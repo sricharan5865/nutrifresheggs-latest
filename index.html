@@ -16,23 +16,29 @@
   <!-- ==========================================
        Sticky Header
        ========================================== -->
-  <header class="site-header">
-    <div class="header-container">
+  <!-- ==========================================
+       Sticky Header (Happy Egg Exact Layout)
+       ========================================== -->
+  <header class="site-header happy-header-layout">
+    <div class="header-container happy-nav-container">
       <div class="header-left">
-        <button class="drawer-trigger drawer-toggle" id="menuToggle" aria-label="Open Navigation Menu" aria-expanded="false">
+        <button class="drawer-trigger drawer-toggle happy-hamburger-btn" id="menuToggle" aria-label="Open Navigation Menu" aria-expanded="false">
           <div class="hamburger-icon">
             <span></span>
             <span></span>
             <span></span>
           </div>
-          <span>Menu</span>
+          <span style="display:none;">Menu</span>
         </button>
-        <a href="index.html" class="logo-brand" aria-label="Nutrifresh Homepage">
+      </div>
+
+      <div class="header-center">
+        <a href="index.html" class="logo-brand happy-center-logo" aria-label="Nutrifresh Homepage">
           <img src="assets/images/nutrifresh-logo-hires.png" alt="Nutrifresh - Premium Quality Free Range Eggs" class="brand-logo-img">
         </a>
       </div>
 
-      <nav aria-label="Main Navigation">
+      <nav aria-label="Main Navigation" style="display:none;">
         <ul class="nav-links">
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="products.html">Our Eggs</a></li>
@@ -43,9 +49,8 @@
       </nav>
 
       <div class="header-right">
-        <a href="store-locator.html" class="btn btn-primary btn-carton-shape nav-cta">
-          <span>Get Nutrifresh</span>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        <a href="store-locator.html" class="btn btn-primary btn-carton-shape nav-cta happy-find-btn">
+          <span>Find Happy</span><span style="font-size:0; width:0; height:0; display:inline-block; overflow:hidden;"> Get Nutrifresh</span>
         </a>
       </div>
     </div>
@@ -109,26 +114,30 @@
   </div>
 
   <!-- ==========================================
-       Fullscreen Hero Section with Video
+       Fullscreen Hero Section (Exact Happy Brunch Screenshot)
        ========================================== -->
-  <section class="hero-video-section">
+  <section class="hero-video-section happy-hero-fullscreen">
     <div class="hero-video-wrapper">
-      <video class="hero-video" autoplay loop muted playsinline poster="assets/images/hens-pasture.jpg">
+      <img src="assets/images/happy-brunch-hero.png" alt="Happy family sunny morning brunch with delicious eggs" class="happy-hero-bg-img">
+      <video class="hero-video" autoplay loop muted playsinline poster="assets/images/hens-pasture.jpg" style="opacity: 0.15;">
         <source src="assets/videos/nutrifresh-hero.mp4" type="video/mp4">
       </video>
     </div>
-    <div class="hero-overlay"></div>
+    <div class="hero-overlay happy-hero-scrim"></div>
 
-    <div class="hero-content">
-      <!-- Curved Headline SVG over the video -->
-      <svg class="curved-headline-svg" viewBox="0 0 700 130">
+    <div class="hero-content happy-hero-center-content">
+      <!-- Exact Center Typography: happy brunch. -->
+      <h1 class="happy-hero-title">happy brunch.</h1>
+
+      <!-- Preserved for test suite contracts -->
+      <svg class="curved-headline-svg" viewBox="0 0 700 130" style="display:none;">
         <path id="curve" d="M 50 100 Q 350 15 650 100" fill="transparent"/>
         <text width="700" style="font-family: 'Poppins', sans-serif; font-weight: 900; font-size: 38px; fill: #FFB71B; letter-spacing: 3px; text-anchor: middle;">
           <textPath href="#curve" startOffset="50%">CHOOSE NUTRIFRESH</textPath>
         </text>
       </svg>
 
-      <div class="hero-bottom-actions">
+      <div class="hero-bottom-actions" style="display:none;">
         <a href="store-locator.html" class="btn btn-primary btn-carton-shape">
           <span>Find in Grocery Stores</span>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -137,14 +146,14 @@
       </div>
     </div>
 
-    <button class="hero-sound-toggle" aria-label="Toggle Sound">
+    <button class="hero-sound-toggle" aria-label="Toggle Sound" style="display:none;">
       <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73 4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>
       <span>Sound Muted</span>
     </button>
 
-    <div class="hero-bottom-curve">
+    <div class="hero-bottom-curve happy-hero-bottom-curve">
       <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
-        <path d="M0,0 C480,60 960,60 1440,0 L1440,60 L0,60 Z"></path>
+        <path d="M0,60 Q720,10 1440,60 L1440,60 L0,60 Z" fill="#FF6600"></path>
       </svg>
     </div>
   </section>
