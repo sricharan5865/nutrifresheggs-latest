@@ -3327,37 +3327,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .happy-real-plate-img {
   width: 100%;
-  max-width: 580px;
+  max-width: 760px;
   height: auto;
   display: block;
   margin: 0 auto;
   filter: drop-shadow(0 30px 65px rgba(0,0,0,0.45));
-}
-
-.happy-plate-callout {
-  position: absolute;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  z-index: 5;
-}
-
-.callout-left-photo {
-  left: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 8px;
-}
-
-.callout-right-photo {
-  right: 20px;
-  top: 18%;
-  display: flex;
-  align-items: center;
-  gap: 14px;
 }
 
 .callout-arrow-svg {
