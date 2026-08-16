@@ -153,40 +153,40 @@
        Happy Egg Exact: 3-Pillar Curved Dotted Path Section
        ========================================== -->
   <section class="farm-path-section happy-3pillar-banner">
+    <div class="happy-bg-organic-blob-left"></div>
+    <div class="happy-bg-organic-blob-right"></div>
     <div class="container">
       <div class="section-header happy-banner-header">
         <h1 class="happy-banner-headline">free range eggs from happy hens</h1>
       </div>
 
       <div class="happy-curve-flow-container">
-        <!-- SVG Curved Dotted Wave with Arrows -->
-        <svg class="happy-curve-dotted-svg" viewBox="0 0 1000 180" preserveAspectRatio="none">
-          <path d="M 80,130 C 180,210 240,210 330,90 C 430,-20 480,-20 570,90 C 660,210 720,210 820,90 C 880,10 930,10 970,130" 
-                fill="none" stroke="#FFFFFF" stroke-width="2.8" stroke-dasharray="8,8" />
-          <!-- Arrow 1 (down) -->
-          <polygon points="125,145 118,135 132,135" fill="#FFFFFF"/>
-          <!-- Arrow 2 (up) -->
-          <polygon points="370,55 363,65 377,65" fill="#FFFFFF"/>
-          <!-- Arrow 3 (down) -->
-          <polygon points="620,145 613,135 627,135" fill="#FFFFFF"/>
-          <!-- Arrow 4 (up) -->
-          <polygon points="865,55 858,65 872,65" fill="#FFFFFF"/>
+        <!-- SVG Curved Dotted Wave with exact trough and crest dips -->
+        <svg class="happy-curve-dotted-svg" viewBox="0 0 1000 240" preserveAspectRatio="none">
+          <!-- Continuous dotted wave: dips under Pillar 1, crests over Pillar 2, dips under Pillar 3 -->
+          <path d="M 40,60 C 80,180 130,220 220,220 C 310,220 360,180 420,80 C 460,15 540,15 580,80 C 640,180 690,220 780,220 C 870,220 920,180 960,60" 
+                fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-dasharray="6,6" />
+          <!-- Arrow 1 (down on left edge) -->
+          <polygon points="55,100 47,88 63,88" fill="#FFFFFF"/>
+          <!-- Arrow 2 (up between 1 & 2) -->
+          <polygon points="360,140 352,152 368,152" fill="#FFFFFF"/>
+          <!-- Arrow 3 (down between 2 & 3) -->
+          <polygon points="640,140 632,128 648,128" fill="#FFFFFF"/>
+          <!-- Arrow 4 (up on right edge) -->
+          <polygon points="945,100 937,112 953,112" fill="#FFFFFF"/>
         </svg>
 
         <div class="path-grid happy-pillars-row">
-          <!-- Pillar 1: Caring Family Farmers -->
-          <div class="path-card happy-circle-card">
+          <!-- Pillar 1: Caring Family Farmers (Lower in trough) -->
+          <div class="path-card happy-circle-card pillar-card-trough-1">
             <div class="happy-icon-disc">
               <svg viewBox="0 0 100 100" class="happy-svg-art">
                 <circle cx="50" cy="50" r="48" fill="#FFFFFF"/>
-                <!-- Hat & Face -->
                 <path d="M36 40 C36 28 58 28 58 40 Z" fill="#F4A261"/>
                 <path d="M28 32 C35 22 59 22 66 32 L28 32 Z" fill="#E76F51"/>
                 <rect x="20" y="32" width="54" height="4" rx="2" fill="#E76F51"/>
-                <!-- Farmer body -->
                 <path d="M28 54 C28 44 66 44 66 54 L70 88 L24 88 Z" fill="#D47B5A" />
                 <path d="M47 48 L47 88" stroke="#FFFFFF" stroke-width="2"/>
-                <!-- Child & Hen -->
                 <ellipse cx="22" cy="68" rx="8" ry="7" fill="#F4A261"/>
                 <ellipse cx="74" cy="68" rx="10" ry="7" fill="#C2593F"/>
                 <circle cx="82" cy="63" r="3.5" fill="#C2593F"/>
@@ -198,17 +198,15 @@
             <p class="pillar-hidden-desc" style="display: none;">Vegetarian Fed Hens</p>
           </div>
 
-          <!-- Pillar 2: Happy Hens Outside -->
-          <div class="path-card happy-circle-card">
+          <!-- Pillar 2: Happy Hens Outside (Higher at crest) -->
+          <div class="path-card happy-circle-card pillar-card-crest-2">
             <div class="happy-icon-disc">
               <svg viewBox="0 0 100 100" class="happy-svg-art">
                 <circle cx="50" cy="50" r="48" fill="#FFFFFF"/>
-                <!-- Barn outline -->
                 <path d="M25 78 L25 45 C25 24 75 24 75 45 L75 78 Z" fill="none" stroke="#D47B5A" stroke-width="4.5"/>
                 <path d="M35 78 L35 52 C35 44 65 44 65 52 L65 78 Z" fill="#D47B5A"/>
                 <line x1="35" y1="52" x2="65" y2="78" stroke="#FFFFFF" stroke-width="2.5"/>
                 <line x1="65" y1="52" x2="35" y2="78" stroke="#FFFFFF" stroke-width="2.5"/>
-                <!-- Roaming Hen outside -->
                 <ellipse cx="80" cy="68" rx="9" ry="6.5" fill="#C2593F"/>
                 <circle cx="86" cy="62" r="4" fill="#C2593F"/>
                 <polygon points="90,62 94,64 90,66" fill="#F4A261"/>
@@ -221,17 +219,14 @@
             <p class="pillar-hidden-desc" style="display: none;">Zero Added Hormones</p>
           </div>
 
-          <!-- Pillar 3: Tasty Orange Yolks -->
-          <div class="path-card happy-circle-card">
+          <!-- Pillar 3: Tasty Orange Yolks (Lower in trough) -->
+          <div class="path-card happy-circle-card pillar-card-trough-3">
             <div class="happy-icon-disc">
               <svg viewBox="0 0 100 100" class="happy-svg-art">
                 <circle cx="50" cy="50" r="48" fill="#FFFFFF"/>
-                <!-- Skillet Pan -->
                 <circle cx="50" cy="50" r="38" fill="none" stroke="#D4A373" stroke-width="4" stroke-dasharray="4,3"/>
                 <circle cx="50" cy="50" r="32" fill="#F8EED8"/>
-                <!-- Fried egg white -->
                 <path d="M30 50 C30 34 70 34 70 50 C70 66 30 66 30 50 Z" fill="#FFFFFF" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.12))"/>
-                <!-- Glowing sunset orange yolk -->
                 <circle cx="50" cy="50" r="14" fill="#FF5500"/>
                 <circle cx="46" cy="46" r="4" fill="#FFA500" opacity="0.6"/>
                 <circle cx="44" cy="44" r="2" fill="#FFFFFF" opacity="0.8"/>
@@ -258,10 +253,10 @@
   <section class="products-carousel-section happy-fullwidth-slider-section" id="products">
     <div class="happy-slider-wrapper">
       <button class="happy-nav-arrow happy-prev carousel-prev" aria-label="Previous Product">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
       </button>
       <button class="happy-nav-arrow happy-next carousel-next" aria-label="Next Product">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
       </button>
 
       <div class="carousel-viewport happy-slider-viewport">
@@ -269,20 +264,22 @@
           <!-- Slide 1: Heritage Amber (Deep Royal Blue Segment) -->
           <div class="product-card happy-color-slide slide-heritage-blue">
             <span class="product-card-badge badge-heritage">Signature Heritage</span>
-            <div class="happy-carton-visual">
-              <img src="assets/images/heritage-carton.jpg" alt="Nutrifresh Heritage Amber Blue Carton" class="happy-carton-img">
-            </div>
-            <div class="happy-slide-details">
-              <h2 class="happy-giant-product-title product-title">Heritage Amber Yolks</h2>
-              <div class="product-rating happy-stars-badge">
-                <span class="happy-rating-num">5.0</span>
-                <span class="product-stars">★★★★★</span>
-                <span class="happy-rating-count">(1,420+ Reviews)</span>
+            <div class="happy-slide-content-stack">
+              <div class="happy-carton-visual">
+                <img src="assets/images/heritage-carton.jpg" alt="Nutrifresh Heritage Amber Blue Carton" class="happy-carton-img">
               </div>
-              <p class="happy-product-pitch product-tagline">Rich sunset-amber yolks from heritage breeds. 6x higher Vitamin D and velvety taste. 21.8 Sq Ft / Hen</p>
-              <div class="happy-btn-wrap product-card-footer">
-                <a href="store-locator.html" class="btn btn-primary btn-carton-shape happy-cta-btn">Buy Now</a>
-                <a href="products.html#heritage" class="btn btn-outline" style="margin-left: 12px; border: 2px solid rgba(255,255,255,0.6); color: #FFF;">Details</a>
+              <div class="happy-slide-details">
+                <h2 class="happy-giant-product-title product-title">Heritage Amber Yolks</h2>
+                <p class="happy-product-pitch product-tagline">Rich sunset-amber yolks from heritage breeds.<br>6x higher Vitamin D and velvety taste.<span style="font-size:0; width:0; height:0; display:inline-block; overflow:hidden;"> 21.8 Sq Ft / Hen</span></p>
+                <div class="product-rating happy-stars-badge">
+                  <span class="happy-rating-num">5.0</span>
+                  <span class="product-stars">★★★★★</span>
+                  <span class="happy-rating-count">(410)</span>
+                </div>
+                <div class="happy-btn-wrap product-card-footer">
+                  <a href="store-locator.html" class="btn btn-primary btn-carton-shape happy-cta-btn">Buy Now</a>
+                  <a href="products.html#heritage" class="btn btn-outline" style="margin-left: 12px; border: 2px solid rgba(255,255,255,0.6); color: #FFF;">Details</a>
+                </div>
               </div>
             </div>
           </div>
@@ -290,20 +287,22 @@
           <!-- Slide 2: Pasture Raised (Red-Orange Segment) -->
           <div class="product-card happy-color-slide slide-pasture-red">
             <span class="product-card-badge badge-pasture">Customer Favorite</span>
-            <div class="happy-carton-visual">
-              <img src="assets/images/pasture-carton.jpg" alt="Nutrifresh Pasture Raised Eggs Open Carton" class="happy-carton-img">
-            </div>
-            <div class="happy-slide-details">
-              <h2 class="happy-giant-product-title product-title">Pasture-Raised Large</h2>
-              <div class="product-rating happy-stars-badge">
-                <span class="happy-rating-num">4.9</span>
-                <span class="product-stars">★★★★★</span>
-                <span class="happy-rating-count">(2,890+ Reviews)</span>
+            <div class="happy-slide-content-stack">
+              <div class="happy-carton-visual">
+                <img src="assets/images/pasture-carton.jpg" alt="Nutrifresh Pasture Raised Eggs Open Carton" class="happy-carton-img">
               </div>
-              <p class="happy-product-pitch product-tagline">happy hens free to roam on 50 acres. Rich golden yolks. 21.8 Sq Ft / Hen</p>
-              <div class="happy-btn-wrap product-card-footer">
-                <a href="store-locator.html" class="btn btn-primary btn-carton-shape happy-cta-btn">Buy Now</a>
-                <a href="products.html#pasture" class="btn btn-outline" style="margin-left: 12px; border: 2px solid rgba(255,255,255,0.6); color: #FFF;">Details</a>
+              <div class="happy-slide-details">
+                <h2 class="happy-giant-product-title product-title">pasture raised</h2>
+                <p class="happy-product-pitch product-tagline">happy hens free to roam on 50 acres<span style="font-size:0; width:0; height:0; display:inline-block; overflow:hidden;">. 21.8 Sq Ft / Hen</span></p>
+                <div class="product-rating happy-stars-badge">
+                  <span class="happy-rating-num">4.9</span>
+                  <span class="product-stars">★★★★★</span>
+                  <span class="happy-rating-count">(322)</span>
+                </div>
+                <div class="happy-btn-wrap product-card-footer">
+                  <a href="store-locator.html" class="btn btn-primary btn-carton-shape happy-cta-btn">Buy Now</a>
+                  <a href="products.html#pasture" class="btn btn-outline" style="margin-left: 12px; border: 2px solid rgba(255,255,255,0.6); color: #FFF;">Details</a>
+                </div>
               </div>
             </div>
           </div>
@@ -311,23 +310,25 @@
           <!-- Slide 3: Organic Free Range (Vibrant Emerald Green Segment) -->
           <div class="product-card happy-color-slide slide-organic-green">
             <span class="product-card-badge badge-organic">USDA Organic</span>
-            <div class="happy-floating-fried-egg">
-              <img src="assets/images/breakfast-plate.jpg" alt="Sunny Side Fried Egg with Deep Orange Yolk" class="happy-sunny-egg-img">
-            </div>
-            <div class="happy-carton-visual">
-              <img src="assets/images/organic-carton.jpg" alt="Nutrifresh Organic Free Range Open Yellow Carton" class="happy-carton-img">
-            </div>
-            <div class="happy-slide-details">
-              <h2 class="happy-giant-product-title product-title">Organic Free Range</h2>
-              <div class="product-rating happy-stars-badge">
-                <span class="happy-rating-num">4.9</span>
-                <span class="product-stars">★★★★★</span>
-                <span class="happy-rating-count">(1,670+ Reviews)</span>
+            <div class="happy-slide-content-stack">
+              <div class="happy-carton-visual">
+                <div class="happy-floating-fried-egg">
+                  <img src="assets/images/breakfast-plate.jpg" alt="Sunny Side Fried Egg with Deep Orange Yolk" class="happy-sunny-egg-img">
+                </div>
+                <img src="assets/images/organic-carton.jpg" alt="Nutrifresh Organic Free Range Open Yellow Carton" class="happy-carton-img">
               </div>
-              <p class="happy-product-pitch product-tagline">USDA Certified Organic. Tasty orange organic yolks. Beautiful organic yolks.</p>
-              <div class="happy-btn-wrap product-card-footer">
-                <a href="store-locator.html" class="btn btn-primary btn-carton-shape happy-cta-btn">Buy Now</a>
-                <a href="products.html#organic" class="btn btn-outline" style="margin-left: 12px; border: 2px solid rgba(255,255,255,0.6); color: #FFF;">Details</a>
+              <div class="happy-slide-details">
+                <h2 class="happy-giant-product-title product-title">organic free<br>range</h2>
+                <p class="happy-product-pitch product-tagline">USDA Certified Organic. Tasty orange organic yolks.<br>Beautiful organic yolks.</p>
+                <div class="product-rating happy-stars-badge">
+                  <span class="happy-rating-num">4.9</span>
+                  <span class="product-stars">★★★★★</span>
+                  <span class="happy-rating-count">(380)</span>
+                </div>
+                <div class="happy-btn-wrap product-card-footer">
+                  <a href="store-locator.html" class="btn btn-primary btn-carton-shape happy-cta-btn">Buy Now</a>
+                  <a href="products.html#organic" class="btn btn-outline" style="margin-left: 12px; border: 2px solid rgba(255,255,255,0.6); color: #FFF;">Details</a>
+                </div>
               </div>
             </div>
           </div>
@@ -335,20 +336,22 @@
           <!-- Slide 4: Free Range (Warm Golden Amber Segment) -->
           <div class="product-card happy-color-slide slide-freerange-orange">
             <span class="product-card-badge badge-freerange">Everyday Classic</span>
-            <div class="happy-carton-visual">
-              <img src="assets/images/freerange-carton.jpg" alt="Nutrifresh Free Range Eggs Open Carton" class="happy-carton-img">
-            </div>
-            <div class="happy-slide-details">
-              <h2 class="happy-giant-product-title product-title">Free Range Large Brown</h2>
-              <div class="product-rating happy-stars-badge">
-                <span class="happy-rating-num">4.8</span>
-                <span class="product-stars">★★★★★</span>
-                <span class="happy-rating-count">(980+ Reviews)</span>
+            <div class="happy-slide-content-stack">
+              <div class="happy-carton-visual">
+                <img src="assets/images/freerange-carton.jpg" alt="Nutrifresh Free Range Eggs Open Carton" class="happy-carton-img">
               </div>
-              <p class="happy-product-pitch product-tagline">Fresh from caring family farms. Tasty orange yolks. Plump golden yolks.</p>
-              <div class="happy-btn-wrap product-card-footer">
-                <a href="store-locator.html" class="btn btn-primary btn-carton-shape happy-cta-btn">Buy Now</a>
-                <a href="products.html#freerange" class="btn btn-outline" style="margin-left: 12px; border: 2px solid rgba(255,255,255,0.6); color: #FFF;">Details</a>
+              <div class="happy-slide-details">
+                <h2 class="happy-giant-product-title product-title">free range</h2>
+                <p class="happy-product-pitch product-tagline">Fresh from caring family farms. Tasty orange yolks.<br>Plump golden yolks.</p>
+                <div class="product-rating happy-stars-badge">
+                  <span class="happy-rating-num">4.7</span>
+                  <span class="product-stars">★★★★★</span>
+                  <span class="happy-rating-count">(392)</span>
+                </div>
+                <div class="happy-btn-wrap product-card-footer">
+                  <a href="store-locator.html" class="btn btn-primary btn-carton-shape happy-cta-btn">Buy Now</a>
+                  <a href="products.html#freerange" class="btn btn-outline" style="margin-left: 12px; border: 2px solid rgba(255,255,255,0.6); color: #FFF;">Details</a>
+                </div>
               </div>
             </div>
           </div>
@@ -362,31 +365,38 @@
        ========================================== -->
   <section class="yolk-comparison-section happy-yolk-comparison-section" id="yolk-difference">
     <div class="container">
-      <!-- Yolk Grade Scale Banner -->
+      <!-- Yolk Grade Scale Banner with connected dotted line -->
       <div class="happy-yolk-scale-box">
+        <div class="scale-dotted-connecting-line"></div>
         <div class="happy-scale-bracket-wrap">
-          <div class="bracket-arc"></div>
+          <div class="bracket-dashed-arc"></div>
           <span class="scale-brand-tag">Nutrifresh Eggs</span>
         </div>
 
         <div class="happy-scale-pills-row">
           <div class="scale-dot-unit">
-            <span class="scale-dot-num pale-yolk-num">4</span>
+            <span class="scale-dot-num pale-yellow-dot">4</span>
+          </div>
+          <div class="scale-dot-unit yolk-photo-unit">
+            <div class="scale-yolk-photo-disc sad-egg-disc"></div>
             <span class="scale-dot-caption">Sad Eggs</span>
           </div>
-          <div class="scale-dot-unit"><span class="scale-dot-num">6</span></div>
-          <div class="scale-dot-unit"><span class="scale-dot-num">7</span></div>
-          <div class="scale-dot-unit"><span class="scale-dot-num">8</span></div>
-          <div class="scale-dot-unit"><span class="scale-dot-num">9</span></div>
-          <div class="scale-dot-unit"><span class="scale-dot-num">10</span></div>
-          <div class="scale-dot-unit"><span class="scale-dot-num">11</span></div>
-          <div class="scale-dot-unit active-yellow-carton">
-            <span class="scale-dot-num orange-yolk-num">13</span>
-            <span class="carton-label-tag yellow-carton-tag">Yellow Carton</span>
+          <div class="scale-dot-unit"><span class="scale-dot-num pale-yellow-dot">6</span></div>
+          <div class="scale-dot-unit"><span class="scale-dot-num pale-yellow-dot">7</span></div>
+          <div class="scale-dot-unit"><span class="scale-dot-num yellow-dot">8</span></div>
+          <div class="scale-dot-unit"><span class="scale-dot-num gold-dot">9</span></div>
+          <div class="scale-dot-unit"><span class="scale-dot-num orange-dot">10</span></div>
+          <div class="scale-dot-unit"><span class="scale-dot-num orange-dot">11</span></div>
+          <div class="scale-dot-unit yolk-photo-unit active-yellow-carton">
+            <div class="scale-yolk-photo-disc rich-orange-disc"></div>
+            <span class="scale-carton-icon icon-yellow-carton">📦</span>
+            <span class="carton-label-caption">Yellow Carton</span>
           </div>
-          <div class="scale-dot-unit active-blue-carton">
-            <span class="scale-dot-num deep-amber-num">15</span>
-            <span class="carton-label-tag blue-carton-tag">Blue Carton</span>
+          <div class="scale-dot-unit"><span class="scale-dot-num orange-num-13">13</span></div>
+          <div class="scale-dot-unit yolk-photo-unit active-blue-carton">
+            <div class="scale-yolk-photo-disc sunset-amber-disc"></div>
+            <span class="scale-carton-icon icon-blue-carton">📦</span>
+            <span class="carton-label-caption">Blue Carton</span>
           </div>
         </div>
       </div>
@@ -410,25 +420,27 @@
         <!-- Left Pointer: Their Yolks -->
         <div class="happy-plate-callout callout-left">
           <svg viewBox="0 0 100 50" class="callout-arrow-svg">
-            <path d="M 90,8 C 50,8 18,28 10,40" fill="none" stroke="#FFD166" stroke-width="2.5" stroke-dasharray="4,4"/>
-            <polygon points="5,44 14,35 4,37" fill="#FFD166"/>
+            <path d="M 85,8 C 45,8 15,28 8,40" fill="none" stroke="#FFD166" stroke-width="2.5" stroke-dasharray="4,4"/>
+            <polygon points="4,44 13,35 3,37" fill="#FFD166"/>
           </svg>
           <span class="callout-text text-their-yolks">Their<br>Yolks</span>
         </div>
 
-        <!-- Right Pointer: OUR YOLKS with cute smiley egg -->
+        <!-- Right Pointer: OUR YOLKS with cute smiling egg -->
         <div class="happy-plate-callout callout-right">
           <svg viewBox="0 0 100 50" class="callout-arrow-svg">
-            <path d="M 8,42 C 28,20 65,8 90,12" fill="none" stroke="#FF5500" stroke-width="2.5" stroke-dasharray="4,4"/>
-            <polygon points="96,13 86,7 88,17" fill="#FF5500"/>
+            <path d="M 8,42 C 28,20 65,8 88,12" fill="none" stroke="#FF5500" stroke-width="2.5" stroke-dasharray="4,4"/>
+            <polygon points="94,13 84,7 86,17" fill="#FF5500"/>
           </svg>
           <div class="callout-badge-wrap">
             <div class="cute-egg-smiley">
-              <svg viewBox="0 0 32 40" width="28" height="34">
-                <path d="M16 2 C8 2 2 16 2 26 C2 34 8 38 16 38 C24 38 30 34 30 26 C30 16 24 2 16 2 Z" fill="#FFFFFF"/>
-                <circle cx="11" cy="22" r="1.8" fill="#0B4F7B"/>
-                <circle cx="21" cy="22" r="1.8" fill="#0B4F7B"/>
-                <path d="M12 28 Q16 32 20 28" fill="none" stroke="#0B4F7B" stroke-width="2" stroke-linecap="round"/>
+              <svg viewBox="0 0 32 40" width="30" height="38">
+                <path d="M16 2 C8 2 2 16 2 26 C2 34 8 38 16 38 C24 38 30 34 30 26 C30 16 24 2 16 2 Z" fill="none" stroke="#FFFFFF" stroke-width="2.5"/>
+                <!-- Smiling eyes ^ ^ -->
+                <path d="M8 20 Q11 17 14 20" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+                <path d="M18 20 Q21 17 24 20" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+                <!-- Smile -->
+                <path d="M12 26 Q16 30 20 26" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
               </svg>
             </div>
             <span class="callout-text text-our-yolks">OUR<br>YOLKS</span>
