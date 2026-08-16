@@ -2960,35 +2960,189 @@ h1, h2, h3, h4, h5, h6 {
 .happy-next { right: 30px; }
 
 /* ==========================================================================
+   Happy Egg Exact: Social Media Review Cloud Section (Screenshot 2)
+   ========================================================================== */
+.happy-social-reviews-section {
+  background: #FFFFFF;
+  padding: 90px 0 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+.happy-social-reviews-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.reviews-floating-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+}
+
+.row-top {
+  justify-content: space-around;
+  padding-right: 5%;
+}
+
+.row-mid-top {
+  justify-content: space-between;
+  padding: 0 4%;
+}
+
+.row-mid-bottom {
+  justify-content: space-around;
+  padding: 0 2%;
+}
+
+.row-bottom {
+  justify-content: space-evenly;
+  padding: 0 8%;
+}
+
+.reviews-center-headline-wrap {
+  text-align: center;
+  margin: 25px 0;
+  position: relative;
+  z-index: 5;
+}
+
+.reviews-giant-headline {
+  font-family: 'Poppins', sans-serif;
+  font-size: clamp(2.4rem, 5.5vw, 4.4rem);
+  font-weight: 900;
+  color: #FF5500;
+  letter-spacing: -1px;
+  line-height: 1.05;
+  text-transform: lowercase;
+  margin: 0;
+}
+
+.hashtag-tag {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-size: 1.45rem;
+  color: #FF5500;
+  letter-spacing: -0.5px;
+}
+
+.hashtag-crack {
+  margin-left: 10%;
+}
+
+.hashtag-difference {
+  margin-right: 8%;
+}
+
+.hashtag-happyeggs {
+  margin-left: 2%;
+}
+
+.floating-review-bubble {
+  background: #FFF8F5;
+  border-radius: 16px;
+  padding: 14px 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  border: 1px solid #FFE6DC;
+  max-width: 320px;
+  transition: transform 0.3s ease;
+}
+
+.floating-review-bubble:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 12px 28px rgba(255, 85, 0, 0.12);
+}
+
+.reviewer-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.reviewer-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #FF5500;
+}
+
+.reviewer-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.reviewer-username {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 0.88rem;
+  color: #081C30;
+}
+
+.review-comment {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  color: #2D3748;
+  font-weight: 600;
+  line-height: 1.35;
+  margin: 0;
+}
+
+/* ==========================================================================
    Happy Egg Exact: Deep Blue Yolk Comparison Section (Screenshot 3)
    ========================================================================== */
 .happy-yolk-comparison-section {
-  background: #084E7D;
-  padding: 80px 0 120px;
+  background: #005587;
+  padding: 60px 0 80px;
   color: #FFFFFF;
   position: relative;
   overflow: hidden;
 }
 
+.yolk-wavy-mask {
+  width: 100%;
+  line-height: 0;
+  position: relative;
+  z-index: 3;
+}
+
+.yolk-mask-top {
+  margin-top: -60px;
+  margin-bottom: 30px;
+}
+
+.yolk-mask-bottom {
+  margin-top: 50px;
+  margin-bottom: -80px;
+}
+
 .happy-yolk-header {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 36px;
 }
 
 .happy-yolk-title {
   font-family: 'Poppins', sans-serif;
-  font-size: 3.2rem;
+  font-size: 3.4rem;
   font-weight: 900;
   color: #FFFFFF;
   letter-spacing: -0.5px;
   line-height: 1.1;
   text-transform: lowercase;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .happy-yolk-subtitle {
   font-family: 'Poppins', sans-serif;
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-weight: 600;
   color: rgba(255,255,255,0.9);
   margin: 0;
@@ -2996,8 +3150,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .happy-yolk-scale-box {
   position: relative;
-  max-width: 900px;
-  margin: 0 auto 70px;
+  max-width: 960px;
+  margin: 0 auto 60px;
   text-align: center;
 }
 
@@ -3007,40 +3161,41 @@ h1, h2, h3, h4, h5, h6 {
   left: 30px;
   right: 30px;
   height: 2px;
-  border-top: 2px dotted rgba(255,255,255,0.45);
+  border-top: 2px dotted rgba(255,255,255,0.4);
   z-index: 1;
 }
 
-.happy-scale-bracket-wrap {
-  position: relative;
-  display: inline-block;
-  margin-bottom: 8px;
+.happy-scale-arch-bracket {
+  position: absolute;
+  top: -30px;
+  right: 40px;
+  text-align: center;
   z-index: 2;
 }
 
-.bracket-dashed-arc {
-  width: 140px;
-  height: 14px;
-  border-top: 2px dashed rgba(255,255,255,0.7);
-  border-left: 2px dashed rgba(255,255,255,0.7);
-  border-right: 2px dashed rgba(255,255,255,0.7);
-  border-radius: 8px 8px 0 0;
-  margin: 0 auto 4px;
-}
-
-.scale-brand-tag {
+.arch-brand-label {
   font-family: 'Poppins', sans-serif;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 700;
   color: #FFFFFF;
   letter-spacing: 0.5px;
+}
+
+.arch-dashed-line {
+  width: 170px;
+  height: 10px;
+  border-top: 1.5px dashed rgba(255,255,255,0.6);
+  border-left: 1.5px dashed rgba(255,255,255,0.6);
+  border-right: 1.5px dashed rgba(255,255,255,0.6);
+  border-radius: 6px 6px 0 0;
+  margin: 2px auto 0;
 }
 
 .happy-scale-pills-row {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 16px;
+  gap: 14px;
   position: relative;
   z-index: 2;
 }
@@ -3053,72 +3208,91 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .scale-dot-num {
-  width: 42px;
-  height: 42px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
   color: #081C30;
   font-family: 'Poppins', sans-serif;
   font-weight: 900;
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
 }
 
 .pale-yellow-dot { background: #FFF176; }
-.yellow-dot { background: #FFEE58; }
-.gold-dot { background: #FFD54F; }
-.orange-dot { background: #FFB74D; }
+.dot-color-6 { background: #FFF59D; }
+.dot-color-7 { background: #FFEE58; }
+.dot-color-8 { background: #FFEB3B; }
+.dot-color-9 { background: #FFD54F; }
+.dot-color-10 { background: #FFCA28; }
+.dot-color-11 { background: #FFA726; }
+
 .orange-num-13 {
-  background: #FF7A00;
+  background: #FF7043;
   color: #FFFFFF;
-  width: 44px;
-  height: 44px;
-  font-size: 1.15rem;
+  width: 42px;
+  height: 42px;
+  font-size: 1.05rem;
 }
 
 .scale-yolk-photo-disc {
-  width: 50px;
-  height: 50px;
+  width: 46px;
+  height: 46px;
   border-radius: 50%;
   box-shadow: 0 4px 14px rgba(0,0,0,0.35);
-  border: 2px solid #FFFFFF;
+  border: 2px solid rgba(255,255,255,0.8);
 }
 
 .sad-egg-disc {
-  background: radial-gradient(circle at 35% 35%, #FFF59D 0%, #FBC02D 85%);
+  background: radial-gradient(circle at 35% 35%, #FFF9C4 0%, #FDD835 85%);
+  border: 3px solid #D6D6D6;
 }
 
 .rich-orange-disc {
-  background: radial-gradient(circle at 35% 35%, #FFA726 0%, #E65100 85%);
-  width: 54px;
-  height: 54px;
+  background: radial-gradient(circle at 35% 35%, #FFB74D 0%, #F57C00 85%);
+  border: 3px solid #D6D6D6;
+  width: 48px;
+  height: 48px;
 }
 
 .sunset-amber-disc {
-  background: radial-gradient(circle at 35% 35%, #FF7043 0%, #BF360C 85%);
-  width: 56px;
-  height: 56px;
-  box-shadow: 0 0 18px rgba(255,87,34,0.7);
+  background: radial-gradient(circle at 35% 35%, #FF8A65 0%, #D84315 85%);
+  border: 3px solid #D6D6D6;
+  width: 50px;
+  height: 50px;
+  box-shadow: 0 0 14px rgba(255,87,34,0.6);
 }
 
 .scale-dot-caption {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   font-weight: 700;
   color: #FFFFFF;
   margin-top: 4px;
 }
 
-.carton-label-caption {
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: #FFFFFF;
-  margin-top: 2px;
+.carton-pill-tag {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  margin-top: 4px;
 }
 
-.scale-carton-icon {
-  font-size: 0.9rem;
+.carton-bar-swatch {
+  width: 32px;
+  height: 6px;
+  border-radius: 3px;
+}
+
+.bar-yellow { background: #FFB71B; }
+.bar-blue { background: #3E84A8; }
+
+.carton-bar-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #FFFFFF;
 }
 
 /* The Ceramic Plate */
