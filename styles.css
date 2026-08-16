@@ -2588,8 +2588,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ==========================================================================
-   Responsive Breakpoints
+   Responsive Breakpoints & Mobile Optimization
    ========================================================================== */
+
+/* Prevent horizontal scroll and ensure smooth box sizing */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
 @media (max-width: 1024px) {
   .hero-title { font-size: 3rem; }
@@ -2608,16 +2614,499 @@ h1, h2, h3, h4, h5, h6 {
   .locator-page-container { grid-template-columns: 1fr; }
   .product-detail-card, .product-detail-card:nth-child(even) { grid-template-columns: 1fr; }
   .product-detail-card:nth-child(even) .product-detail-img-wrap { order: 0; }
+  .nutrition-facts-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
 @media (max-width: 768px) {
-  .nav-links { display: none; }
-  .hero-title { font-size: 2.3rem; }
-  .section-title { font-size: 2.1rem; }
-  .stats-grid { grid-template-columns: 1fr; }
-  .recipe-cards-grid { grid-template-columns: 1fr; }
-  .footer-top { grid-template-columns: 1fr; }
-  .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+  /* Layout & Container */
+  .container {
+    padding: 0 16px;
+    width: 100%;
+  }
+
+  /* Header & Navigation */
+  .site-header {
+    padding: 12px 0;
+  }
+  .site-header.scrolled {
+    padding: 8px 0;
+  }
+  .header-container {
+    padding: 0 16px;
+    gap: 8px;
+  }
+  .header-left {
+    gap: 10px;
+  }
+  .nav-links {
+    display: none;
+  }
+  .drawer-trigger {
+    padding: 8px 14px;
+    font-size: 0.85rem;
+    gap: 6px;
+  }
+  .brand-logo-img {
+    height: 40px;
+    max-width: 130px;
+  }
+  .nav-cta {
+    padding: 8px 14px;
+    font-size: 0.85rem;
+    white-space: nowrap;
+  }
+  .nav-cta svg {
+    display: none;
+  }
+
+  /* Slideout Drawer */
+  .slideout-drawer {
+    max-width: 100%;
+    width: 100%;
+  }
+  .drawer-header {
+    padding: 20px;
+  }
+  .drawer-body {
+    padding: 24px 20px;
+    gap: 24px;
+  }
+  .drawer-nav-list a {
+    font-size: 1.4rem;
+  }
+  .drawer-cartons-section {
+    padding: 16px;
+  }
+  .drawer-cartons-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  /* Hero Section */
+  .hero-video-section {
+    height: 100svh;
+    height: 100vh;
+    min-height: 560px;
+  }
+  .hero-content {
+    padding: 0 16px;
+    margin-top: 30px;
+    height: calc(100vh - 100px);
+    min-height: 480px;
+    justify-content: space-between;
+  }
+  .curved-headline-svg {
+    max-width: 95%;
+    margin-top: 10px;
+  }
+  .hero-title {
+    font-size: 2.2rem;
+    line-height: 1.15;
+  }
+  .hero-bottom-actions {
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  .hero-bottom-actions .btn {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 0.95rem;
+    text-align: center;
+    justify-content: center;
+  }
+  .hero-sound-toggle {
+    bottom: 16px;
+    right: 16px;
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+  .hero-bottom-curve svg {
+    height: 36px;
+  }
+
+  /* Section Titles & Spacings */
+  .section-header {
+    margin-bottom: 36px;
+  }
+  .section-title {
+    font-size: 2rem;
+    line-height: 1.2;
+  }
+  .section-desc {
+    font-size: 1rem;
+  }
+  .farm-path-section,
+  .collage-section,
+  .products-carousel-section,
+  .yolk-comparison-section,
+  .stats-counter-section,
+  .reviews-cloud-section,
+  .ethical-standards-section,
+  .nutrition-power-section,
+  .recipes-section,
+  .store-locator-widget-section,
+  .instagram-section {
+    padding: 55px 0;
+  }
+
+  /* Path Grid */
+  .path-card {
+    padding: 28px 20px;
+  }
+  .path-icon-bubble {
+    width: 75px;
+    height: 75px;
+    font-size: 2rem;
+    margin-bottom: 18px;
+  }
+
+  /* Collage Section */
+  .collage-visuals {
+    min-height: 320px;
+    max-width: 360px;
+    margin: 0 auto 30px;
+  }
+  .collage-content {
+    text-align: center;
+  }
+  .collage-content h2 {
+    font-size: 2.1rem;
+  }
+  .welfare-checklist {
+    text-align: left;
+    max-width: 340px;
+    margin: 0 auto 28px;
+  }
+  .smiley-badge {
+    width: 80px;
+    height: 80px;
+    font-size: 0.72rem;
+    top: -10px;
+    right: 5%;
+  }
+
+  /* Products Carousel */
+  .carousel-controls-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  .carousel-nav-btns {
+    align-self: flex-end;
+  }
+  .carousel-track {
+    gap: 16px;
+  }
+  .product-card {
+    flex: 0 0 100%;
+    min-width: 0;
+    width: 100%;
+    padding: 24px 18px;
+  }
+  .product-img-holder {
+    height: 180px;
+    margin: 10px 0;
+  }
+  .product-title {
+    font-size: 1.35rem;
+  }
+  .product-card-footer {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  /* Yolk Grade Comparison */
+  .yolk-interactive-box {
+    padding: 24px 16px;
+    border-radius: var(--radius-md);
+  }
+  .yolk-egg-preview {
+    width: 230px;
+    height: 230px;
+  }
+  .egg-white-base {
+    width: 220px;
+    height: 200px;
+  }
+  .dynamic-yolk-dome {
+    width: 115px;
+    height: 115px;
+  }
+  .yolk-info-panel h3 {
+    font-size: 1.6rem;
+  }
+  .yolk-grade-pill {
+    padding: 6px 16px;
+    font-size: 0.95rem;
+  }
+  .yolk-grade-pill span.num {
+    font-size: 1.25rem;
+  }
+  .yolk-range-slider::-webkit-slider-thumb {
+    width: 36px;
+    height: 36px;
+  }
+  .yolk-real-comparison img {
+    height: 220px;
+  }
+  .yolk-compare-overlay {
+    flex-direction: column;
+    gap: 4px;
+    font-size: 0.85rem;
+    padding: 16px 14px 10px;
+  }
+
+  /* Stats Counter */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  .stat-card {
+    padding: 20px 12px;
+  }
+  .stat-number-wrap {
+    font-size: 2.4rem;
+  }
+  .stat-title {
+    font-size: 0.95rem;
+  }
+  .stat-desc {
+    font-size: 0.8rem;
+  }
+
+  /* Reviews Section */
+  .review-card {
+    padding: 22px 18px;
+  }
+  .review-card:nth-child(even) {
+    transform: none;
+  }
+
+  /* Ethical Standards */
+  .standards-grid {
+    gap: 30px;
+  }
+  .standard-feature-box {
+    padding: 16px 14px;
+    gap: 14px;
+  }
+  .standards-photo-card img {
+    height: 260px;
+  }
+  .standards-overlay-badge {
+    position: static;
+    margin-top: 12px;
+    border-radius: var(--radius-md);
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+
+  /* Nutrition Powerhouse */
+  .nutrition-power-header h2 {
+    font-size: 2rem;
+  }
+  .nutrition-power-header p {
+    font-size: 1rem;
+  }
+  .nutrition-facts-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .nutrition-fact-card {
+    padding: 18px 10px;
+  }
+  .fact-big-stat {
+    font-size: 2rem;
+  }
+  .fact-label {
+    font-size: 0.95rem;
+  }
+
+  /* Recipes Section & Cards */
+  .recipe-cards-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .recipe-img-holder {
+    height: 200px;
+  }
+
+  /* Store Locator Widget */
+  .store-locator-box {
+    padding: 24px 16px;
+  }
+  .locator-search-bar {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .locator-search-bar .btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .store-results-preview {
+    grid-template-columns: 1fr;
+  }
+
+  /* Subpages */
+  .page-hero {
+    padding: 120px 0 50px;
+  }
+  .page-hero h1 {
+    font-size: 2.2rem;
+  }
+  .page-hero p {
+    font-size: 1.05rem;
+  }
+  .product-detail-card,
+  .product-detail-card:nth-child(even) {
+    grid-template-columns: 1fr;
+    padding: 24px 16px;
+    gap: 24px;
+  }
+  .product-detail-img-wrap {
+    padding: 24px 12px;
+  }
+  .product-detail-img-wrap img {
+    max-height: 200px;
+  }
+  .nutrition-pill-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  .farm-story-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .farm-badge-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .locator-page-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .locator-sidebar {
+    padding: 20px 16px;
+  }
+  .map-interactive-container {
+    min-height: 320px;
+    height: 320px;
+  }
+  .map-svg-mockup {
+    min-height: 320px;
+    height: 320px;
+  }
+
+  /* Footer */
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .footer-brand {
+    text-align: center;
+  }
+  .footer-brand .drawer-socials {
+    justify-content: center;
+  }
+  .footer-col {
+    text-align: center;
+  }
+  .footer-links {
+    align-items: center;
+  }
+  .newsletter-form {
+    max-width: 360px;
+    margin: 0 auto;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+
+  /* Floating CTA */
   .floating-cta-btn,
-  .floating-locator-cta { bottom: 16px; right: 16px; font-size: 0.9rem; padding: 12px 18px; }
+  .floating-locator-cta {
+    bottom: max(14px, env(safe-area-inset-bottom, 14px));
+    right: 14px;
+    font-size: 0.82rem;
+    padding: 10px 16px;
+  }
+
+  /* Modals */
+  .legal-modal-card {
+    max-height: 92vh;
+    border-radius: var(--radius-md);
+  }
+  .legal-modal-header {
+    padding: 16px 20px;
+  }
+  .legal-modal-body {
+    padding: 20px 16px;
+  }
+  .legal-modal-footer {
+    padding: 14px 20px;
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+  }
+  .legal-modal-footer .btn {
+    width: 100%;
+  }
+  .cookie-option-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}
+
+/* Extra Small Phones (<= 480px & <= 375px) */
+@media (max-width: 480px) {
+  .drawer-trigger span:last-child {
+    display: none;
+  }
+  .drawer-trigger {
+    padding: 8px 10px;
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    justify-content: center;
+  }
+  .brand-logo-img {
+    height: 34px;
+    max-width: 110px;
+  }
+  .nav-cta {
+    padding: 7px 12px;
+    font-size: 0.78rem;
+  }
+  .hero-title {
+    font-size: 1.85rem;
+  }
+  .section-title {
+    font-size: 1.75rem;
+  }
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .nutrition-facts-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .insta-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .floating-cta-btn,
+  .floating-locator-cta {
+    font-size: 0.78rem;
+    padding: 8px 14px;
+    gap: 6px;
+  }
 }

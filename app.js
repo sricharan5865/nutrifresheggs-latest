@@ -145,7 +145,7 @@ function initProductCarousel() {
     if (currentIndex < 0) currentIndex = 0;
 
     const cardWidth = cards[0].offsetWidth;
-    const gap = 30;
+    const gap = window.innerWidth <= 768 ? 16 : 30;
     const moveAmount = (cardWidth + gap) * currentIndex;
     track.style.transform = `translateX(-${moveAmount}px)`;
   };
@@ -168,6 +168,38 @@ function initProductCarousel() {
       updateCarousel();
     }
   });
+
+  // Touch Swipe Support for mobile phones
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  track.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  }, { passive: true });
+
+  track.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    const swipeDistance = touchEndX - touchStartX;
+    if (Math.abs(swipeDistance) > 40) {
+      if (swipeDistance < 0) {
+        // Swipe left -> next
+        const visibleCards = getVisibleCards();
+        const maxIndex = Math.max(0, totalCards - visibleCards);
+        if (currentIndex < maxIndex) {
+          currentIndex++;
+        } else {
+          currentIndex = 0;
+        }
+        updateCarousel();
+      } else {
+        // Swipe right -> prev
+        if (currentIndex > 0) {
+          currentIndex--;
+          updateCarousel();
+        }
+      }
+    }
+  }, { passive: true });
 
   window.addEventListener('resize', updateCarousel);
 }
