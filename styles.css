@@ -2675,17 +2675,17 @@ h1, h2, h3, h4, h5, h6 {
 
 .happy-curve-flow-container {
   position: relative;
-  max-width: 1100px;
+  max-width: 1040px;
   margin: 0 auto;
-  padding: 20px 0;
+  padding: 30px 0 10px;
 }
 
 .happy-curve-dotted-svg {
   position: absolute;
-  top: 48%;
+  top: 38%;
   left: 0;
   width: 100%;
-  height: 320px;
+  height: 280px;
   transform: translateY(-50%);
   pointer-events: none;
   z-index: 1;
@@ -2694,8 +2694,8 @@ h1, h2, h3, h4, h5, h6 {
 .happy-pillars-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  max-width: 980px;
+  gap: 20px;
+  max-width: 960px;
   margin: 0 auto;
   position: relative;
   z-index: 2;
@@ -2703,15 +2703,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .pillar-card-trough-1 {
-  margin-top: 60px;
+  margin-top: 50px;
 }
 
 .pillar-card-crest-2 {
-  margin-top: -25px;
+  margin-top: -30px;
 }
 
 .pillar-card-trough-3 {
-  margin-top: 60px;
+  margin-top: 50px;
 }
 
 .happy-circle-card {
