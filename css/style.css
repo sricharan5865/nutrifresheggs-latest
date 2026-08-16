@@ -562,6 +562,11 @@ h1, h2, h3, h4, h5, h6 {
   background: transparent !important;
 }
 
+.happy-header-layout nav,
+.happy-header-layout .nav-links {
+  display: none !important;
+}
+
 .happy-nav-container {
   display: flex;
   align-items: center;
@@ -624,6 +629,14 @@ h1, h2, h3, h4, h5, h6 {
   height: 4px;
   background: repeating-linear-gradient(90deg, #FFB71B 0px, #FFB71B 8px, transparent 8px, transparent 12px);
   border-radius: 0 0 2px 2px;
+}
+
+.curved-headline-svg,
+.hero-bottom-actions,
+.hero-sound-toggle,
+.floating-cta-btn,
+.floating-locator-cta {
+  display: none !important;
 }
 
 .happy-hero-fullscreen {
