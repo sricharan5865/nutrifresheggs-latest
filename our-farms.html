@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Farms & Welfare Standards | Nutrifresh Eggs</title>
+  <meta name="description" content="Explore Nutrifresh Eggs' ethical farm standards: 21.8 sq ft of pasture per hen, solar-powered barns, regenerative agriculture, and American Humane Certified family farms.">
+  <link rel="icon" type="image/png" href="assets/favicon-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="header-left">
+        <button class="drawer-trigger drawer-toggle" id="menuToggle" aria-label="Open Navigation Menu" aria-expanded="false">
+          <div class="hamburger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <span>Menu</span>
+        </button>
+        <a href="index.html" class="logo-brand" aria-label="Nutrifresh Homepage">
+          <img src="assets/images/nutrifresh-logo-hires.png" alt="Nutrifresh - Premium Quality Free Range Eggs" class="brand-logo-img">
+        </a>
+      </div>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Our Eggs</a></li>
+          <li><a href="our-farms.html" class="active">Our Farms</a></li>
+          <li><a href="store-locator.html">Find In Store</a></li>
+          <li><a href="recipes.html">Recipes</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-right">
+        <a href="store-locator.html" class="btn btn-primary btn-carton-shape nav-cta">
+          <span>Get Nutrifresh</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Slideout Drawer -->
+  <div class="drawer-overlay" id="drawerOverlay">
+    <div class="slideout-drawer" id="navDrawer" role="dialog" aria-modal="true" aria-label="Navigation Drawer">
+      <div class="drawer-header">
+        <a href="index.html" class="logo-brand" aria-label="Nutrifresh Homepage">
+          <img src="assets/images/nutrifresh-logo-hires.png" alt="Nutrifresh - Premium Quality Free Range Eggs" class="brand-logo-img" style="height: 46px;">
+        </a>
+        <button class="drawer-close" id="drawerClose" aria-label="Close menu">&times;</button>
+      </div>
+
+      <div class="drawer-body">
+        <ul class="drawer-nav-list">
+          <li><a href="index.html">Home <span>→</span></a></li>
+          <li><a href="products.html">Our Eggs <span>→</span></a></li>
+          <li><a href="our-farms.html">Our Farms <span>→</span></a></li>
+          <li><a href="recipes.html">Farm Kitchen Recipes <span>→</span></a></li>
+          <li><a href="store-locator.html">Find In Store <span>→</span></a></li>
+          <li><a href="products.html#traceability">Traceability <span>→</span></a></li>
+        </ul>
+
+        <div class="drawer-cartons-section">
+          <div class="drawer-cartons-title">Explore Our Cartons</div>
+          <div class="drawer-cartons-grid">
+            <a href="products.html#heritage" class="drawer-carton-item">
+              <img src="assets/images/heritage-carton.jpg" alt="Heritage Amber Carton">
+              <span>Heritage Amber</span>
+            </a>
+            <a href="products.html#pasture" class="drawer-carton-item">
+              <img src="assets/images/pasture-carton.jpg" alt="Pasture Raised Carton">
+              <span>Pasture Raised</span>
+            </a>
+            <a href="products.html#organic" class="drawer-carton-item">
+              <img src="assets/images/organic-carton.jpg" alt="Organic Free Range Carton">
+              <span>Organic Free Range</span>
+            </a>
+            <a href="products.html#freerange" class="drawer-carton-item">
+              <img src="assets/images/freerange-carton.jpg" alt="Free Range Carton">
+              <span>Free Range Brown</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="drawer-footer">
+        <p style="font-weight: 700; font-size: 0.9rem; color: var(--deep-navy);">Connect with @NutrifreshEggs</p>
+        <div class="drawer-socials">
+          <a href="https://www.instagram.com/nutrifresheggs?igsh=MWg3OXlhZmRjcnI1ZA==" target="_blank" rel="noopener noreferrer" class="drawer-social-btn" aria-label="Instagram">📸</a>
+          <a href="https://www.instagram.com/nutrifresheggs?igsh=MWg3OXlhZmRjcnI1ZA==" target="_blank" rel="noopener noreferrer" class="drawer-social-btn" aria-label="TikTok">🎵</a>
+          <a href="https://www.instagram.com/nutrifresheggs?igsh=MWg3OXlhZmRjcnI1ZA==" target="_blank" rel="noopener noreferrer" class="drawer-social-btn" aria-label="YouTube">▶️</a>
+          <a href="https://www.instagram.com/nutrifresheggs?igsh=MWg3OXlhZmRjcnI1ZA==" target="_blank" rel="noopener noreferrer" class="drawer-social-btn" aria-label="Facebook">📘</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="script-text" style="color: var(--primary-yellow); font-size: 2rem;">SUREGROW FARMS Pvt. Ltd. — Est. 2015</span>
+      <h1>Farming with Integrity</h1>
+      <p>Mission Statement: To engage in Sustainable and environment-friendly agricultural practices to produce healthy and nutritious food products with utmost care for animal well-being.</p>
+    </div>
+  </section>
+
+  <!-- Farm Story Block 1 -->
+  <section class="farm-story-block">
+    <div class="container">
+      <div class="farm-story-grid">
+        <div>
+          <span class="section-tag">Ethical & Humane</span>
+          <h2>Not All Eggs Are Made Equal</h2>
+          <p>It’s a sad reality of today’s egg industry that most egg-laying hens spend their whole lives in cramped wire cages in huge factory factories, which is cruel and inhumane. Commercial eggs from these factories have almost negligible nutritional value and are ridden with chemicals.</p>
+          <p><strong>SUREGROW FARMS Pvt. Ltd.</strong> was started in 2015 to be the change in the agricultural landscape. Our free range hens live in spacious barns with ample space to roam, scratch, roost and exhibit their natural behaviors.</p>
+
+          <div class="farm-badge-grid">
+            <div class="farm-badge-box">
+              <h4>🐔 Only Female Hens & Color Birds</h4>
+              <p style="font-size: 0.9rem; color: var(--muted-text);">We raise healthy colored heritage breeds that lay thick, natural brown-shelled eggs.</p>
+            </div>
+            <div class="farm-badge-box">
+              <h4>🌱 100% Vegetarian Feed</h4>
+              <p style="font-size: 0.9rem; color: var(--muted-text);">Natural green forage, herbs, insects, and whole grains. Zero animal byproducts.</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <img src="assets/images/hens-pasture.jpg" alt="Nutrifresh Pasture Hens" style="border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); border: 6px solid var(--white);">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Farm Story Block 2 -->
+  <section class="farm-story-block" style="background: var(--cream-alt);">
+    <div class="container">
+      <div class="farm-story-grid" style="grid-template-columns: 1fr 1.1fr;">
+        <div style="order: 2;">
+          <span class="section-tag">Zero Hormones or Antibiotics</span>
+          <h2>Ethical Animal Well-Being</h2>
+          <p>Our hens are <strong>never treated with growth hormones, antibiotics, steroids or growth enhancers</strong> to artificially increase their weight or egg production. We firmly believe that healthy chickens lay nutritious eggs.</p>
+          <p>They enjoy large outdoor pastures with plenty of fresh air, sunshine, and natural exercise, significantly reducing stress and resulting in golden-yellow to rich amber yolks loaded with vitamins.</p>
+          
+          <div style="margin-top: 24px;">
+            <a href="https://www.instagram.com/nutrifresheggs?igsh=MWg3OXlhZmRjcnI1ZA==" target="_blank" rel="noopener noreferrer" class="btn btn-orange">Follow Our Farm on Instagram @nutrifresheggs →</a>
+          </div>
+        </div>
+
+        <div style="order: 1;">
+          <img src="assets/images/nutrifresh_farmer_pasture.jpg" alt="Nutrifresh Farmer in Field" style="border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); border: 6px solid var(--white);">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Nutritional Highlights -->
+  <section class="nutrition-power-section">
+    <div class="container">
+      <div class="nutrition-power-header">
+        <span class="section-tag">Proven Nutritional Value</span>
+        <h2>Nutrifresh Pasture-Raised Difference</h2>
+        <p>Compared to commercial factory eggs, our free range pasture eggs deliver vastly superior nutrition:</p>
+      </div>
+
+      <div class="nutrition-facts-grid">
+        <div class="nutrition-fact-card">
+          <div class="fact-big-stat">⅓ Less</div>
+          <div class="fact-label">Cholesterol</div>
+          <div class="fact-subtext">Clean & heart friendly</div>
+        </div>
+
+        <div class="nutrition-fact-card">
+          <div class="fact-big-stat">¼ Less</div>
+          <div class="fact-label">Saturated Fat</div>
+          <div class="fact-subtext">Lighter nutritional profile</div>
+        </div>
+
+        <div class="nutrition-fact-card">
+          <div class="fact-big-stat">⅔ More</div>
+          <div class="fact-label">Vitamin A</div>
+          <div class="fact-subtext">For cellular vitality</div>
+        </div>
+
+        <div class="nutrition-fact-card">
+          <div class="fact-big-stat">3x More</div>
+          <div class="fact-label">Vitamin E</div>
+          <div class="fact-subtext">Essential antioxidant</div>
+        </div>
+
+        <div class="nutrition-fact-card">
+          <div class="fact-big-stat">7x More</div>
+          <div class="fact-label">Beta Carotene</div>
+          <div class="fact-subtext">Rich golden yolk color</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       Standardized Global Footer
+       ========================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <!-- Brand & Social Column -->
+        <div class="footer-brand">
+          <div class="logo-brand" style="margin-bottom: 16px;">
+            <a href="index.html" class="logo-brand" aria-label="Nutrifresh Homepage">
+              <img src="assets/images/nutrifresh-logo-hires-white.png" alt="Nutrifresh - Premium Quality Free Range Eggs" class="brand-logo-img-white">
+            </a>
+          </div>
+          <p><strong>Nutrifresh Eggs</strong> is a brand by <strong>SUREGROW FARMS Pvt. Ltd.</strong> (Est. 2015). We are committed to ethical animal well-being, sustainable agriculture, and farming with integrity to produce the healthiest, most flavorful free range eggs.</p>
+          <div class="drawer-socials">
+            <a href="https://www.instagram.com/nutrifresheggs?igsh=MWg3OXlhZmRjcnI1ZA==" target="_blank" rel="noopener noreferrer" class="drawer-social-btn" aria-label="Instagram">📸</a>
+            <a href="https://www.instagram.com/nutrifresheggs?igsh=MWg3OXlhZmRjcnI1ZA==" target="_blank" rel="noopener noreferrer" class="drawer-social-btn" aria-label="TikTok">🎵</a>
+            <a href="https://www.instagram.com/nutrifresheggs?igsh=MWg3OXlhZmRjcnI1ZA==" target="_blank" rel="noopener noreferrer" class="drawer-social-btn" aria-label="YouTube">▶️</a>
+            <a href="https://www.instagram.com/nutrifresheggs?igsh=MWg3OXlhZmRjcnI1ZA==" target="_blank" rel="noopener noreferrer" class="drawer-social-btn" aria-label="Facebook">📘</a>
+          </div>
+        </div>
+
+        <!-- Column 1: Our Standards & Products -->
+        <div class="footer-col">
+          <h4>Our Standards</h4>
+          <ul class="footer-links">
+            <li><a href="products.html">Free Range Eggs</a></li>
+            <li><a href="products.html#heritage">Heritage Breed (Grade 15)</a></li>
+            <li><a href="products.html#pasture">Pasture-Raised (21.8 sq ft)</a></li>
+            <li><a href="products.html#organic">USDA Certified Organic</a></li>
+            <li><a href="our-farms.html">Zero Added Hormones</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 2: Suregrow Farms Navigation -->
+        <div class="footer-col">
+          <h4>SUREGROW FARMS</h4>
+          <ul class="footer-links">
+            <li><a href="our-farms.html">About Suregrow Farms</a></li>
+            <li><a href="our-farms.html">Farming with Integrity</a></li>
+            <li><a href="recipes.html">Farm Kitchen Recipes</a></li>
+            <li><a href="store-locator.html">Store Locator &amp; Map</a></li>
+            <li><a href="https://www.instagram.com/nutrifresheggs?igsh=MWg3OXlhZmRjcnI1ZA==" target="_blank" rel="noopener noreferrer">Instagram @nutrifresheggs</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Newsletter Signup Form -->
+        <div class="footer-col footer-newsletter-col">
+          <h4>Sunny Morning Club</h4>
+          <p style="font-size: 0.92rem; color: #CBD5E1; margin-bottom: 14px; line-height: 1.5;">Subscribe for fresh pasture updates, delicious chef recipes, and exclusive breakfast coupons.</p>
+          <form class="newsletter-form" id="footerNewsletter" novalidate onsubmit="event.preventDefault();">
+            <div class="newsletter-input-group">
+              <input type="email" id="newsletterEmail" class="newsletter-input" placeholder="Enter your email address" aria-label="Email address for newsletter" required autocomplete="email">
+              <button type="submit" class="btn btn-primary newsletter-submit-btn" aria-label="Subscribe to Sunny Morning Club">
+                <span>Subscribe</span>
+              </button>
+            </div>
+            <div class="newsletter-feedback" id="newsletterFeedback" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Footer Bottom & Legal Links -->
+      <div class="footer-bottom">
+        <div>© 2026 SUREGROW FARMS Pvt. Ltd. | Nutrifresh Premium Quality Free Range Eggs. All Rights Reserved.</div>
+        <div class="footer-legal-links" style="display: flex; gap: 18px; flex-wrap: wrap; align-items: center;">
+          <a href="#legalModal" class="legal-link-btn" data-legal-tab="privacy">Privacy Policy</a>
+          <span class="legal-sep" aria-hidden="true">•</span>
+          <a href="#legalModal" class="legal-link-btn" data-legal-tab="terms">Terms of Service</a>
+          <span class="legal-sep" aria-hidden="true">•</span>
+          <a href="#legalModal" class="legal-link-btn" data-legal-tab="accessibility">Accessibility</a>
+          <span class="legal-sep" aria-hidden="true">•</span>
+          <a href="#legalModal" class="legal-link-btn" data-legal-tab="cookies">Cookie Settings</a>
+          <span class="legal-sep" aria-hidden="true">•</span>
+          <a href="https://www.instagram.com/nutrifresheggs?igsh=MWg3OXlhZmRjcnI1ZA==" target="_blank" rel="noopener noreferrer" style="color: var(--primary-yellow); font-weight: 700;">Instagram @nutrifresheggs</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating 'Get Nutrifresh' CTA Button -->
+  <a href="store-locator.html" class="floating-cta-btn floating-locator-cta" aria-label="Find Nutrifresh Eggs in Store">
+    <span>🛒</span>
+    <span>Get Nutrifresh</span>
+  </a>
+
+  <!-- ==========================================
+       Interactive Legal & Compliance Modal
+       ========================================== -->
+  <div class="modal-overlay legal-modal-overlay" id="legalModal" role="dialog" aria-modal="true" aria-labelledby="legalModalTitle" aria-hidden="true">
+    <div class="legal-modal-card">
+      <!-- Header -->
+      <div class="legal-modal-header">
+        <div class="legal-header-brand">
+          <span class="legal-badge">SUREGROW FARMS PVT. LTD.</span>
+          <h2 id="legalModalTitle" class="legal-modal-title">Legal &amp; Compliance Information</h2>
+        </div>
+        <button type="button" class="legal-modal-close" id="closeLegalModal" aria-label="Close Legal Information Modal">&times;</button>
+      </div>
+
+      <!-- Tab Bar -->
+      <div class="legal-modal-tabs legal-tabs" role="tablist" aria-label="Legal Sections">
+        <button type="button" class="legal-tab-btn active" role="tab" id="tabBtnPrivacy" aria-selected="true" aria-controls="tabPanelPrivacy" data-tab="privacy">
+          <span class="tab-icon">🔒</span> Privacy Policy
+        </button>
+        <button type="button" class="legal-tab-btn" role="tab" id="tabBtnTerms" aria-selected="false" aria-controls="tabPanelTerms" data-tab="terms">
+          <span class="tab-icon">📜</span> Terms of Service
+        </button>
+        <button type="button" class="legal-tab-btn" role="tab" id="tabBtnAccessibility" aria-selected="false" aria-controls="tabPanelAccessibility" data-tab="accessibility">
+          <span class="tab-icon">♿</span> Accessibility
+        </button>
+        <button type="button" class="legal-tab-btn" role="tab" id="tabBtnCookies" aria-selected="false" aria-controls="tabPanelCookies" data-tab="cookies">
+          <span class="tab-icon">🍪</span> Cookie Settings
+        </button>
+      </div>
+
+      <!-- Tab Panels Body -->
+      <div class="legal-modal-body">
+        <!-- 1. Privacy Policy Panel -->
+        <div class="legal-tab-panel active" id="tabPanelPrivacy" role="tabpanel" aria-labelledby="tabBtnPrivacy">
+          <h3>Privacy Policy</h3>
+          <p class="legal-meta">Last Updated: January 1, 2026 | Effective for Suregrow Farms Pvt. Ltd. &amp; Nutrifresh Eggs</p>
+          <div class="legal-content-block">
+            <h4>1. Information We Collect</h4>
+            <p>Suregrow Farms Pvt. Ltd. collects information you voluntarily provide, such as your email address when subscribing to the Sunny Morning Club newsletter, and ZIP/city queries entered in our Store Locator.</p>
+            
+            <h4>2. How We Use Your Information</h4>
+            <p>We use your information exclusively to deliver farm news, recipes, and store distribution updates. We never sell, rent, or trade your personal data to third-party brokers or advertisers.</p>
+            
+            <h4>3. Data Security &amp; Storage</h4>
+            <p>All data is transmitted via industry-standard TLS encryption. You may unsubscribe from communications at any time by clicking the unsubscribe link or contacting <a href="mailto:privacy@suregrowfarms.com">privacy@suregrowfarms.com</a>.</p>
+          </div>
+        </div>
+
+        <!-- 2. Terms of Service Panel -->
+        <div class="legal-tab-panel" id="tabPanelTerms" role="tabpanel" aria-labelledby="tabBtnTerms" hidden>
+          <h3>Terms of Service</h3>
+          <p class="legal-meta">Governing use of nutrifresheggs.com and Suregrow Farms digital properties</p>
+          <div class="legal-content-block">
+            <h4>1. Acceptance of Terms</h4>
+            <p>By accessing or utilizing any part of this website, you agree to comply with these terms, all applicable agricultural trade standards, and consumer protection laws.</p>
+            
+            <h4>2. Intellectual Property &amp; Trademarks</h4>
+            <p>All trademarks, brand names, product packaging designs, photography, and original farm stories are the proprietary assets of SUREGROW FARMS Pvt. Ltd. (Est. 2015). Unauthorized reproduction is prohibited.</p>
+            
+            <h4>3. Nutritional Transparency &amp; Farm Claims</h4>
+            <p>Nutritional metrics, yolk color scales, and animal welfare metrics (21.8 sq ft pasture per hen) reflect our standard pasture-raised farming practices certified by American Humane Certified™ and USDA Organic programs.</p>
+          </div>
+        </div>
+
+        <!-- 3. Accessibility Statement Panel -->
+        <div class="legal-tab-panel" id="tabPanelAccessibility" role="tabpanel" aria-labelledby="tabBtnAccessibility" hidden>
+          <h3>Accessibility Statement</h3>
+          <p class="legal-meta">Our Commitment to Universal Web Accessibility (WCAG 2.1 AA Standard)</p>
+          <div class="legal-content-block">
+            <h4>1. Standards &amp; Measures</h4>
+            <p>Nutrifresh Eggs is dedicated to ensuring digital accessibility for people with disabilities. We continually improve the user experience for everyone and apply relevant accessibility standards, aiming for full WCAG 2.1 Level AA conformance.</p>
+            
+            <h4>2. Assistive Technology Support</h4>
+            <p>Features include semantic HTML5 landmarks, complete keyboard navigability (Tab/Shift+Tab/ESC), high-contrast text ratios exceeding 4.5:1, screen-reader aria labels on all interactive buttons and modals.</p>
+            
+            <h4>3. Accessibility Feedback</h4>
+            <p>We welcome your feedback on the accessibility of our site. Please email our accessibility coordinator at <a href="mailto:accessibility@suregrowfarms.com">accessibility@suregrowfarms.com</a>.</p>
+          </div>
+        </div>
+
+        <!-- 4. Cookie Settings Panel -->
+        <div class="legal-tab-panel" id="tabPanelCookies" role="tabpanel" aria-labelledby="tabBtnCookies" hidden>
+          <h3>Cookie Settings &amp; Preferences</h3>
+          <p class="legal-meta">Manage your privacy and data collection preferences</p>
+          
+          <div class="cookie-options-list">
+            <div class="cookie-option-card">
+              <div class="cookie-option-info">
+                <h4>Essential &amp; Functional Cookies</h4>
+                <p>Required for basic site navigation, video audio state, drawer operation, and security. Cannot be disabled.</p>
+              </div>
+              <div class="cookie-toggle-wrap">
+                <span class="cookie-status-badge locked">Always Active</span>
+              </div>
+            </div>
+
+            <div class="cookie-option-card">
+              <div class="cookie-option-info">
+                <h4>Analytics &amp; Performance Cookies</h4>
+                <p>Helps us understand how visitors interact with our recipe directory and store finder to improve load times and user experience.</p>
+              </div>
+              <div class="cookie-toggle-wrap">
+                <label class="toggle-switch">
+                  <input type="checkbox" id="cookieAnalyticsToggle" checked>
+                  <span class="toggle-slider"></span>
+                </label>
+              </div>
+            </div>
+
+            <div class="cookie-option-card">
+              <div class="cookie-option-info">
+                <h4>Marketing &amp; Social Media Cookies</h4>
+                <p>Enables Instagram embed feeds, recipe sharing, and localized grocery store retail campaigns.</p>
+              </div>
+              <div class="cookie-toggle-wrap">
+                <label class="toggle-switch">
+                  <input type="checkbox" id="cookieMarketingToggle" checked>
+                  <span class="toggle-slider"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="cookie-actions-bar">
+            <button type="button" class="btn btn-outline" id="saveCookiePreferencesBtn">Save Preferences</button>
+            <button type="button" class="btn btn-primary" id="acceptAllCookiesBtn">Accept All Cookies</button>
+          </div>
+          <div id="cookieFeedbackMsg" class="cookie-feedback-msg" aria-live="polite"></div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="legal-modal-footer">
+        <div class="legal-footer-note">SUREGROW FARMS Pvt. Ltd. • Certified Organic &amp; Pasture-Raised Integrity</div>
+        <button type="button" class="btn btn-navy" id="dismissLegalModalBtn">Close Window</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

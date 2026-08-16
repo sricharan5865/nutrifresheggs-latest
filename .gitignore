@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.env
+
+# Large frame directories (not needed for web)
+video_frames/
+processed_frames/
+temp_frames/
+temp_frames_inspect/
+text_overlay_frames/
+frames_4k/
+frames_bright/
+frames_pure_bright/
+frames_all_text/
+
+# Preview images (local dev only)
+preview_*.png
+
+# Netlify build cache
+.netlify/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Agent metadata
+.agents/
+tests/__pycache__/

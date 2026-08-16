@@ -1,0 +1,966 @@
+{
+  "timestamp": "2026-08-16T08:41:06Z",
+  "base_url": "http://127.0.0.1:3000",
+  "summary": {
+    "total": 182,
+    "passed": 182,
+    "failed": 0,
+    "errors": 0,
+    "elapsed_sec": 8.234,
+    "success": true
+  },
+  "tiers": [
+    {
+      "tier": "Tier 1: Feature Coverage",
+      "total": 80,
+      "passed": 80,
+      "failed": 0,
+      "errors": 0,
+      "elapsed_sec": 3.49,
+      "failures": [],
+      "errors_list": []
+    },
+    {
+      "tier": "Tier 2: Boundaries & Corners",
+      "total": 80,
+      "passed": 80,
+      "failed": 0,
+      "errors": 0,
+      "elapsed_sec": 2.882,
+      "failures": [],
+      "errors_list": []
+    },
+    {
+      "tier": "Tier 3: Cross-Feature Combos",
+      "total": 16,
+      "passed": 16,
+      "failed": 0,
+      "errors": 0,
+      "elapsed_sec": 1.108,
+      "failures": [],
+      "errors_list": []
+    },
+    {
+      "tier": "Tier 4: Real-World Scenarios",
+      "total": 6,
+      "passed": 6,
+      "failed": 0,
+      "errors": 0,
+      "elapsed_sec": 0.755,
+      "failures": [],
+      "errors_list": []
+    }
+  ],
+  "test_records": [
+    {
+      "test": "test_f01_01_header_presence_and_container (tests.test_tier1_features.TestTier1_F01_HeaderNav.test_f01_01_header_presence_and_container)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f01_02_brand_logo_link_and_img (tests.test_tier1_features.TestTier1_F01_HeaderNav.test_f01_02_brand_logo_link_and_img)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f01_03_desktop_nav_links_structure (tests.test_tier1_features.TestTier1_F01_HeaderNav.test_f01_03_desktop_nav_links_structure)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f01_04_active_page_indicator (tests.test_tier1_features.TestTier1_F01_HeaderNav.test_f01_04_active_page_indicator)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f01_05_store_cta_button_in_header (tests.test_tier1_features.TestTier1_F01_HeaderNav.test_f01_05_store_cta_button_in_header)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f02_01_drawer_markup_and_overlay (tests.test_tier1_features.TestTier1_F02_Drawer.test_f02_01_drawer_markup_and_overlay)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f02_02_drawer_trigger_and_close_buttons (tests.test_tier1_features.TestTier1_F02_Drawer.test_f02_02_drawer_trigger_and_close_buttons)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f02_03_drawer_navigation_links (tests.test_tier1_features.TestTier1_F02_Drawer.test_f02_03_drawer_navigation_links)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f02_04_drawer_carton_shortcuts_grid (tests.test_tier1_features.TestTier1_F02_Drawer.test_f02_04_drawer_carton_shortcuts_grid)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f02_05_drawer_social_channel_links (tests.test_tier1_features.TestTier1_F02_Drawer.test_f02_05_drawer_social_channel_links)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f03_01_footer_presence_and_branding (tests.test_tier1_features.TestTier1_F03_Footer.test_f03_01_footer_presence_and_branding)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f03_02_footer_navigation_columns (tests.test_tier1_features.TestTier1_F03_Footer.test_f03_02_footer_navigation_columns)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f03_03_footer_newsletter_form (tests.test_tier1_features.TestTier1_F03_Footer.test_f03_03_footer_newsletter_form)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f03_04_footer_social_links_integrity (tests.test_tier1_features.TestTier1_F03_Footer.test_f03_04_footer_social_links_integrity)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f03_05_footer_copyright_statement (tests.test_tier1_features.TestTier1_F03_Footer.test_f03_05_footer_copyright_statement)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f04_01_meta_charset_and_viewport (tests.test_tier1_features.TestTier1_F04_Brand.test_f04_01_meta_charset_and_viewport)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f04_02_document_title_brand_uniformity (tests.test_tier1_features.TestTier1_F04_Brand.test_f04_02_document_title_brand_uniformity)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f04_03_google_fonts_and_stylesheet_links (tests.test_tier1_features.TestTier1_F04_Brand.test_f04_03_google_fonts_and_stylesheet_links)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f04_04_brand_color_tokens_in_css (tests.test_tier1_features.TestTier1_F04_Brand.test_f04_04_brand_color_tokens_in_css)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f04_05_floating_store_cta_presence (tests.test_tier1_features.TestTier1_F04_Brand.test_f04_05_floating_store_cta_presence)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f05_01_video_element_markup (tests.test_tier1_features.TestTier1_F05_HeroVideo.test_f05_01_video_element_markup)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f05_02_video_source_integrity (tests.test_tier1_features.TestTier1_F05_HeroVideo.test_f05_02_video_source_integrity)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f05_03_hero_video_file_serving (tests.test_tier1_features.TestTier1_F05_HeroVideo.test_f05_03_hero_video_file_serving)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f05_04_curved_svg_headline (tests.test_tier1_features.TestTier1_F05_HeroVideo.test_f05_04_curved_svg_headline)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f05_05_sound_toggle_button (tests.test_tier1_features.TestTier1_F05_HeroVideo.test_f05_05_sound_toggle_button)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f06_01_four_pillar_farm_path_grid (tests.test_tier1_features.TestTier1_F06_FarmIntegrity.test_f06_01_four_pillar_farm_path_grid)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f06_02_pillar_step_badges (tests.test_tier1_features.TestTier1_F06_FarmIntegrity.test_f06_02_pillar_step_badges)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f06_03_five_nutrition_fact_cards (tests.test_tier1_features.TestTier1_F06_FarmIntegrity.test_f06_03_five_nutrition_fact_cards)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f06_04_nutrition_metrics_content (tests.test_tier1_features.TestTier1_F06_FarmIntegrity.test_f06_04_nutrition_metrics_content)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f06_05_official_brand_card_image (tests.test_tier1_features.TestTier1_F06_FarmIntegrity.test_f06_05_official_brand_card_image)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f07_01_carousel_track_and_four_cards (tests.test_tier1_features.TestTier1_F07_ProductCarousel.test_f07_01_carousel_track_and_four_cards)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f07_02_carousel_navigation_controls (tests.test_tier1_features.TestTier1_F07_ProductCarousel.test_f07_02_carousel_navigation_controls)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f07_03_product_card_badges (tests.test_tier1_features.TestTier1_F07_ProductCarousel.test_f07_03_product_card_badges)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f07_04_product_card_ratings_and_stars (tests.test_tier1_features.TestTier1_F07_ProductCarousel.test_f07_04_product_card_ratings_and_stars)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f07_05_product_card_action_buttons (tests.test_tier1_features.TestTier1_F07_ProductCarousel.test_f07_05_product_card_action_buttons)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f08_01_slider_input_element (tests.test_tier1_features.TestTier1_F08_YolkSlider.test_f08_01_slider_input_element)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f08_02_dynamic_yolk_dome_visual (tests.test_tier1_features.TestTier1_F08_YolkSlider.test_f08_02_dynamic_yolk_dome_visual)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f08_03_yolk_grade_pill_display (tests.test_tier1_features.TestTier1_F08_YolkSlider.test_f08_03_yolk_grade_pill_display)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f08_04_yolk_info_panel_titles (tests.test_tier1_features.TestTier1_F08_YolkSlider.test_f08_04_yolk_info_panel_titles)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f08_05_side_by_side_photo_comparison (tests.test_tier1_features.TestTier1_F08_YolkSlider.test_f08_05_side_by_side_photo_comparison)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f09_01_stats_grid_presence (tests.test_tier1_features.TestTier1_F09_StatsCounter.test_f09_01_stats_grid_presence)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f09_02_data_target_attributes (tests.test_tier1_features.TestTier1_F09_StatsCounter.test_f09_02_data_target_attributes)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f09_03_stats_metric_labels (tests.test_tier1_features.TestTier1_F09_StatsCounter.test_f09_03_stats_metric_labels)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f09_04_decimal_target_support (tests.test_tier1_features.TestTier1_F09_StatsCounter.test_f09_04_decimal_target_support)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f09_05_initial_counter_zero_display (tests.test_tier1_features.TestTier1_F09_StatsCounter.test_f09_05_initial_counter_zero_display)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f10_01_reviews_cloud_cards (tests.test_tier1_features.TestTier1_F10_RecipeTeasers.test_f10_01_reviews_cloud_cards)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f10_02_review_authors_and_citations (tests.test_tier1_features.TestTier1_F10_RecipeTeasers.test_f10_02_review_authors_and_citations)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f10_03_home_recipe_teasers_three_cards (tests.test_tier1_features.TestTier1_F10_RecipeTeasers.test_f10_03_home_recipe_teasers_three_cards)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f10_04_recipe_teaser_time_badges (tests.test_tier1_features.TestTier1_F10_RecipeTeasers.test_f10_04_recipe_teaser_time_badges)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f10_05_recipe_teaser_images_serving (tests.test_tier1_features.TestTier1_F10_RecipeTeasers.test_f10_05_recipe_teaser_images_serving)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f11_01_products_page_hero_h1 (tests.test_tier1_features.TestTier1_F11_ProductsShowcase.test_f11_01_products_page_hero_h1)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f11_02_four_carton_sections (tests.test_tier1_features.TestTier1_F11_ProductsShowcase.test_f11_02_four_carton_sections)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f11_03_nutrition_pill_grids (tests.test_tier1_features.TestTier1_F11_ProductsShowcase.test_f11_03_nutrition_pill_grids)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f11_04_carton_images_loading (tests.test_tier1_features.TestTier1_F11_ProductsShowcase.test_f11_04_carton_images_loading)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f11_05_find_in_store_buttons (tests.test_tier1_features.TestTier1_F11_ProductsShowcase.test_f11_05_find_in_store_buttons)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f12_01_page_hero_and_mission (tests.test_tier1_features.TestTier1_F12_OurFarmsStory.test_f12_01_page_hero_and_mission)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f12_02_farm_story_blocks_presence (tests.test_tier1_features.TestTier1_F12_OurFarmsStory.test_f12_02_farm_story_blocks_presence)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f12_03_farm_badge_boxes (tests.test_tier1_features.TestTier1_F12_OurFarmsStory.test_f12_03_farm_badge_boxes)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f12_04_farm_photography_assets (tests.test_tier1_features.TestTier1_F12_OurFarmsStory.test_f12_04_farm_photography_assets)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f12_05_nutrition_highlights_on_our_farms (tests.test_tier1_features.TestTier1_F12_OurFarmsStory.test_f12_05_nutrition_highlights_on_our_farms)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f13_01_filter_tabs_bar_structure (tests.test_tier1_features.TestTier1_F13_RecipesFilter.test_f13_01_filter_tabs_bar_structure)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f13_02_initial_active_tab (tests.test_tier1_features.TestTier1_F13_RecipesFilter.test_f13_02_initial_active_tab)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f13_03_six_recipe_cards_in_grid (tests.test_tier1_features.TestTier1_F13_RecipesFilter.test_f13_03_six_recipe_cards_in_grid)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f13_04_recipe_card_categories (tests.test_tier1_features.TestTier1_F13_RecipesFilter.test_f13_04_recipe_card_categories)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f13_05_recipe_card_images_and_time_badges (tests.test_tier1_features.TestTier1_F13_RecipesFilter.test_f13_05_recipe_card_images_and_time_badges)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f14_01_modal_overlay_and_content_container (tests.test_tier1_features.TestTier1_F14_RecipeModal.test_f14_01_modal_overlay_and_content_container)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f14_02_modal_close_button (tests.test_tier1_features.TestTier1_F14_RecipeModal.test_f14_02_modal_close_button)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f14_03_six_recipe_open_buttons (tests.test_tier1_features.TestTier1_F14_RecipeModal.test_f14_03_six_recipe_open_buttons)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f14_04_appjs_contains_all_six_recipe_objects (tests.test_tier1_features.TestTier1_F14_RecipeModal.test_f14_04_appjs_contains_all_six_recipe_objects)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f14_05_recipe_database_ingredients_and_steps_fields (tests.test_tier1_features.TestTier1_F14_RecipeModal.test_f14_05_recipe_database_ingredients_and_steps_fields)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f15_01_search_input_and_button (tests.test_tier1_features.TestTier1_F15_StoreLocator.test_f15_01_search_input_and_button)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f15_02_store_carton_filter_pills (tests.test_tier1_features.TestTier1_F15_StoreLocator.test_f15_02_store_carton_filter_pills)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f15_03_store_results_list_container (tests.test_tier1_features.TestTier1_F15_StoreLocator.test_f15_03_store_results_list_container)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f15_04_interactive_svg_map_element (tests.test_tier1_features.TestTier1_F15_StoreLocator.test_f15_04_interactive_svg_map_element)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f15_05_five_map_pins_with_numbers (tests.test_tier1_features.TestTier1_F15_StoreLocator.test_f15_05_five_map_pins_with_numbers)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f16_01_root_path_index_serving (tests.test_tier1_features.TestTier1_F16_ServerStreaming.test_f16_01_root_path_index_serving)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f16_02_all_core_html_routes (tests.test_tier1_features.TestTier1_F16_ServerStreaming.test_f16_02_all_core_html_routes)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f16_03_static_assets_mime_types (tests.test_tier1_features.TestTier1_F16_ServerStreaming.test_f16_03_static_assets_mime_types)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f16_04_http206_byte_range_streaming (tests.test_tier1_features.TestTier1_F16_ServerStreaming.test_f16_04_http206_byte_range_streaming)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f16_05_http404_on_nonexistent_route (tests.test_tier1_features.TestTier1_F16_ServerStreaming.test_f16_05_http404_on_nonexistent_route)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f01_b01_rapid_scroll_threshold_logic (tests.test_tier2_boundaries.TestTier2_F01_HeaderNavBoundaries.test_f01_b01_rapid_scroll_threshold_logic)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f01_b02_header_mobile_breakpoint_css (tests.test_tier2_boundaries.TestTier2_F01_HeaderNavBoundaries.test_f01_b02_header_mobile_breakpoint_css)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f01_b03_header_max_width_constraint (tests.test_tier2_boundaries.TestTier2_F01_HeaderNavBoundaries.test_f01_b03_header_max_width_constraint)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f01_b04_hash_fragment_navigation_targets (tests.test_tier2_boundaries.TestTier2_F01_HeaderNavBoundaries.test_f01_b04_hash_fragment_navigation_targets)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f01_b05_zero_dead_links_in_header (tests.test_tier2_boundaries.TestTier2_F01_HeaderNavBoundaries.test_f01_b05_zero_dead_links_in_header)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f02_b01_drawer_escape_key_listener (tests.test_tier2_boundaries.TestTier2_F02_DrawerBoundaries.test_f02_b01_drawer_escape_key_listener)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f02_b02_drawer_body_overflow_lock (tests.test_tier2_boundaries.TestTier2_F02_DrawerBoundaries.test_f02_b02_drawer_body_overflow_lock)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f02_b03_drawer_outside_click_propagation (tests.test_tier2_boundaries.TestTier2_F02_DrawerBoundaries.test_f02_b03_drawer_outside_click_propagation)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f02_b04_drawer_carton_hash_targets_exist (tests.test_tier2_boundaries.TestTier2_F02_DrawerBoundaries.test_f02_b04_drawer_carton_hash_targets_exist)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f02_b05_drawer_carton_image_aspect_ratio (tests.test_tier2_boundaries.TestTier2_F02_DrawerBoundaries.test_f02_b05_drawer_carton_image_aspect_ratio)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f03_b01_newsletter_form_email_validation (tests.test_tier2_boundaries.TestTier2_F03_FooterBoundaries.test_f03_b01_newsletter_form_email_validation)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f03_b02_legal_modal_fallback_integrity (tests.test_tier2_boundaries.TestTier2_F03_FooterBoundaries.test_f03_b02_legal_modal_fallback_integrity)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f03_b03_floating_cta_fixed_positioning_and_zindex (tests.test_tier2_boundaries.TestTier2_F03_FooterBoundaries.test_f03_b03_floating_cta_fixed_positioning_and_zindex)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f03_b04_footer_responsive_column_wrapping (tests.test_tier2_boundaries.TestTier2_F03_FooterBoundaries.test_f03_b04_footer_responsive_column_wrapping)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f03_b05_unicode_emoji_rendering_integrity (tests.test_tier2_boundaries.TestTier2_F03_FooterBoundaries.test_f03_b05_unicode_emoji_rendering_integrity)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f04_b01_logo_hires_and_white_dimensions (tests.test_tier2_boundaries.TestTier2_F04_BrandBoundaries.test_f04_b01_logo_hires_and_white_dimensions)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f04_b02_system_font_fallbacks (tests.test_tier2_boundaries.TestTier2_F04_BrandBoundaries.test_f04_b02_system_font_fallbacks)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f04_b03_global_img_alt_audit (tests.test_tier2_boundaries.TestTier2_F04_BrandBoundaries.test_f04_b03_global_img_alt_audit)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f04_b04_contrast_and_color_tokens (tests.test_tier2_boundaries.TestTier2_F04_BrandBoundaries.test_f04_b04_contrast_and_color_tokens)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f04_b05_meta_descriptions_length_and_quality (tests.test_tier2_boundaries.TestTier2_F04_BrandBoundaries.test_f04_b05_meta_descriptions_length_and_quality)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f05_b01_autoplay_promise_rejection_fallback (tests.test_tier2_boundaries.TestTier2_F05_HeroVideoBoundaries.test_f05_b01_autoplay_promise_rejection_fallback)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f05_b02_video_file_size_and_preservation (tests.test_tier2_boundaries.TestTier2_F05_HeroVideoBoundaries.test_f05_b02_video_file_size_and_preservation)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f05_b03_curved_svg_viewbox_scaling (tests.test_tier2_boundaries.TestTier2_F05_HeroVideoBoundaries.test_f05_b03_curved_svg_viewbox_scaling)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f05_b04_sound_toggle_volume_level (tests.test_tier2_boundaries.TestTier2_F05_HeroVideoBoundaries.test_f05_b04_sound_toggle_volume_level)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f05_b05_video_poster_image_exists (tests.test_tier2_boundaries.TestTier2_F05_HeroVideoBoundaries.test_f05_b05_video_poster_image_exists)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f06_b01_four_pillar_grid_responsive_css (tests.test_tier2_boundaries.TestTier2_F06_FarmIntegrityBoundaries.test_f06_b01_four_pillar_grid_responsive_css)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f06_b02_nutrition_stat_big_text_classes (tests.test_tier2_boundaries.TestTier2_F06_FarmIntegrityBoundaries.test_f06_b02_nutrition_stat_big_text_classes)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f06_b03_caveat_script_text_styling (tests.test_tier2_boundaries.TestTier2_F06_FarmIntegrityBoundaries.test_f06_b03_caveat_script_text_styling)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f06_b04_brand_card_responsive_width (tests.test_tier2_boundaries.TestTier2_F06_FarmIntegrityBoundaries.test_f06_b04_brand_card_responsive_width)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f06_b05_welfare_checklist_structure (tests.test_tier2_boundaries.TestTier2_F06_FarmIntegrityBoundaries.test_f06_b05_welfare_checklist_structure)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f07_b01_next_button_wrap_around_math (tests.test_tier2_boundaries.TestTier2_F07_ProductCarouselBoundaries.test_f07_b01_next_button_wrap_around_math)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f07_b02_prev_button_clamp_at_zero (tests.test_tier2_boundaries.TestTier2_F07_ProductCarouselBoundaries.test_f07_b02_prev_button_clamp_at_zero)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f07_b03_visible_cards_calculation_breakpoints (tests.test_tier2_boundaries.TestTier2_F07_ProductCarouselBoundaries.test_f07_b03_visible_cards_calculation_breakpoints)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f07_b04_carousel_resize_clamping (tests.test_tier2_boundaries.TestTier2_F07_ProductCarouselBoundaries.test_f07_b04_carousel_resize_clamping)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f07_b05_card_badge_distinct_styling (tests.test_tier2_boundaries.TestTier2_F07_ProductCarouselBoundaries.test_f07_b05_card_badge_distinct_styling)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f08_b01_min_boundary_grade_1_rgb_and_tier (tests.test_tier2_boundaries.TestTier2_F08_YolkSliderBoundaries.test_f08_b01_min_boundary_grade_1_rgb_and_tier)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f08_b02_max_boundary_grade_15_rgb_and_tier (tests.test_tier2_boundaries.TestTier2_F08_YolkSliderBoundaries.test_f08_b02_max_boundary_grade_15_rgb_and_tier)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f08_b03_tier_threshold_transitions (tests.test_tier2_boundaries.TestTier2_F08_YolkSliderBoundaries.test_f08_b03_tier_threshold_transitions)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f08_b04_out_of_bounds_clamping (tests.test_tier2_boundaries.TestTier2_F08_YolkSliderBoundaries.test_f08_b04_out_of_bounds_clamping)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f08_b05_yolk_photo_overlay_labels (tests.test_tier2_boundaries.TestTier2_F08_YolkSliderBoundaries.test_f08_b05_yolk_photo_overlay_labels)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f09_b01_unobserve_pattern_in_appjs (tests.test_tier2_boundaries.TestTier2_F09_StatsCounterBoundaries.test_f09_b01_unobserve_pattern_in_appjs)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f09_b02_decimal_precision_tofixed_1 (tests.test_tier2_boundaries.TestTier2_F09_StatsCounterBoundaries.test_f09_b02_decimal_precision_tofixed_1)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f09_b03_integer_counter_math_floor (tests.test_tier2_boundaries.TestTier2_F09_StatsCounterBoundaries.test_f09_b03_integer_counter_math_floor)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f09_b04_intersection_observer_threshold_05 (tests.test_tier2_boundaries.TestTier2_F09_StatsCounterBoundaries.test_f09_b04_intersection_observer_threshold_05)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f09_b05_stats_grid_responsive_styling (tests.test_tier2_boundaries.TestTier2_F09_StatsCounterBoundaries.test_f09_b05_stats_grid_responsive_styling)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f10_b01_instagram_links_target_blank_rel_noopener (tests.test_tier2_boundaries.TestTier2_F10_RecipeTeasersBoundaries.test_f10_b01_instagram_links_target_blank_rel_noopener)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f10_b02_reviews_card_wrap_and_quote_styling (tests.test_tier2_boundaries.TestTier2_F10_RecipeTeasersBoundaries.test_f10_b02_reviews_card_wrap_and_quote_styling)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f10_b03_recipe_teaser_time_badges_format (tests.test_tier2_boundaries.TestTier2_F10_RecipeTeasersBoundaries.test_f10_b03_recipe_teaser_time_badges_format)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f10_b04_recipe_teaser_image_aspect_ratio_styles (tests.test_tier2_boundaries.TestTier2_F10_RecipeTeasersBoundaries.test_f10_b04_recipe_teaser_image_aspect_ratio_styles)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f10_b05_insta_grid_four_cards (tests.test_tier2_boundaries.TestTier2_F10_RecipeTeasersBoundaries.test_f10_b05_insta_grid_four_cards)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f11_b01_anchor_fragments_resolvability (tests.test_tier2_boundaries.TestTier2_F11_ProductsShowcaseBoundaries.test_f11_b01_anchor_fragments_resolvability)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f11_b02_nutrition_pill_labels_content (tests.test_tier2_boundaries.TestTier2_F11_ProductsShowcaseBoundaries.test_f11_b02_nutrition_pill_labels_content)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f11_b03_products_page_floating_cta (tests.test_tier2_boundaries.TestTier2_F11_ProductsShowcaseBoundaries.test_f11_b03_products_page_floating_cta)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f11_b04_yolk_scale_cta_link_back (tests.test_tier2_boundaries.TestTier2_F11_ProductsShowcaseBoundaries.test_f11_b04_yolk_scale_cta_link_back)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f11_b05_all_product_detail_cards_have_badges (tests.test_tier2_boundaries.TestTier2_F11_ProductsShowcaseBoundaries.test_f11_b05_all_product_detail_cards_have_badges)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f12_b01_flex_order_reversal_in_story_block_2 (tests.test_tier2_boundaries.TestTier2_F12_OurFarmsStoryBoundaries.test_f12_b01_flex_order_reversal_in_story_block_2)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f12_b02_instagram_cta_button_url (tests.test_tier2_boundaries.TestTier2_F12_OurFarmsStoryBoundaries.test_f12_b02_instagram_cta_button_url)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f12_b03_badge_grid_two_boxes (tests.test_tier2_boundaries.TestTier2_F12_OurFarmsStoryBoundaries.test_f12_b03_badge_grid_two_boxes)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f12_b04_zero_dead_links_on_our_farms (tests.test_tier2_boundaries.TestTier2_F12_OurFarmsStoryBoundaries.test_f12_b04_zero_dead_links_on_our_farms)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f12_b05_nutrition_cards_match_home_values (tests.test_tier2_boundaries.TestTier2_F12_OurFarmsStoryBoundaries.test_f12_b05_nutrition_cards_match_home_values)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f13_b01_category_filtering_simulation_brunch (tests.test_tier2_boundaries.TestTier2_F13_RecipesFilterBoundaries.test_f13_b01_category_filtering_simulation_brunch)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f13_b02_category_filtering_simulation_quick (tests.test_tier2_boundaries.TestTier2_F13_RecipesFilterBoundaries.test_f13_b02_category_filtering_simulation_quick)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f13_b03_category_filtering_simulation_baking (tests.test_tier2_boundaries.TestTier2_F13_RecipesFilterBoundaries.test_f13_b03_category_filtering_simulation_baking)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f13_b04_category_filtering_simulation_all (tests.test_tier2_boundaries.TestTier2_F13_RecipesFilterBoundaries.test_f13_b04_category_filtering_simulation_all)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f13_b05_filter_btn_active_class_toggle_logic (tests.test_tier2_boundaries.TestTier2_F13_RecipesFilterBoundaries.test_f13_b05_filter_btn_active_class_toggle_logic)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f14_b01_all_six_recipe_keys_in_js_database (tests.test_tier2_boundaries.TestTier2_F14_RecipeModalBoundaries.test_f14_b01_all_six_recipe_keys_in_js_database)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f14_b02_recipe_images_exist_and_serve_200 (tests.test_tier2_boundaries.TestTier2_F14_RecipeModalBoundaries.test_f14_b02_recipe_images_exist_and_serve_200)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f14_b03_body_overflow_lock_and_unlock (tests.test_tier2_boundaries.TestTier2_F14_RecipeModalBoundaries.test_f14_b03_body_overflow_lock_and_unlock)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f14_b04_backdrop_click_dismissal_logic (tests.test_tier2_boundaries.TestTier2_F14_RecipeModalBoundaries.test_f14_b04_backdrop_click_dismissal_logic)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f14_b05_missing_recipe_id_guard (tests.test_tier2_boundaries.TestTier2_F14_RecipeModalBoundaries.test_f14_b05_missing_recipe_id_guard)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f15_b01_empty_query_returns_all_five_stores (tests.test_tier2_boundaries.TestTier2_F15_StoreLocatorBoundaries.test_f15_b01_empty_query_returns_all_five_stores)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f15_b02_whitespace_query_returns_all_stores (tests.test_tier2_boundaries.TestTier2_F15_StoreLocatorBoundaries.test_f15_b02_whitespace_query_returns_all_stores)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f15_b03_non_existent_zip_returns_empty_list (tests.test_tier2_boundaries.TestTier2_F15_StoreLocatorBoundaries.test_f15_b03_non_existent_zip_returns_empty_list)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f15_b04_case_insensitive_store_search (tests.test_tier2_boundaries.TestTier2_F15_StoreLocatorBoundaries.test_f15_b04_case_insensitive_store_search)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f15_b05_carton_filtering_simulation (tests.test_tier2_boundaries.TestTier2_F15_StoreLocatorBoundaries.test_f15_b05_carton_filtering_simulation)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f16_b01_first_byte_only_range_0_0 (tests.test_tier2_boundaries.TestTier2_F16_ServerStreamingBoundaries.test_f16_b01_first_byte_only_range_0_0)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f16_b02_exact_last_byte_range (tests.test_tier2_boundaries.TestTier2_F16_ServerStreamingBoundaries.test_f16_b02_exact_last_byte_range)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f16_b03_open_ended_range (tests.test_tier2_boundaries.TestTier2_F16_ServerStreamingBoundaries.test_f16_b03_open_ended_range)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f16_b04_start_exceeding_file_size_returns_416 (tests.test_tier2_boundaries.TestTier2_F16_ServerStreamingBoundaries.test_f16_b04_start_exceeding_file_size_returns_416)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_f16_b05_directory_traversal_sandbox_escape_returns_403 (tests.test_tier2_boundaries.TestTier2_F16_ServerStreamingBoundaries.test_f16_b05_directory_traversal_sandbox_escape_returns_403)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_t3_01_carousel_details_deep_link_to_products_heritage (tests.test_tier3_combinations.TestTier3_Combinations.test_t3_01_carousel_details_deep_link_to_products_heritage)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_t3_02_yolk_slider_to_store_locator_cta_handoff (tests.test_tier3_combinations.TestTier3_Combinations.test_t3_02_yolk_slider_to_store_locator_cta_handoff)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_t3_03_home_recipe_teaser_to_recipe_modal_flow (tests.test_tier3_combinations.TestTier3_Combinations.test_t3_03_home_recipe_teaser_to_recipe_modal_flow)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_t3_04_store_locator_filter_plus_search_combination (tests.test_tier3_combinations.TestTier3_Combinations.test_t3_04_store_locator_filter_plus_search_combination)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_t3_05_mobile_drawer_open_and_carton_shortcut_navigation (tests.test_tier3_combinations.TestTier3_Combinations.test_t3_05_mobile_drawer_open_and_carton_shortcut_navigation)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_t3_06_video_sound_toggle_and_hero_cta_interaction (tests.test_tier3_combinations.TestTier3_Combinations.test_t3_06_video_sound_toggle_and_hero_cta_interaction)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_t3_07_recipes_category_tab_plus_detail_modal_open (tests.test_tier3_combinations.TestTier3_Combinations.test_t3_07_recipes_category_tab_plus_detail_modal_open)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_t3_08_store_map_pin_selection_and_store_card_sync (tests.test_tier3_combinations.TestTier3_Combinations.test_t3_08_store_map_pin_selection_and_store_card_sync)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_t3_09_footer_newsletter_submit_and_page_stability (tests.test_tier3_combinations.TestTier3_Combinations.test_t3_09_footer_newsletter_submit_and_page_stability)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_t3_10_stats_counter_scroll_plus_brand_card_render (tests.test_tier3_combinations.TestTier3_Combinations.test_t3_10_stats_counter_scroll_plus_brand_card_render)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_t3_11_products_nutrition_pill_consistency_with_yolk_slider (tests.test_tier3_combinations.TestTier3_Combinations.test_t3_11_products_nutrition_pill_consistency_with_yolk_slider)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_t3_12_our_farms_welfare_metrics_match_home_stats (tests.test_tier3_combinations.TestTier3_Combinations.test_t3_12_our_farms_welfare_metrics_match_home_stats)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_t3_13_recipe_modal_close_restores_body_scroll_for_drawer (tests.test_tier3_combinations.TestTier3_Combinations.test_t3_13_recipe_modal_close_restores_body_scroll_for_drawer)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_t3_14_all_pages_header_and_footer_uniform_navigation (tests.test_tier3_combinations.TestTier3_Combinations.test_t3_14_all_pages_header_and_footer_uniform_navigation)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_t3_15_video_streaming_under_simulated_range_scrubbing (tests.test_tier3_combinations.TestTier3_Combinations.test_t3_15_video_streaming_under_simulated_range_scrubbing)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_t3_16_floating_cta_presence_and_viewport_consistency (tests.test_tier3_combinations.TestTier3_Combinations.test_t3_16_floating_cta_presence_and_viewport_consistency)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_scenario_01_consumer_discovery_to_store_purchase (tests.test_tier4_scenarios.TestTier4_Scenarios.test_scenario_01_consumer_discovery_to_store_purchase)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_scenario_02_farm_kitchen_culinary_workflow (tests.test_tier4_scenarios.TestTier4_Scenarios.test_scenario_02_farm_kitchen_culinary_workflow)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_scenario_03_mobile_visitor_responsive_experience (tests.test_tier4_scenarios.TestTier4_Scenarios.test_scenario_03_mobile_visitor_responsive_experience)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_scenario_04_brand_due_diligence_and_nutrition (tests.test_tier4_scenarios.TestTier4_Scenarios.test_scenario_04_brand_due_diligence_and_nutrition)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_scenario_05_video_asset_streaming_and_http_conformance (tests.test_tier4_scenarios.TestTier4_Scenarios.test_scenario_05_video_asset_streaming_and_http_conformance)",
+      "status": "PASS",
+      "error": null
+    },
+    {
+      "test": "test_scenario_06_robustness_and_adversarial_error_recovery (tests.test_tier4_scenarios.TestTier4_Scenarios.test_scenario_06_robustness_and_adversarial_error_recovery)",
+      "status": "PASS",
+      "error": null
+    }
+  ]
+}

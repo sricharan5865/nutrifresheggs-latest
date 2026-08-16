@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120">
+  <path d="M50 10 C 25 10 15 60 15 85 C 15 105 30 115 50 115 C 70 115 85 105 85 85 C 85 60 75 10 50 10 Z" fill="#A4D3E6"/>
+  <!-- Speckles -->
+  <circle cx="35" cy="50" r="2" fill="#5F8EA1" opacity="0.6"/>
+  <circle cx="65" cy="70" r="1.5" fill="#5F8EA1" opacity="0.6"/>
+  <circle cx="45" cy="85" r="2.5" fill="#5F8EA1" opacity="0.5"/>
+  <circle cx="55" cy="40" r="2" fill="#5F8EA1" opacity="0.4"/>
+</svg>

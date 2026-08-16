@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 150">
+      <!-- Carton Base -->
+      <path d="M20 70 L 40 130 H 260 L 280 70 Z" fill="#E8DCD0" stroke="#C2B2A2" stroke-width="2"/>
+      <!-- Carton Lid -->
+      <path d="M15 60 L 25 25 H 275 L 285 60 Z" fill="#5AB4E5"/>
+      <rect x="25" y="25" width="250" height="35" fill="#5AB4E5"/>
+      <!-- Top Label -->
+      <rect x="60" y="30" width="180" height="25" fill="#FFFFFF" rx="4"/>
+      <text x="150" y="47" font-family="sans-serif" font-weight="bold" font-size="10" fill="#1B1C47" text-anchor="middle">nutrifresh eggs</text>
+      <!-- Clasp -->
+      <rect x="135" y="55" width="30" height="15" rx="5" fill="#C2B2A2"/>
+      <circle cx="150" cy="62" r="3" fill="#1B1C47"/>
+    </svg>

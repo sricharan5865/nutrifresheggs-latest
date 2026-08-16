@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 180">
+      <!-- Open Lid (Leaned Back) -->
+      <path d="M15 60 L 30 5 H 270 L 285 60 Z" fill="#FFB71B" opacity="0.9"/>
+      <!-- Label inside Lid -->
+      <rect x="60" y="15" width="180" height="30" fill="#FFFFFF" rx="4"/>
+      <text x="150" y="34" font-family="sans-serif" font-weight="bold" font-size="12" fill="#1B1C47" text-anchor="middle">nutrifresh eggs</text>
+      
+      <!-- Eggs Base (Bottom Tray) -->
+      <path d="M10 100 L 25 160 H 275 L 290 100 Z" fill="#E8DCD0" stroke="#C2B2A2" stroke-width="2"/>
+      
+      <!-- Inside Cups Grid -->
+      <path d="M25 100 C 45 125, 75 125, 95 100 C 115 125, 145 125, 165 100 C 185 125, 215 125, 235 100 C 255 125, 275 125, 290 100" fill="none" stroke="#C2B2A2" stroke-width="3"/>
+      
+      <!-- Eggs inside cups -->
+      <circle cx='60' cy='95' r='18' fill='#D7A17C'/>
+      <circle cx='120' cy='95' r='18' fill='#D7A17C'/>
+      <circle cx='180' cy='95' r='18' fill='#D7A17C'/>
+      <circle cx='240' cy='95' r='18' fill='#D7A17C'/>
+    </svg>

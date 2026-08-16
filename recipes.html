@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Farm Kitchen & Chef Recipes | Nutrifresh Eggs</title>
+  <meta name="description" content="Discover chef-crafted recipes highlighting the velvety texture and deep amber yolk color of Nutrifresh pasture-raised eggs.">
+  <link rel="icon" type="image/png" href="assets/favicon-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Sticky Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="header-left">
+        <button class="drawer-trigger drawer-toggle" id="menuToggle" aria-label="Open Navigation Menu" aria-expanded="false">
+          <div class="hamburger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <span>Menu</span>
+        </button>
+        <a href="index.html" class="logo-brand" aria-label="Nutrifresh Homepage">
+          <img src="assets/images/nutrifresh-logo-hires.png" alt="Nutrifresh - Premium Quality Free Range Eggs" class="brand-logo-img">
+        </a>
+      </div>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Our Eggs</a></li>
+          <li><a href="our-farms.html">Our Farms</a></li>
+          <li><a href="store-locator.html">Find In Store</a></li>
+          <li><a href="recipes.html" class="active">Recipes</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-right">
+        <a href="store-locator.html" class="btn btn-primary btn-carton-shape nav-cta">
+          <span>Get Nutrifresh</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Slideout Drawer -->
+  <div class="drawer-overlay" id="drawerOverlay">
+    <div class="slideout-drawer" id="navDrawer" role="dialog" aria-modal="true" aria-label="Navigation Drawer">
+      <div class="drawer-header">
+        <a href="index.html" class="logo-brand" aria-label="Nutrifresh Homepage">
+          <img src="assets/images/nutrifresh-logo-hires.png" alt="Nutrifresh - Premium Quality Free Range Eggs" class="brand-logo-img" style="height: 46px;">
+        </a>
+        <button class="drawer-close" id="drawerClose" aria-label="Close menu">&times;</button>
+      </div>
+
+      <div class="drawer-body">
+        <ul class="drawer-nav-list">
+          <li><a href="index.html">Home <span>→</span></a></li>
+          <li><a href="products.html">Our Eggs <span>→</span></a></li>
+          <li><a href="our-farms.html">Our Farms <span>→</span></a></li>
+          <li><a href="recipes.html">Farm Kitchen Recipes <span>→</span></a></li>
+          <li><a href="store-locator.html">Find In Store <span>→</span></a></li>
+          <li><a href="products.html#traceability">Traceability <span>→</span></a></li>
+        </ul>
+
+        <div class="drawer-cartons-section">
+          <div class="drawer-cartons-title">Explore Our Cartons</div>
+          <div class="drawer-cartons-grid">
+            <a href="products.html#heritage" class="drawer-carton-item">
+              <img src="assets/images/heritage-carton.jpg" alt="Heritage Amber Carton">
+              <span>Heritage Amber</span>
+            </a>
+            <a href="products.html#pasture" class="drawer-carton-item">
+              <img src="assets/images/pasture-carton.jpg" alt="Pasture Raised Carton">
+              <span>Pasture Raised</span>
+            </a>
+            <a href="products.html#organic" class="drawer-carton-item">
+              <img src="assets/images/organic-carton.jpg" alt="Organic Free Range Carton">
+              <span>Organic Free Range</span>
+            </a>
+            <a href="products.html#freerange" class="drawer-carton-item">
+              <img src="assets/images/freerange-carton.jpg" alt="Free Range Carton">
+              <span>Free Range Brown</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="drawer-footer">
+        <p style="font-weight: 700; font-size: 0.9rem; color: var(--deep-navy);">Connect with @NutrifreshEggs</p>
+        <div class="drawer-socials">
+          <a href="https://www.instagram.com/nutrifresheggs?igsh=MWg3OXlhZmRjcnI1ZA==" target="_blank" rel="noopener noreferrer" class="drawer-social-btn" aria-label="Instagram">📸</a>
+          <a href="https://www.instagram.com/nutrifresheggs?igsh=MWg3OXlhZmRjcnI1ZA==" target="_blank" rel="noopener noreferrer" class="drawer-social-btn" aria-label="TikTok">🎵</a>
+          <a href="https://www.instagram.com/nutrifresheggs?igsh=MWg3OXlhZmRjcnI1ZA==" target="_blank" rel="noopener noreferrer" class="drawer-social-btn" aria-label="YouTube">▶️</a>
+          <a href="https://www.instagram.com/nutrifresheggs?igsh=MWg3OXlhZmRjcnI1ZA==" target="_blank" rel="noopener noreferrer" class="drawer-social-btn" aria-label="Facebook">📘</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="script-text" style="color: var(--primary-yellow); font-size: 2rem;">Farm Kitchen Inspirations</span>
+      <h1>Chef-Tested Egg Recipes</h1>
+      <p>Crack into culinary excellence with recipes specially tailored to celebrate the velvety texture, rich custard notes, and deep sunset-amber yolks of Nutrifresh eggs.</p>
+    </div>
+  </section>
+
+  <!-- Recipe Category Tabs & Grid -->
+  <section class="recipes-section" style="padding: 60px 0 100px;">
+    <div class="container">
+      
+      <!-- Filter Tabs -->
+      <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 48px;">
+        <button class="btn btn-navy recipe-filter-btn active" data-filter="all" style="padding: 10px 24px;">All Recipes</button>
+        <button class="btn btn-outline recipe-filter-btn" data-filter="brunch" style="padding: 10px 24px;">Weekend Brunch</button>
+        <button class="btn btn-outline recipe-filter-btn" data-filter="quick" style="padding: 10px 24px;">Quick 15-Min</button>
+        <button class="btn btn-outline recipe-filter-btn" data-filter="baking" style="padding: 10px 24px;">Baking & Gourmet</button>
+      </div>
+
+      <!-- Recipes Grid -->
+      <div class="recipe-cards-grid" id="recipeCardsGrid">
+        
+        <!-- Recipe 1 -->
+        <div class="recipe-card" data-category="brunch">
+          <div class="recipe-img-holder">
+            <img src="assets/images/nutrifresh_breakfast_dish.jpg" alt="Golden Amber Eggs Benedict">
+            <span class="recipe-time-badge">⏱ 25 Mins</span>
+          </div>
+          <div class="recipe-content">
+            <span class="recipe-category">Brunch Favorite</span>
+            <h3>Sunset Amber Eggs Benedict</h3>
+            <p>Silky lemon-butter hollandaise cascading over softly poached Nutrifresh pasture eggs, Canadian bacon, and toasted sourdough english muffins.</p>
+            <button class="recipe-link open-recipe-modal" data-recipe="benedict" style="background:none; border:none; padding:0; cursor:pointer; text-align:left;">
+              View Full Recipe <span>→</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Recipe 2 -->
+        <div class="recipe-card" data-category="quick">
+          <div class="recipe-img-holder">
+            <img src="assets/images/nutrifresh_egg_tacos.jpg" alt="Charred Corn & Pasture Egg Tacos">
+            <span class="recipe-time-badge">⏱ 15 Mins</span>
+          </div>
+          <div class="recipe-content">
+            <span class="recipe-category">Quick Breakfast</span>
+            <h3>Pasture Breakfast Tacos</h3>
+            <p>Velvety soft-scrambled Nutrifresh eggs on blistered yellow corn tortillas with charred poblano crema, pickled red onions, and fresh cilantro.</p>
+            <button class="recipe-link open-recipe-modal" data-recipe="tacos" style="background:none; border:none; padding:0; cursor:pointer; text-align:left;">
+              View Full Recipe <span>→</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Recipe 3 -->
+        <div class="recipe-card" data-category="brunch">
+          <div class="recipe-img-holder">
+            <img src="assets/images/breakfast-plate.jpg" alt="Cast Iron Skillet Shakshuka">
+            <span class="recipe-time-badge">⏱ 30 Mins</span>
+          </div>
+          <div class="recipe-content">
+            <span class="recipe-category">Weekend Feast</span>
+            <h3>Cast-Iron Farm Shakshuka</h3>
+            <p>Eggs gently simmered in a spiced heirloom tomato, garlic, and sweet bell pepper stew, topped with crumbled feta cheese and za'atar herbs.</p>
+            <button class="recipe-link open-recipe-modal" data-recipe="shakshuka" style="background:none; border:none; padding:0; cursor:pointer; text-align:left;">
+              View Full Recipe <span>→</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Recipe 4 -->
+        <div class="recipe-card" data-category="baking">
+          <div class="recipe-img-holder">
+            <img src="assets/images/nutrifresh_yolk_comparison.jpg" alt="Rich Amber Lemon Curd Tart">
+            <span class="recipe-time-badge">⏱ 45 Mins</span>
+          </div>
+          <div class="recipe-content">
+            <span class="recipe-category">Baking & Dessert</span>
+            <h3>Heritage Amber Lemon Curd</h3>
+            <p>An outrageously vibrant golden curd made with 6 Nutrifresh Heritage yolks, fresh Meyer lemon juice, and pure European butter.</p>
+            <button class="recipe-link open-recipe-modal" data-recipe="curd" style="background:none; border:none; padding:0; cursor:pointer; text-align:left;">
+              View Full Recipe <span>→</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Recipe 5 -->
+        <div class="recipe-card" data-category="quick">
+          <div class="recipe-img-holder">
+            <img src="assets/images/nutrifresh_farmer_pasture.jpg" alt="Jammy Yolk Sourdough Tartine">
+            <span class="recipe-time-badge">⏱ 10 Mins</span>
+          </div>
+          <div class="recipe-content">
+            <span class="recipe-category">Quick Breakfast</span>
+            <h3>Jammy Yolk Avocado Toast</h3>
+            <p>6.5-minute jammy boiled Nutrifresh egg served atop artisanal country loaf with whipped avocado, chili crisp oil, and flaky Maldon sea salt.</p>
+            <button class="recipe-link open-recipe-modal" data-recipe="tartine" style="background:none; border:none; padding:0; cursor:pointer; text-align:left;">
+              View Full Recipe <span>→</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Recipe 6 -->
+        <div class="recipe-card" data-category="baking">
+          <div class="recipe-img-holder">
+            <img src="assets/images/nutrifresh_hens_pasture.jpg" alt="Classic French Omelette">
+            <span class="recipe-time-badge">⏱ 8 Mins</span>
+          </div>
+          <div class="recipe-content">
+            <span class="recipe-category">Culinary Masterclass</span>
+            <h3>Classic French Rolled Omelette</h3>
+            <p>No browning, pure silky golden exterior, and a custardy center seasoned with minced fresh chives and cultured butter.</p>
+            <button class="recipe-link open-recipe-modal" data-recipe="omelette" style="background:none; border:none; padding:0; cursor:pointer; text-align:left;">
+              View Full Recipe <span>→</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Recipe Details Modal -->
+  <div class="drawer-overlay" id="recipeModalOverlay" style="z-index: 3000;">
+    <div style="background: var(--white); width: 90%; max-width: 680px; max-height: 85vh; margin: auto; border-radius: var(--radius-lg); padding: 36px; overflow-y: auto; position: relative; box-shadow: 0 25px 60px rgba(0,0,0,0.3); border: 2px solid var(--border-light);">
+      <button id="closeRecipeModal" style="position: absolute; top: 20px; right: 20px; width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--border-light); background: var(--cream-alt); font-size: 1.2rem; cursor: pointer; display: flex; align-items: center; justify-content: center;">✕</button>
+      <div id="recipeModalContent">
+        <!-- Injected via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       Standardized Global Footer
+       ========================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <!-- Brand & Social Column -->
+        <div class="footer-brand">
+          <div class="logo-brand" style="margin-bottom: 16px;">
+            <a href="index.html" class="logo-brand" aria-label="Nutrifresh Homepage">
+              <img src="assets/images/nutrifresh-logo-hires-white.png" alt="Nutrifresh - Premium Quality Free Range Eggs" class="brand-logo-img-white">
+            </a>
+          </div>
+          <p><strong>Nutrifresh Eggs</strong> is a brand by <strong>SUREGROW FARMS Pvt. Ltd.</strong> (Est. 2015). We are committed to ethical animal well-being, sustainable agriculture, and farming with integrity to produce the healthiest, most flavorful free range eggs.</p>
+          <div class="drawer-socials">
+            <a href="https://www.instagram.com/nutrifresheggs?igsh=MWg3OXlhZmRjcnI1ZA==" target="_blank" rel="noopener noreferrer" class="drawer-social-btn" aria-label="Instagram">📸</a>
+            <a href="https://www.instagram.com/nutrifresheggs?igsh=MWg3OXlhZmRjcnI1ZA==" target="_blank" rel="noopener noreferrer" class="drawer-social-btn" aria-label="TikTok">🎵</a>
+            <a href="https://www.instagram.com/nutrifresheggs?igsh=MWg3OXlhZmRjcnI1ZA==" target="_blank" rel="noopener noreferrer" class="drawer-social-btn" aria-label="YouTube">▶️</a>
+            <a href="https://www.instagram.com/nutrifresheggs?igsh=MWg3OXlhZmRjcnI1ZA==" target="_blank" rel="noopener noreferrer" class="drawer-social-btn" aria-label="Facebook">📘</a>
+          </div>
+        </div>
+
+        <!-- Column 1: Our Standards & Products -->
+        <div class="footer-col">
+          <h4>Our Standards</h4>
+          <ul class="footer-links">
+            <li><a href="products.html">Free Range Eggs</a></li>
+            <li><a href="products.html#heritage">Heritage Breed (Grade 15)</a></li>
+            <li><a href="products.html#pasture">Pasture-Raised (21.8 sq ft)</a></li>
+            <li><a href="products.html#organic">USDA Certified Organic</a></li>
+            <li><a href="our-farms.html">Zero Added Hormones</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 2: Suregrow Farms Navigation -->
+        <div class="footer-col">
+          <h4>SUREGROW FARMS</h4>
+          <ul class="footer-links">
+            <li><a href="our-farms.html">About Suregrow Farms</a></li>
+            <li><a href="our-farms.html">Farming with Integrity</a></li>
+            <li><a href="recipes.html">Farm Kitchen Recipes</a></li>
+            <li><a href="store-locator.html">Store Locator &amp; Map</a></li>
+            <li><a href="https://www.instagram.com/nutrifresheggs?igsh=MWg3OXlhZmRjcnI1ZA==" target="_blank" rel="noopener noreferrer">Instagram @nutrifresheggs</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Newsletter Signup Form -->
+        <div class="footer-col footer-newsletter-col">
+          <h4>Sunny Morning Club</h4>
+          <p style="font-size: 0.92rem; color: #CBD5E1; margin-bottom: 14px; line-height: 1.5;">Subscribe for fresh pasture updates, delicious chef recipes, and exclusive breakfast coupons.</p>
+          <form class="newsletter-form" id="footerNewsletter" novalidate onsubmit="event.preventDefault();">
+            <div class="newsletter-input-group">
+              <input type="email" id="newsletterEmail" class="newsletter-input" placeholder="Enter your email address" aria-label="Email address for newsletter" required autocomplete="email">
+              <button type="submit" class="btn btn-primary newsletter-submit-btn" aria-label="Subscribe to Sunny Morning Club">
+                <span>Subscribe</span>
+              </button>
+            </div>
+            <div class="newsletter-feedback" id="newsletterFeedback" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Footer Bottom & Legal Links -->
+      <div class="footer-bottom">
+        <div>© 2026 SUREGROW FARMS Pvt. Ltd. | Nutrifresh Premium Quality Free Range Eggs. All Rights Reserved.</div>
+        <div class="footer-legal-links" style="display: flex; gap: 18px; flex-wrap: wrap; align-items: center;">
+          <a href="#legalModal" class="legal-link-btn" data-legal-tab="privacy">Privacy Policy</a>
+          <span class="legal-sep" aria-hidden="true">•</span>
+          <a href="#legalModal" class="legal-link-btn" data-legal-tab="terms">Terms of Service</a>
+          <span class="legal-sep" aria-hidden="true">•</span>
+          <a href="#legalModal" class="legal-link-btn" data-legal-tab="accessibility">Accessibility</a>
+          <span class="legal-sep" aria-hidden="true">•</span>
+          <a href="#legalModal" class="legal-link-btn" data-legal-tab="cookies">Cookie Settings</a>
+          <span class="legal-sep" aria-hidden="true">•</span>
+          <a href="https://www.instagram.com/nutrifresheggs?igsh=MWg3OXlhZmRjcnI1ZA==" target="_blank" rel="noopener noreferrer" style="color: var(--primary-yellow); font-weight: 700;">Instagram @nutrifresheggs</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating 'Get Nutrifresh' CTA Button -->
+  <a href="store-locator.html" class="floating-cta-btn floating-locator-cta" aria-label="Find Nutrifresh Eggs in Store">
+    <span>🛒</span>
+    <span>Get Nutrifresh</span>
+  </a>
+
+  <!-- ==========================================
+       Interactive Legal & Compliance Modal
+       ========================================== -->
+  <div class="modal-overlay legal-modal-overlay" id="legalModal" role="dialog" aria-modal="true" aria-labelledby="legalModalTitle" aria-hidden="true">
+    <div class="legal-modal-card">
+      <!-- Header -->
+      <div class="legal-modal-header">
+        <div class="legal-header-brand">
+          <span class="legal-badge">SUREGROW FARMS PVT. LTD.</span>
+          <h2 id="legalModalTitle" class="legal-modal-title">Legal &amp; Compliance Information</h2>
+        </div>
+        <button type="button" class="legal-modal-close" id="closeLegalModal" aria-label="Close Legal Information Modal">&times;</button>
+      </div>
+
+      <!-- Tab Bar -->
+      <div class="legal-modal-tabs legal-tabs" role="tablist" aria-label="Legal Sections">
+        <button type="button" class="legal-tab-btn active" role="tab" id="tabBtnPrivacy" aria-selected="true" aria-controls="tabPanelPrivacy" data-tab="privacy">
+          <span class="tab-icon">🔒</span> Privacy Policy
+        </button>
+        <button type="button" class="legal-tab-btn" role="tab" id="tabBtnTerms" aria-selected="false" aria-controls="tabPanelTerms" data-tab="terms">
+          <span class="tab-icon">📜</span> Terms of Service
+        </button>
+        <button type="button" class="legal-tab-btn" role="tab" id="tabBtnAccessibility" aria-selected="false" aria-controls="tabPanelAccessibility" data-tab="accessibility">
+          <span class="tab-icon">♿</span> Accessibility
+        </button>
+        <button type="button" class="legal-tab-btn" role="tab" id="tabBtnCookies" aria-selected="false" aria-controls="tabPanelCookies" data-tab="cookies">
+          <span class="tab-icon">🍪</span> Cookie Settings
+        </button>
+      </div>
+
+      <!-- Tab Panels Body -->
+      <div class="legal-modal-body">
+        <!-- 1. Privacy Policy Panel -->
+        <div class="legal-tab-panel active" id="tabPanelPrivacy" role="tabpanel" aria-labelledby="tabBtnPrivacy">
+          <h3>Privacy Policy</h3>
+          <p class="legal-meta">Last Updated: January 1, 2026 | Effective for Suregrow Farms Pvt. Ltd. &amp; Nutrifresh Eggs</p>
+          <div class="legal-content-block">
+            <h4>1. Information We Collect</h4>
+            <p>Suregrow Farms Pvt. Ltd. collects information you voluntarily provide, such as your email address when subscribing to the Sunny Morning Club newsletter, and ZIP/city queries entered in our Store Locator.</p>
+            
+            <h4>2. How We Use Your Information</h4>
+            <p>We use your information exclusively to deliver farm news, recipes, and store distribution updates. We never sell, rent, or trade your personal data to third-party brokers or advertisers.</p>
+            
+            <h4>3. Data Security &amp; Storage</h4>
+            <p>All data is transmitted via industry-standard TLS encryption. You may unsubscribe from communications at any time by clicking the unsubscribe link or contacting <a href="mailto:privacy@suregrowfarms.com">privacy@suregrowfarms.com</a>.</p>
+          </div>
+        </div>
+
+        <!-- 2. Terms of Service Panel -->
+        <div class="legal-tab-panel" id="tabPanelTerms" role="tabpanel" aria-labelledby="tabBtnTerms" hidden>
+          <h3>Terms of Service</h3>
+          <p class="legal-meta">Governing use of nutrifresheggs.com and Suregrow Farms digital properties</p>
+          <div class="legal-content-block">
+            <h4>1. Acceptance of Terms</h4>
+            <p>By accessing or utilizing any part of this website, you agree to comply with these terms, all applicable agricultural trade standards, and consumer protection laws.</p>
+            
+            <h4>2. Intellectual Property &amp; Trademarks</h4>
+            <p>All trademarks, brand names, product packaging designs, photography, and original farm stories are the proprietary assets of SUREGROW FARMS Pvt. Ltd. (Est. 2015). Unauthorized reproduction is prohibited.</p>
+            
+            <h4>3. Nutritional Transparency &amp; Farm Claims</h4>
+            <p>Nutritional metrics, yolk color scales, and animal welfare metrics (21.8 sq ft pasture per hen) reflect our standard pasture-raised farming practices certified by American Humane Certified™ and USDA Organic programs.</p>
+          </div>
+        </div>
+
+        <!-- 3. Accessibility Statement Panel -->
+        <div class="legal-tab-panel" id="tabPanelAccessibility" role="tabpanel" aria-labelledby="tabBtnAccessibility" hidden>
+          <h3>Accessibility Statement</h3>
+          <p class="legal-meta">Our Commitment to Universal Web Accessibility (WCAG 2.1 AA Standard)</p>
+          <div class="legal-content-block">
+            <h4>1. Standards &amp; Measures</h4>
+            <p>Nutrifresh Eggs is dedicated to ensuring digital accessibility for people with disabilities. We continually improve the user experience for everyone and apply relevant accessibility standards, aiming for full WCAG 2.1 Level AA conformance.</p>
+            
+            <h4>2. Assistive Technology Support</h4>
+            <p>Features include semantic HTML5 landmarks, complete keyboard navigability (Tab/Shift+Tab/ESC), high-contrast text ratios exceeding 4.5:1, screen-reader aria labels on all interactive buttons and modals.</p>
+            
+            <h4>3. Accessibility Feedback</h4>
+            <p>We welcome your feedback on the accessibility of our site. Please email our accessibility coordinator at <a href="mailto:accessibility@suregrowfarms.com">accessibility@suregrowfarms.com</a>.</p>
+          </div>
+        </div>
+
+        <!-- 4. Cookie Settings Panel -->
+        <div class="legal-tab-panel" id="tabPanelCookies" role="tabpanel" aria-labelledby="tabBtnCookies" hidden>
+          <h3>Cookie Settings &amp; Preferences</h3>
+          <p class="legal-meta">Manage your privacy and data collection preferences</p>
+          
+          <div class="cookie-options-list">
+            <div class="cookie-option-card">
+              <div class="cookie-option-info">
+                <h4>Essential &amp; Functional Cookies</h4>
+                <p>Required for basic site navigation, video audio state, drawer operation, and security. Cannot be disabled.</p>
+              </div>
+              <div class="cookie-toggle-wrap">
+                <span class="cookie-status-badge locked">Always Active</span>
+              </div>
+            </div>
+
+            <div class="cookie-option-card">
+              <div class="cookie-option-info">
+                <h4>Analytics &amp; Performance Cookies</h4>
+                <p>Helps us understand how visitors interact with our recipe directory and store finder to improve load times and user experience.</p>
+              </div>
+              <div class="cookie-toggle-wrap">
+                <label class="toggle-switch">
+                  <input type="checkbox" id="cookieAnalyticsToggle" checked>
+                  <span class="toggle-slider"></span>
+                </label>
+              </div>
+            </div>
+
+            <div class="cookie-option-card">
+              <div class="cookie-option-info">
+                <h4>Marketing &amp; Social Media Cookies</h4>
+                <p>Enables Instagram embed feeds, recipe sharing, and localized grocery store retail campaigns.</p>
+              </div>
+              <div class="cookie-toggle-wrap">
+                <label class="toggle-switch">
+                  <input type="checkbox" id="cookieMarketingToggle" checked>
+                  <span class="toggle-slider"></span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="cookie-actions-bar">
+            <button type="button" class="btn btn-outline" id="saveCookiePreferencesBtn">Save Preferences</button>
+            <button type="button" class="btn btn-primary" id="acceptAllCookiesBtn">Accept All Cookies</button>
+          </div>
+          <div id="cookieFeedbackMsg" class="cookie-feedback-msg" aria-live="polite"></div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="legal-modal-footer">
+        <div class="legal-footer-note">SUREGROW FARMS Pvt. Ltd. • Certified Organic &amp; Pasture-Raised Integrity</div>
+        <button type="button" class="btn btn-navy" id="dismissLegalModalBtn">Close Window</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

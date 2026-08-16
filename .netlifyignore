@@ -1,0 +1,13 @@
+video_frames/
+processed_frames/
+temp_frames/
+temp_frames_inspect/
+text_overlay_frames/
+frames_4k/
+frames_bright/
+frames_pure_bright/
+frames_all_text/
+*.png
+*.jpg
+!assets/**
+server.py
