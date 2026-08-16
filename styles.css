@@ -2957,6 +2957,30 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
 }
 
+.happy-yolk-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.happy-yolk-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3.2rem;
+  font-weight: 900;
+  color: #FFFFFF;
+  letter-spacing: -0.5px;
+  line-height: 1.1;
+  text-transform: lowercase;
+  margin-bottom: 8px;
+}
+
+.happy-yolk-subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.9);
+  margin: 0;
+}
+
 .happy-yolk-scale-box {
   position: relative;
   max-width: 900px;
@@ -3216,9 +3240,27 @@ h1, h2, h3, h4, h5, h6 {
   min-height: 750px;
 }
 
+.happy-mosaic-intro-heading {
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 6;
+}
+
+.happy-flavor-tagline {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #FFB71B;
+  text-transform: lowercase;
+  letter-spacing: 0.5px;
+  margin: 0;
+  text-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
 .happy-diagonal-title-wrap {
   transform: rotate(-13deg);
-  margin-top: 40px;
+  margin-top: 30px;
   margin-bottom: 20px;
   position: relative;
   z-index: 5;
@@ -3409,6 +3451,60 @@ h1, h2, h3, h4, h5, h6 {
 .ernest-signoff span {
   font-size: 0.82rem;
   color: rgba(255,255,255,0.85);
+}
+
+/* ==========================================================================
+   Happy Egg Exact: Store Locator CTA Section
+   ========================================================================== */
+.happy-cta-store-section {
+  background: #FFFFFF;
+  padding: 90px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.happy-cta-store-content {
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.happy-cta-store-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3.4rem;
+  font-weight: 900;
+  color: #081C30;
+  text-transform: lowercase;
+  letter-spacing: -1px;
+  line-height: 1.05;
+  margin-bottom: 14px;
+}
+
+.happy-cta-store-subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #4A5568;
+  margin-bottom: 30px;
+}
+
+.happy-cta-store-btn {
+  background: #FFB71B !important;
+  color: #081C30 !important;
+  font-size: 1.2rem;
+  font-weight: 800;
+  padding: 16px 42px !important;
+  display: inline-flex;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 10px 30px rgba(255, 183, 27, 0.4);
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+.happy-cta-store-btn:hover {
+  background: #FF3D00 !important;
+  color: #FFFFFF !important;
+  transform: translateY(-3px) scale(1.04);
 }
 
 /* ==========================================================================
