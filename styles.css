@@ -2850,8 +2850,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .happy-ribbon-card {
-  flex: 0 0 33.333%;
-  min-width: 33.333%;
+  flex: 0 0 100%;
+  width: 100%;
   padding: 85px 30px 95px;
   display: flex;
   flex-direction: column;
@@ -2863,64 +2863,49 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
 }
 
-@media (max-width: 991px) {
-  .happy-ribbon-card {
-    flex: 0 0 50%;
-    min-width: 50%;
-  }
+.happy-ribbon-card.single-sku-card {
+  flex: 0 0 100%;
+  width: 100%;
+  min-height: 640px;
+  padding: 100px 20px 110px;
+  background: linear-gradient(135deg, #FF3D00 0%, #E62A00 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-@media (max-width: 640px) {
-  .happy-ribbon-card {
-    flex: 0 0 100%;
-    min-width: 100%;
-  }
+.single-sku-card .ribbon-carton-wrap {
+  max-width: 440px;
+  margin-bottom: 24px;
 }
 
-.slide-heritage-blue {
-  background: #0B4F7B;
+.single-sku-card .ribbon-carton-img {
+  max-height: 320px;
+  filter: drop-shadow(0 20px 35px rgba(0,0,0,0.35));
 }
 
-.slide-pasture-red {
-  background: #FF3700;
+.single-sku-card .ribbon-product-title {
+  font-size: clamp(2.8rem, 5.5vw, 4.4rem);
+  line-height: 1.05;
+  margin-bottom: 12px;
 }
 
-.slide-organic-green {
-  background: #27B04D;
+.single-sku-card .ribbon-product-desc {
+  font-size: 1.2rem;
+  line-height: 1.45;
+  margin-bottom: 16px;
+  max-width: 650px;
 }
 
-.slide-freerange-orange {
-  background: #FF8500;
+.single-sku-card .ribbon-rating {
+  font-size: 1.2rem;
+  margin-bottom: 24px;
 }
 
-.ribbon-carton-wrap {
-  position: relative;
-  max-width: 320px;
-  margin-bottom: 20px;
-}
-
-.ribbon-carton-img {
-  max-width: 100%;
-  max-height: 240px;
-  object-fit: contain;
-  filter: drop-shadow(0 16px 28px rgba(0,0,0,0.3));
-  transform: rotate(-3deg);
-  transition: transform 0.35s ease;
-}
-
-.happy-ribbon-card:hover .ribbon-carton-img {
-  transform: scale(1.05) rotate(-1deg);
-}
-
-.ribbon-product-title {
-  font-family: 'Poppins', sans-serif;
-  font-size: 2.6rem;
-  font-weight: 900;
-  color: #FFFFFF;
-  text-transform: lowercase;
-  letter-spacing: -0.5px;
-  line-height: 1.1;
-  margin: 0 0 8px;
+.single-sku-card .ribbon-buy-btn {
+  padding: 14px 44px !important;
+  font-size: 1.15rem;
 }
 
 .ribbon-product-desc {
