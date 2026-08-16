@@ -715,7 +715,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .path-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 32px;
   position: relative;
 }
@@ -2753,6 +2753,13 @@ html, body {
   }
 
   /* Path Grid */
+  .path-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .path-grid::before {
+    display: none;
+  }
   .path-card {
     padding: 28px 20px;
   }
