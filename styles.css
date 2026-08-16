@@ -648,22 +648,30 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background-color: #222222;
+  background-color: #081C30;
 }
 
-.happy-hero-bg-img {
+.hero-video-wrapper {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  overflow: hidden;
   z-index: 1;
+}
+
+.hero-video.happy-fullscreen-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 1 !important;
 }
 
 .happy-hero-scrim {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.05);
+  background: rgba(0, 0, 0, 0.12);
   z-index: 2;
 }
 
