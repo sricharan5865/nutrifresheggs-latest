@@ -2588,6 +2588,679 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ==========================================================================
+   Happy Egg Exact: 3-Pillar Curved Banner (Screenshot 1)
+   ========================================================================== */
+.happy-3pillar-banner {
+  background: linear-gradient(135deg, #FF6600 0%, #FF3D00 50%, #E62A00 100%);
+  padding: 80px 0 110px;
+  position: relative;
+  overflow: hidden;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.happy-banner-headline {
+  font-family: 'Poppins', var(--font-heading), sans-serif;
+  font-size: 3.4rem;
+  font-weight: 900;
+  color: #FFFFFF;
+  letter-spacing: -0.5px;
+  margin-bottom: 30px;
+  text-transform: lowercase;
+}
+
+.happy-curve-flow-container {
+  position: relative;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 30px 0 10px;
+}
+
+.happy-curve-dotted-svg {
+  position: absolute;
+  top: 45%;
+  left: 0;
+  width: 100%;
+  height: 180px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.happy-pillars-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+.happy-circle-card {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.happy-icon-disc {
+  width: 165px;
+  height: 165px;
+  background: #FFFFFF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 14px 35px rgba(0,0,0,0.2);
+  margin-bottom: 22px;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+  padding: 10px;
+}
+
+.happy-icon-disc:hover {
+  transform: scale(1.08) translateY(-6px);
+}
+
+.happy-svg-art {
+  width: 100%;
+  height: 100%;
+}
+
+.happy-pillar-title {
+  font-family: 'Poppins', var(--font-heading), sans-serif;
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.25;
+  margin: 0;
+}
+
+/* ==========================================================================
+   Happy Egg Exact: Full-Width Wavy Multi-Color Slider (Screenshot 2)
+   ========================================================================== */
+.happy-fullwidth-slider-section {
+  padding: 0 !important;
+  background: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+}
+
+.happy-slider-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.happy-slider-viewport {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 0 !important;
+}
+
+.happy-slider-track {
+  display: flex;
+  width: 100%;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+  gap: 0 !important;
+}
+
+.happy-color-slide {
+  flex: 0 0 100%;
+  min-width: 100%;
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  padding: 80px 10%;
+  position: relative;
+  border: none !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  color: #FFFFFF;
+  box-sizing: border-box;
+}
+
+.slide-pasture-red {
+  background: linear-gradient(135deg, #FF3D00 0%, #E62A00 100%);
+}
+
+.slide-organic-green {
+  background: linear-gradient(135deg, #24A647 0%, #1E8C3A 100%);
+}
+
+.slide-freerange-orange {
+  background: linear-gradient(135deg, #FF8500 0%, #E66A00 100%);
+}
+
+.slide-heritage-blue {
+  background: linear-gradient(135deg, #0B4F7B 0%, #073655 100%);
+}
+
+.happy-floating-fried-egg {
+  position: absolute;
+  top: 30px;
+  left: 22%;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+  border: 4px solid #FFFFFF;
+  animation: floatEgg 4s ease-in-out infinite alternate;
+  z-index: 5;
+}
+
+@keyframes floatEgg {
+  from { transform: translateY(0) rotate(-4deg); }
+  to { transform: translateY(-12px) rotate(4deg); }
+}
+
+.happy-sunny-egg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.happy-carton-visual {
+  flex: 1;
+  max-width: 480px;
+  text-align: center;
+}
+
+.happy-carton-img {
+  max-width: 100%;
+  max-height: 380px;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 35px rgba(0,0,0,0.35));
+  transition: transform 0.4s ease;
+}
+
+.happy-color-slide:hover .happy-carton-img {
+  transform: scale(1.05) rotate(-2deg);
+}
+
+.happy-slide-details {
+  flex: 1;
+  max-width: 520px;
+}
+
+.happy-giant-product-title {
+  font-family: 'Poppins', var(--font-heading), sans-serif;
+  font-size: 3.8rem;
+  font-weight: 900;
+  line-height: 1.05;
+  color: #FFFFFF;
+  margin-bottom: 16px;
+  text-transform: lowercase;
+  letter-spacing: -1px;
+}
+
+.happy-stars-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 14px;
+}
+
+.happy-rating-num {
+  font-size: 1.25rem;
+  font-weight: 900;
+}
+
+.happy-stars-badge .product-stars {
+  color: #FFD166;
+  font-size: 1.3rem;
+}
+
+.happy-rating-count {
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+.happy-product-pitch {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.92);
+  line-height: 1.5;
+  margin-bottom: 28px;
+}
+
+.happy-cta-btn {
+  background: #FFB71B !important;
+  color: #081C30 !important;
+  font-size: 1.15rem;
+  font-weight: 800;
+  padding: 14px 36px !important;
+  display: inline-flex;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  transition: all 0.25s ease;
+}
+
+.happy-cta-btn:hover {
+  background: #FFFFFF !important;
+  color: #FF3D00 !important;
+  transform: translateY(-3px) scale(1.04);
+}
+
+.happy-nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.25);
+  backdrop-filter: blur(8px);
+  border: 2px solid rgba(255,255,255,0.6);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.happy-nav-arrow:hover {
+  background: #FFFFFF;
+  color: #FF3D00;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.happy-prev { left: 30px; }
+.happy-next { right: 30px; }
+
+/* ==========================================================================
+   Happy Egg Exact: Deep Blue Yolk Comparison Section (Screenshot 3)
+   ========================================================================== */
+.happy-yolk-comparison-section {
+  background: #0B4F7B;
+  padding: 90px 0 110px;
+  color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+}
+
+.happy-yolk-scale-box {
+  max-width: 820px;
+  margin: 0 auto 60px;
+  text-align: center;
+}
+
+.happy-scale-bracket-wrap {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.scale-brand-tag {
+  font-family: 'Caveat', cursive, sans-serif;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #FFB71B;
+}
+
+.happy-scale-pills-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.scale-dot-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.scale-dot-num {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #FEE440;
+  color: #081C30;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+.pale-yolk-num {
+  background: #FFF59D;
+}
+
+.orange-yolk-num {
+  background: #FF7A00;
+  color: #FFFFFF;
+  width: 50px;
+  height: 50px;
+  font-size: 1.25rem;
+}
+
+.deep-amber-num {
+  background: #E63900;
+  color: #FFFFFF;
+  width: 52px;
+  height: 52px;
+  font-size: 1.3rem;
+  box-shadow: 0 0 20px rgba(255,87,0,0.6);
+}
+
+.scale-dot-caption {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #90E0EF;
+}
+
+.carton-label-tag {
+  font-size: 0.75rem;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.yellow-carton-tag {
+  background: #FFB71B;
+  color: #081C30;
+}
+
+.blue-carton-tag {
+  background: #4CC9F0;
+  color: #081C30;
+}
+
+/* The Ceramic Plate */
+.happy-dual-plate-wrapper {
+  position: relative;
+  max-width: 650px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.happy-ceramic-plate {
+  width: 440px;
+  height: 440px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #FFFFFF 65%, #ECEFF1 95%, #CFD8DC 100%);
+  box-shadow: 0 30px 70px rgba(0,0,0,0.45), inset 0 0 40px rgba(0,0,0,0.06);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 30px;
+}
+
+.happy-fried-egg {
+  position: relative;
+  width: 175px;
+  height: 175px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.egg-crisp-white {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, #FAFAFA 50%, #ECEFF1 90%, #E0E0E0 100%);
+  border-radius: 55% 45% 65% 35% / 45% 55% 45% 55%;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08), inset 0 0 15px rgba(255,255,255,0.9);
+}
+
+.pale-dull-yolk {
+  position: relative;
+  z-index: 2;
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #FFF9C4 0%, #FFEE58 70%, #FDD835 100%);
+  box-shadow: 0 6px 14px rgba(253, 216, 53, 0.35);
+}
+
+.glowing-amber-yolk {
+  position: relative;
+  z-index: 2;
+  width: 86px;
+  height: 86px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #FFA726 0%, #FF5700 75%, #D84315 100%);
+  box-shadow: 0 8px 22px rgba(255, 87, 0, 0.55), inset 3px 3px 6px rgba(255,255,255,0.7);
+}
+
+.glowing-amber-yolk::before {
+  content: '';
+  position: absolute;
+  top: 14px;
+  left: 16px;
+  width: 18px;
+  height: 10px;
+  background: rgba(255,255,255,0.85);
+  border-radius: 50%;
+  transform: rotate(-30deg);
+}
+
+.happy-plate-callout {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.callout-left {
+  top: 25%;
+  left: -90px;
+}
+
+.callout-right {
+  top: 15%;
+  right: -90px;
+}
+
+.callout-arrow-svg {
+  width: 75px;
+  height: 45px;
+}
+
+.callout-text {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-size: 1.4rem;
+  line-height: 1.15;
+}
+
+.text-their-yolks {
+  color: #FFD166;
+}
+
+.text-our-yolks {
+  color: #FFFFFF;
+}
+
+.callout-badge-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.cute-egg-smiley {
+  width: 38px;
+  height: 38px;
+}
+
+/* ==========================================================================
+   Happy Egg Exact: Mosaic Community & Tilted Typography (Screenshot 4)
+   ========================================================================== */
+.happy-mosaic-section {
+  background: #074674;
+  padding: 100px 0 120px;
+  color: #FFFFFF;
+  position: relative;
+  overflow: hidden;
+}
+
+.happy-diagonal-title-wrap {
+  transform: rotate(-3deg);
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.diagonal-title-yellow {
+  font-family: 'Poppins', sans-serif;
+  font-size: 5.5rem;
+  font-weight: 900;
+  color: #FFAC00;
+  letter-spacing: -1.5px;
+  line-height: 0.95;
+  margin: 0;
+  text-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.diagonal-title-white {
+  font-family: 'Poppins', sans-serif;
+  font-size: 5.5rem;
+  font-weight: 900;
+  color: #FFFFFF;
+  letter-spacing: -1.5px;
+  line-height: 0.95;
+  margin: 0;
+  text-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+.happy-scattered-grid {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  align-items: center;
+}
+
+.scatter-photo-card {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 14px 35px rgba(0,0,0,0.35);
+  border: 4px solid #FFFFFF;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.scatter-photo-card:hover {
+  transform: scale(1.08) rotate(0deg);
+  z-index: 10;
+}
+
+.scatter-photo-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-card-1 { transform: rotate(-4deg); }
+.photo-card-2 { transform: rotate(2deg); }
+.photo-card-3 { transform: rotate(5deg); }
+.photo-card-4 { transform: rotate(-3deg); }
+.photo-card-5 { transform: rotate(4deg); }
+.photo-card-6 { transform: rotate(-2deg); }
+
+.scatter-center-social-pill {
+  grid-column: span 4;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.happy-instagram-pill {
+  display: inline-block;
+  background: #FF5500;
+  color: #FFFFFF;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  font-size: 1.1rem;
+  padding: 10px 28px;
+  border-radius: 999px;
+  text-decoration: none;
+  box-shadow: 0 8px 25px rgba(255,85,0,0.45);
+  transition: transform 0.25s ease;
+}
+
+.happy-instagram-pill:hover {
+  transform: scale(1.08);
+  background: #FFB71B;
+  color: #081C30;
+}
+
+.photo-review-card {
+  grid-column: span 2;
+  background: linear-gradient(135deg, #FF6600, #FF3D00);
+  border: 4px solid #FFFFFF;
+  padding: 24px 28px;
+  border-radius: 20px;
+  transform: rotate(2deg);
+}
+
+.ernest-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.ernest-mascot-egg {
+  width: 36px;
+  height: 36px;
+}
+
+.ernest-window-bubbles {
+  display: flex;
+  gap: 6px;
+}
+
+.ernest-window-bubbles span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.4);
+}
+
+.ernest-card-text p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.ernest-signoff strong {
+  display: block;
+  font-size: 1.05rem;
+  color: #FFFFFF;
+  letter-spacing: 0.5px;
+}
+
+.ernest-signoff span {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.85);
+}
+
+/* ==========================================================================
    Responsive Breakpoints & Mobile Optimization
    ========================================================================== */
 
@@ -3065,10 +3738,141 @@ html, body {
   .legal-modal-footer .btn {
     width: 100%;
   }
-  .cookie-option-card {
+  /* Happy Egg Responsive Adjustments */
+  .happy-banner-headline {
+    font-size: 2.1rem;
+    margin-bottom: 24px;
+  }
+  .happy-curve-dotted-svg {
+    display: none;
+  }
+  .happy-pillars-row {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .happy-icon-disc {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 14px;
+  }
+  .happy-pillar-title {
+    font-size: 1.3rem;
+  }
+
+  .happy-color-slide {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
+    padding: 50px 20px 60px;
+    gap: 24px;
+    text-align: center;
+    min-height: auto;
+  }
+  .happy-carton-visual {
+    max-width: 320px;
+  }
+  .happy-carton-img {
+    max-height: 220px;
+  }
+  .happy-slide-details {
+    max-width: 100%;
+  }
+  .happy-giant-product-title {
+    font-size: 2.4rem;
+  }
+  .happy-stars-badge {
+    justify-content: center;
+  }
+  .happy-product-pitch {
+    font-size: 1.05rem;
+    margin-bottom: 20px;
+  }
+  .happy-floating-fried-egg {
+    width: 85px;
+    height: 85px;
+    top: 15px;
+    left: 10%;
+  }
+  .happy-nav-arrow {
+    width: 44px;
+    height: 44px;
+  }
+  .happy-prev { left: 10px; }
+  .happy-next { right: 10px; }
+
+  .happy-yolk-comparison-section {
+    padding: 60px 0 80px;
+  }
+  .happy-scale-pills-row {
+    gap: 8px;
+  }
+  .scale-dot-num {
+    width: 36px;
+    height: 36px;
+    font-size: 0.95rem;
+  }
+  .orange-yolk-num {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+  .deep-amber-num {
+    width: 42px;
+    height: 42px;
+    font-size: 1.05rem;
+  }
+
+  .happy-ceramic-plate {
+    width: 310px;
+    height: 310px;
+    padding: 15px;
+  }
+  .happy-fried-egg {
+    width: 125px;
+    height: 125px;
+  }
+  .pale-dull-yolk {
+    width: 52px;
+    height: 52px;
+  }
+  .glowing-amber-yolk {
+    width: 60px;
+    height: 60px;
+  }
+  .callout-left {
+    left: -15px;
+    top: -40px;
+  }
+  .callout-right {
+    right: -15px;
+    bottom: -40px;
+    top: auto;
+  }
+  .callout-text {
+    font-size: 1.1rem;
+  }
+
+  .happy-mosaic-section {
+    padding: 60px 0 80px;
+  }
+  .diagonal-title-yellow,
+  .diagonal-title-white {
+    font-size: 2.8rem;
+  }
+  .happy-scattered-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  .scatter-photo-card img {
+    height: 150px;
+  }
+  .scatter-center-social-pill {
+    grid-column: span 2;
+  }
+  .photo-review-card {
+    grid-column: span 2;
+    padding: 18px 20px;
+  }
+  .ernest-card-text p {
+    font-size: 1rem;
   }
 }
 

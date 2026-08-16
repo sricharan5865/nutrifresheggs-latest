@@ -131,8 +131,10 @@ function initProductCarousel() {
   let currentIndex = 0;
   const cards = track.querySelectorAll('.product-card');
   const totalCards = cards.length;
+  const isFullWidthSlider = track.classList.contains('happy-slider-track');
 
   const getVisibleCards = () => {
+    if (isFullWidthSlider) return 1;
     if (window.innerWidth <= 768) return 1;
     if (window.innerWidth <= 1024) return 2;
     return 3;
@@ -145,7 +147,7 @@ function initProductCarousel() {
     if (currentIndex < 0) currentIndex = 0;
 
     const cardWidth = cards[0].offsetWidth;
-    const gap = window.innerWidth <= 768 ? 16 : 30;
+    const gap = isFullWidthSlider ? 0 : (window.innerWidth <= 768 ? 16 : 30);
     const moveAmount = (cardWidth + gap) * currentIndex;
     track.style.transform = `translateX(-${moveAmount}px)`;
   };
