@@ -452,105 +452,44 @@
     <div class="container">
       <div class="happy-yolk-header">
         <h2 class="happy-yolk-title">taste the difference</h2>
-        <p class="happy-yolk-subtitle">A quality you can see. A difference you can taste.</p>
       </div>
 
       <!-- Connected Horizontal Yolk Scale -->
       <div class="happy-yolk-scale-box">
-        <div class="scale-dotted-connecting-line"></div>
-
-        <!-- Arch bracket for Happy Eggs -->
-        <div class="happy-scale-arch-bracket">
-          <span class="arch-brand-label">Happy Eggs</span>
-          <div class="arch-dashed-line"></div>
-        </div>
-
-        <div class="happy-scale-pills-row">
-          <!-- Dot 4 -->
-          <div class="scale-dot-unit">
-            <span class="scale-dot-num pale-yellow-dot">4</span>
-          </div>
-
-          <!-- Sad Eggs Disc -->
-          <div class="scale-dot-unit yolk-photo-unit">
-            <div class="scale-yolk-photo-disc sad-egg-disc"></div>
-            <span class="scale-dot-caption">Sad Eggs</span>
-          </div>
-
-          <!-- Dots 6, 7, 8, 9, 10, 11 -->
-          <div class="scale-dot-unit"><span class="scale-dot-num dot-color-6">6</span></div>
-          <div class="scale-dot-unit"><span class="scale-dot-num dot-color-7">7</span></div>
-          <div class="scale-dot-unit"><span class="scale-dot-num dot-color-8">8</span></div>
-          <div class="scale-dot-unit"><span class="scale-dot-num dot-color-9">9</span></div>
-          <div class="scale-dot-unit"><span class="scale-dot-num dot-color-10">10</span></div>
-          <div class="scale-dot-unit"><span class="scale-dot-num dot-color-11">11</span></div>
-
-          <!-- Yellow Carton Yolk Disc -->
-          <div class="scale-dot-unit yolk-photo-unit active-yellow-carton">
-            <div class="scale-yolk-photo-disc rich-orange-disc"></div>
-            <div class="carton-pill-tag yellow-pill-bar">
-              <span class="carton-bar-swatch bar-yellow"></span>
-              <span class="carton-bar-label">Yellow Carton</span>
-            </div>
-          </div>
-
-          <!-- Dot 13 -->
-          <div class="scale-dot-unit">
-            <span class="scale-dot-num orange-num-13">13</span>
-          </div>
-
-          <!-- Blue Carton Sunset Amber Yolk Disc -->
-          <div class="scale-dot-unit yolk-photo-unit active-blue-carton">
-            <div class="scale-yolk-photo-disc sunset-amber-disc"></div>
-            <div class="carton-pill-tag blue-pill-bar">
-              <span class="carton-bar-swatch bar-blue"></span>
-              <span class="carton-bar-label">Blue Carton</span>
-            </div>
-          </div>
-        </div>
+        <img src="assets/images/yolk-comparison-scale.png" alt="Happy Egg Yolk Comparison Scale (Sad Eggs to Happy Eggs)" class="happy-yolk-scale-img">
       </div>
 
-      <!-- Side by Side Fried Egg Plate Comparison -->
+      <!-- Side by Side Fried Egg Plate Comparison (Exact Reference Photo & Callouts) -->
       <div class="happy-dual-plate-wrapper">
-        <div class="happy-ceramic-plate">
-          <!-- Left Egg: Pale Yellow (Their Yolks) -->
-          <div class="happy-fried-egg left-pale-egg">
-            <div class="egg-crisp-white"></div>
-            <div class="pale-dull-yolk"></div>
+        <div class="happy-plate-visual-container">
+          <img src="assets/images/yolk-comparison-plate.webp" alt="Dual Fried Egg Plate Comparison - Pale Yellow vs Glowing Sunset Amber Yolks" class="happy-real-plate-img">
+
+          <!-- Left Callout: Their Yolks -->
+          <div class="happy-plate-callout callout-left-photo">
+            <svg viewBox="0 0 120 70" class="callout-arrow-svg">
+              <path d="M 10,12 C 55,10 90,32 98,58" fill="none" stroke="#FFD166" stroke-width="2.5" stroke-dasharray="4,4"/>
+              <polygon points="102,64 92,56 102,52" fill="#FFD166"/>
+            </svg>
+            <span class="callout-text text-their-yolks">Their<br>Yolks</span>
           </div>
 
-          <!-- Right Egg: Glowing Sunset Amber (OUR YOLKS) -->
-          <div class="happy-fried-egg right-amber-egg">
-            <div class="egg-crisp-white"></div>
-            <div class="glowing-amber-yolk"></div>
-          </div>
-        </div>
-
-        <!-- Left Pointer: Their Yolks -->
-        <div class="happy-plate-callout callout-left">
-          <svg viewBox="0 0 100 50" class="callout-arrow-svg">
-            <path d="M 85,8 C 45,8 15,28 8,40" fill="none" stroke="#FFD166" stroke-width="2.5" stroke-dasharray="4,4"/>
-            <polygon points="4,44 13,35 3,37" fill="#FFD166"/>
-          </svg>
-          <span class="callout-text text-their-yolks">Their<br>Yolks</span>
-        </div>
-
-        <!-- Right Pointer: OUR YOLKS with cute smiling egg -->
-        <div class="happy-plate-callout callout-right">
-          <svg viewBox="0 0 100 50" class="callout-arrow-svg">
-            <path d="M 8,42 C 28,20 65,8 88,12" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-dasharray="4,4"/>
-            <polygon points="94,13 84,7 86,17" fill="#FFFFFF"/>
-          </svg>
-          <div class="callout-badge-wrap">
-            <div class="cute-egg-smiley">
-              <svg viewBox="0 0 32 40" width="34" height="42">
-                <path d="M16 2 C8 2 2 16 2 26 C2 34 8 38 16 38 C24 38 30 34 30 26 C30 16 24 2 16 2 Z" fill="none" stroke="#FFFFFF" stroke-width="2.5"/>
-                <path d="M8 20 Q11 17 14 20" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
-                <path d="M18 20 Q21 17 24 20" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
-                <path d="M12 26 Q16 30 20 26" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
-              </svg>
+          <!-- Right Callout: OUR YOLKS with cute smiling egg mascot -->
+          <div class="happy-plate-callout callout-right-photo">
+            <svg viewBox="0 0 120 70" class="callout-arrow-svg">
+              <path d="M 12,58 C 22,30 65,10 108,12" fill="none" stroke="#FF5500" stroke-width="2.5" stroke-dasharray="4,4"/>
+              <polygon points="114,14 104,7 106,19" fill="#FF5500"/>
+            </svg>
+            <div class="callout-badge-wrap">
+              <div class="cute-egg-smiley">
+                <svg viewBox="0 0 32 40" width="36" height="44">
+                  <path d="M16 2 C8 2 2 16 2 26 C2 34 8 38 16 38 C24 38 30 34 30 26 C30 16 24 2 16 2 Z" fill="none" stroke="#FFFFFF" stroke-width="2.5"/>
+                  <path d="M8 20 Q11 17 14 20" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M18 20 Q21 17 24 20" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M12 26 Q16 30 20 26" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <span class="callout-text text-our-yolks">OUR<br>YOLKS</span>
             </div>
-            <span class="callout-text text-our-yolks">OUR<br>YOLKS</span>
           </div>
         </div>
       </div>
