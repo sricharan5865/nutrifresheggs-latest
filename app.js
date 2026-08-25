@@ -1158,18 +1158,93 @@ function initOrderOnline() {
     });
   }
 
-  // Integrated Razorpay Demo Payment Gateway
-  if (btnPayOnline && payModal) {
+  // Razorpay Key Configuration (Test Mode)
+  const RZP_TEST_KEY = 'rzp_test_SgalSFnkRw1WGz';
+
+  const showOrderSuccess = (paymentId) => {
+    const name = document.getElementById('custName')?.value.trim() || 'Valued Customer';
+    const successNameEl = document.getElementById('successCustName');
+    const successOrderEl = document.getElementById('successOrderId');
+    const successPaymentIdEl = document.getElementById('successPaymentId');
+
+    if (successNameEl) successNameEl.innerText = name;
+    if (successOrderEl) successOrderEl.innerText = `NF-${new Date().getFullYear()}-${Math.floor(1000 + Math.random() * 9000)}`;
+    if (successPaymentIdEl) successPaymentIdEl.innerText = paymentId;
+
+    if (orderSuccessModal) orderSuccessModal.classList.add('active');
+
+    // Clear cart
+    cart = [];
+    renderCart();
+  };
+
+  // Integrated Razorpay Payment Gateway Trigger
+  if (btnPayOnline) {
     btnPayOnline.addEventListener('click', () => {
       if (cart.length === 0) {
         alert('Please add at least one carton to your box before proceeding to payment.');
         return;
       }
+
+      let grandTotal = 0;
+      cart.forEach(item => {
+        grandTotal += item.price * item.qty;
+      });
+
+      const name = document.getElementById('custName')?.value.trim() || 'Nutrifresh Customer';
+      const phone = document.getElementById('custPhone')?.value.trim() || '9999999999';
+      const address = document.getElementById('custAddress')?.value.trim() || '';
+      const pincode = document.getElementById('deliveryPincode')?.value.trim() || '';
+
+      // Check if official Razorpay Standard Checkout SDK is loaded
+      if (typeof Razorpay !== 'undefined') {
+        const options = {
+          key: RZP_TEST_KEY,
+          amount: grandTotal * 100, // Amount in paise
+          currency: 'INR',
+          name: 'Nutrifresh Eggs',
+          description: 'Farm Fresh Pasture-Raised Eggs Delivery',
+          image: 'assets/images/nutrifresh-logo-hires.png',
+          handler: function (response) {
+            showOrderSuccess(response.razorpay_payment_id || `pay_test_${Math.random().toString(36).substring(2, 10)}`);
+          },
+          prefill: {
+            name: name,
+            contact: phone,
+            email: 'orders@nutrifresheggs.com'
+          },
+          notes: {
+            address: address,
+            pincode: pincode,
+            items: cart.map(i => `${i.name} (x${i.qty})`).join(', ')
+          },
+          theme: {
+            color: '#0C2340'
+          },
+          modal: {
+            ondismiss: function () {
+              console.log('Razorpay modal closed');
+            }
+          }
+        };
+
+        try {
+          const rzpInstance = new Razorpay(options);
+          rzpInstance.on('payment.failed', function (response) {
+            alert('Razorpay Payment Failed: ' + (response.error?.description || 'Transaction cancelled'));
+          });
+          rzpInstance.open();
+          return;
+        } catch (err) {
+          console.warn('Razorpay SDK init error, falling back to simulated modal:', err);
+        }
+      }
+
+      // In-page fallback modal if SDK is offline/blocked
       const refCode = `order_demo_${Math.floor(10000 + Math.random() * 90000)}`;
       const refEl = document.getElementById('payOrderRef');
       if (refEl) refEl.innerText = refCode;
-
-      payModal.classList.add('active');
+      if (payModal) payModal.classList.add('active');
     });
   }
 
@@ -1223,7 +1298,7 @@ function initOrderOnline() {
     });
   });
 
-  // Razorpay Simulate UPI Approval
+  // Razorpay In-Page Simulate UPI / Button Approval
   const executeRazorpaySuccess = () => {
     if (!payProcessingLoader) return;
     payProcessingLoader.style.display = 'flex';
@@ -1252,22 +1327,8 @@ function initOrderOnline() {
       payProcessingLoader.style.display = 'none';
       if (payModal) payModal.classList.remove('active');
 
-      // Generate authentic Razorpay Payment ID
       const rzpPaymentId = `pay_demo_${Math.random().toString(36).substring(2, 10).toUpperCase()}`;
-      const name = document.getElementById('custName')?.value.trim() || 'Valued Customer';
-      const successNameEl = document.getElementById('successCustName');
-      const successOrderEl = document.getElementById('successOrderId');
-      const successPaymentIdEl = document.getElementById('successPaymentId');
-
-      if (successNameEl) successNameEl.innerText = name;
-      if (successOrderEl) successOrderEl.innerText = `NF-${new Date().getFullYear()}-${Math.floor(1000 + Math.random() * 9000)}`;
-      if (successPaymentIdEl) successPaymentIdEl.innerText = rzpPaymentId;
-
-      if (orderSuccessModal) orderSuccessModal.classList.add('active');
-
-      // Clear cart
-      cart = [];
-      renderCart();
+      showOrderSuccess(rzpPaymentId);
     }, 1600);
   };
 
