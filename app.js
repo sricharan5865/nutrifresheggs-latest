@@ -14,6 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
   initRecipes();
   initLegalModals();
   initNewsletter();
+  initFarmerPage();
+  initOrderOnline();
+  initChickenCards();
 });
 
 /* --------------------------------------------------------------------------
@@ -779,5 +782,532 @@ function initNewsletter() {
     }, 400);
   });
 }
+
+/* --------------------------------------------------------------------------
+   10. Become a Farmer Interactive Application & FAQs
+   -------------------------------------------------------------------------- */
+function initFarmerPage() {
+  const cardExisting = document.getElementById('cardExistingFarmer');
+  const cardNew = document.getElementById('cardNewFarmer');
+  const exactFarmerType = document.getElementById('exactFarmerType');
+  const exactForm = document.getElementById('happyEggFarmerForm');
+  const exactSubmitBtn = document.getElementById('exactSubmitBtn');
+  const exactSuccessView = document.getElementById('exactSuccessView');
+  const resetBtn = document.getElementById('resetApplicationBtn');
+  const successContactEmail = document.getElementById('successContactEmail');
+  const header = document.getElementById('siteHeader');
+  const confirmCheckbox = document.getElementById('exactConfirmCheckbox');
+
+  // Header scroll effect
+  if (header) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 80) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  }
+
+  // Card Selector (Existing vs New Farmer)
+  if (cardExisting && cardNew) {
+    cardExisting.addEventListener('click', () => {
+      cardExisting.classList.add('active');
+      cardNew.classList.remove('active');
+      if (exactFarmerType) exactFarmerType.value = 'existing';
+    });
+
+    cardNew.addEventListener('click', () => {
+      cardNew.classList.add('active');
+      cardExisting.classList.remove('active');
+      if (exactFarmerType) exactFarmerType.value = 'new';
+    });
+  }
+
+  // Paper application download simulation
+  const dlExisting = document.getElementById('downloadExistingLink');
+  const dlNew = document.getElementById('downloadNewLink');
+  [dlExisting, dlNew].forEach(link => {
+    if (link) {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        alert('Thank you! The printable Farmer Application PDF is being downloaded. You can also mail your application directly to Happy Egg Farmer Recruiting, PO Box 863, Rogers, AR 72757.');
+      });
+    }
+  });
+
+  // Checkbox requirements validation
+  if (confirmCheckbox && exactSubmitBtn) {
+    confirmCheckbox.addEventListener('change', () => {
+      exactSubmitBtn.disabled = !confirmCheckbox.checked;
+    });
+  }
+
+  // Form Submission
+  if (exactForm) {
+    exactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      if (confirmCheckbox && !confirmCheckbox.checked) {
+        alert('Please confirm that you meet the farm qualifications by checking the box.');
+        return;
+      }
+
+      const requiredFields = exactForm.querySelectorAll('input[required], select[required]');
+      let hasError = false;
+      requiredFields.forEach(field => {
+        if (!field.value || !field.value.trim()) {
+          field.style.borderColor = '#DC2626';
+          hasError = true;
+        } else {
+          field.style.borderColor = 'transparent';
+        }
+      });
+
+      if (hasError) {
+        alert('Please fill out all required fields before submitting.');
+        return;
+      }
+
+      if (exactSubmitBtn) {
+        exactSubmitBtn.disabled = true;
+        exactSubmitBtn.innerHTML = '<span>Submitting Application...</span>';
+      }
+
+      const emailVal = document.getElementById('exactEmail')?.value || 'your email';
+
+      setTimeout(() => {
+        if (successContactEmail) successContactEmail.textContent = emailVal;
+        exactForm.style.display = 'none';
+        if (exactSuccessView) {
+          exactSuccessView.style.display = 'block';
+          exactSuccessView.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }, 700);
+    });
+  }
+
+  // Reset Application
+  if (resetBtn && exactForm && exactSuccessView) {
+    resetBtn.addEventListener('click', () => {
+      exactForm.reset();
+      exactForm.style.display = 'flex';
+      exactSuccessView.style.display = 'none';
+      if (exactSubmitBtn) {
+        exactSubmitBtn.disabled = false;
+        exactSubmitBtn.innerHTML = '<span>Submit Application</span>';
+      }
+      if (confirmCheckbox) confirmCheckbox.checked = true;
+    });
+  }
+
+  // Backward compatibility for legacy IDs if present
+  const btnExisting = document.getElementById('btnExistingFarmer');
+  const btnNew = document.getElementById('btnNewFarmer');
+  const checklist = document.getElementById('newFarmerChecklist');
+  const farmerTypeField = document.getElementById('farmerTypeField');
+  const legacyForm = document.getElementById('farmerApplicationForm');
+  const legacySubmitBtn = document.getElementById('submitFarmerAppBtn');
+  const legacySuccessCard = document.getElementById('farmerSuccessCard');
+
+  if (btnExisting && btnNew) {
+    btnExisting.addEventListener('click', () => {
+      btnExisting.classList.add('active');
+      btnNew.classList.remove('active');
+      if (checklist) checklist.style.display = 'none';
+      if (farmerTypeField) farmerTypeField.value = 'existing';
+    });
+    btnNew.addEventListener('click', () => {
+      btnNew.classList.add('active');
+      btnExisting.classList.remove('active');
+      if (checklist) checklist.style.display = 'block';
+      if (farmerTypeField) farmerTypeField.value = 'new';
+    });
+  }
+
+  if (legacyForm) {
+    legacyForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (legacySubmitBtn) {
+        legacySubmitBtn.disabled = true;
+        legacySubmitBtn.innerHTML = '<span>Processing...</span>';
+      }
+      setTimeout(() => {
+        legacyForm.style.display = 'none';
+        if (legacySuccessCard) legacySuccessCard.style.display = 'block';
+      }, 600);
+    });
+  }
+
+  // FAQ Accordion
+  const faqHeaders = document.querySelectorAll('.faq-accordion-header');
+  faqHeaders.forEach(header => {
+    header.addEventListener('click', () => {
+      const item = header.closest('.faq-accordion-item');
+      if (!item) return;
+      const isActive = item.classList.contains('active');
+      
+      document.querySelectorAll('.faq-accordion-item').forEach(other => {
+        other.classList.remove('active');
+        const otherHeader = other.querySelector('.faq-accordion-header');
+        if (otherHeader) otherHeader.setAttribute('aria-expanded', 'false');
+      });
+
+      if (!isActive) {
+        item.classList.add('active');
+        header.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+}
+
+/* --------------------------------------------------------------------------
+   11. Order Online Builder, Cart State & Dual Checkout
+   -------------------------------------------------------------------------- */
+function initOrderOnline() {
+  const orderCards = document.querySelectorAll('.order-item-card');
+  const cartList = document.getElementById('cartItemsList');
+  const cartSubtotal = document.getElementById('cartSubtotal');
+  const cartGrandTotal = document.getElementById('cartGrandTotal');
+  const cartBadge = document.getElementById('cartCountBadge');
+  const btnWhatsApp = document.getElementById('btnOrderWhatsApp');
+  const btnPayOnline = document.getElementById('btnPayOnline');
+  const payModal = document.getElementById('paymentGatewayModal');
+  const closePayModalBtn = document.getElementById('closePaymentModalBtn');
+  const payModalAmount = document.getElementById('payModalAmount');
+  const btnPayAmountText = document.getElementById('btnPayAmountText');
+  const btnProcessMockPayment = document.getElementById('btnProcessMockPayment');
+  const payProcessingLoader = document.getElementById('payProcessingLoader');
+  const orderSuccessModal = document.getElementById('orderSuccessModal');
+  const btnDismissSuccessModal = document.getElementById('btnDismissSuccessModal');
+  const btnCheckPincode = document.getElementById('btnCheckPincode');
+  const pincodeInput = document.getElementById('deliveryPincode');
+  const pincodeFeedback = document.getElementById('pincodeFeedback');
+
+  if (!orderCards.length && !cartList) return;
+
+  // Cart State (Initialized with 1 default item)
+  let cart = [
+    { id: 'heritage-12', name: 'Heritage Amber (12 Pack)', price: 299, qty: 1 }
+  ];
+
+  // Pincode Check
+  if (btnCheckPincode && pincodeInput && pincodeFeedback) {
+    btnCheckPincode.addEventListener('click', () => {
+      const pin = pincodeInput.value.trim();
+      if (pin.length === 6) {
+        pincodeFeedback.innerHTML = `✅ Cold-chain delivery active for PIN <strong>${pin}</strong>! Next dispatch: Tomorrow 7:00 AM.`;
+        pincodeFeedback.style.color = '#10B981';
+      } else {
+        pincodeFeedback.innerHTML = `⚠️ Please enter a valid 6-digit postal code.`;
+        pincodeFeedback.style.color = '#DC2626';
+      }
+    });
+  }
+
+  // Update Cart UI
+  const renderCart = () => {
+    if (!cartList) return;
+    cartList.innerHTML = '';
+    let total = 0;
+    let itemCount = 0;
+
+    if (cart.length === 0) {
+      cartList.innerHTML = '<p style="color: var(--muted-text); font-size: 0.9rem; text-align: center; padding: 20px 0;">Your crate is currently empty. Add your favorite cartons above!</p>';
+    } else {
+      cart.forEach((item, idx) => {
+        const itemTotal = item.price * item.qty;
+        total += itemTotal;
+        itemCount += item.qty;
+
+        const row = document.createElement('div');
+        row.className = 'cart-item-row';
+        row.innerHTML = `
+          <div class="cart-item-info">
+            <strong>${item.name}</strong>
+            <span>₹${item.price} × ${item.qty}</span>
+          </div>
+          <div class="cart-item-actions">
+            <span class="cart-item-total">₹${itemTotal}</span>
+            <button type="button" class="cart-remove-btn" data-idx="${idx}" title="Remove item">&times;</button>
+          </div>
+        `;
+        cartList.appendChild(row);
+      });
+    }
+
+    if (cartSubtotal) cartSubtotal.innerText = `₹${total}`;
+    if (cartGrandTotal) cartGrandTotal.innerText = `₹${total}`;
+    if (cartBadge) cartBadge.innerText = `${itemCount} ${itemCount === 1 ? 'item' : 'items'}`;
+    if (payModalAmount) payModalAmount.innerText = `₹${total}`;
+    if (btnPayAmountText) btnPayAmountText.innerText = `₹${total}`;
+
+    // Attach remove listeners
+    const removeBtns = cartList.querySelectorAll('.cart-remove-btn');
+    removeBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const index = parseInt(e.target.getAttribute('data-idx'), 10);
+        cart.splice(index, 1);
+        renderCart();
+      });
+    });
+  };
+
+  renderCart();
+
+  // Setup Product Card Listeners
+  orderCards.forEach(card => {
+    const sizeSelect = card.querySelector('.pack-size-dropdown');
+    const priceDisplay = card.querySelector('.order-item-price');
+    const qtyDisplay = card.querySelector('.qty-display');
+    const plusBtn = card.querySelector('.qty-plus');
+    const minusBtn = card.querySelector('.qty-minus');
+    const addBtn = card.querySelector('.btn-add-cart');
+    const baseName = card.getAttribute('data-name') || 'Nutrifresh Eggs';
+
+    let currentQty = 1;
+
+    if (sizeSelect && priceDisplay) {
+      sizeSelect.addEventListener('change', () => {
+        const selectedOpt = sizeSelect.options[sizeSelect.selectedIndex];
+        const price = selectedOpt.getAttribute('data-price');
+        const packSize = selectedOpt.value;
+        priceDisplay.innerHTML = `₹${price} <small>/ ${packSize} Pack</small>`;
+      });
+    }
+
+    if (plusBtn && qtyDisplay) {
+      plusBtn.addEventListener('click', () => {
+        currentQty++;
+        qtyDisplay.innerText = currentQty;
+      });
+    }
+
+    if (minusBtn && qtyDisplay) {
+      minusBtn.addEventListener('click', () => {
+        if (currentQty > 1) {
+          currentQty--;
+          qtyDisplay.innerText = currentQty;
+        }
+      });
+    }
+
+    if (addBtn && sizeSelect) {
+      addBtn.addEventListener('click', () => {
+        const selectedOpt = sizeSelect.options[sizeSelect.selectedIndex];
+        const price = parseInt(selectedOpt.getAttribute('data-price'), 10);
+        const packSize = selectedOpt.value;
+        const itemId = `${card.getAttribute('data-product')}-${packSize}`;
+        const itemName = `${baseName} (${packSize} Pack)`;
+
+        const existing = cart.find(i => i.id === itemId);
+        if (existing) {
+          existing.qty += currentQty;
+        } else {
+          cart.push({ id: itemId, name: itemName, price: price, qty: currentQty });
+        }
+
+        // Reset local qty
+        currentQty = 1;
+        if (qtyDisplay) qtyDisplay.innerText = 1;
+
+        // Button feedback
+        addBtn.innerHTML = '<span>Added! ✓</span>';
+        setTimeout(() => {
+          addBtn.innerHTML = '<span>Add to Box</span>';
+        }, 1200);
+
+        renderCart();
+      });
+    }
+  });
+
+  // 1-Click WhatsApp Ordering Action
+  if (btnWhatsApp) {
+    btnWhatsApp.addEventListener('click', () => {
+      if (cart.length === 0) {
+        alert('Please add at least one carton to your box before ordering.');
+        return;
+      }
+
+      const name = document.getElementById('custName')?.value.trim() || 'Valued Customer';
+      const phone = document.getElementById('custPhone')?.value.trim() || '';
+      const address = document.getElementById('custAddress')?.value.trim() || '';
+      const pincode = document.getElementById('deliveryPincode')?.value.trim() || '';
+
+      let itemsSummary = '';
+      let grandTotal = 0;
+      cart.forEach(item => {
+        itemsSummary += `• ${item.name} x ${item.qty} = ₹${item.price * item.qty}%0A`;
+        grandTotal += item.price * item.qty;
+      });
+
+      const messageText = 
+`🥚 *NEW NUTRIFRESH EGGS ORDER*%0A%0A` +
+`*Customer Name:* ${encodeURIComponent(name)}%0A` +
+`*Contact:* ${encodeURIComponent(phone)}%0A` +
+`*Delivery Address:* ${encodeURIComponent(address)} (PIN: ${encodeURIComponent(pincode)})%0A%0A` +
+`*Items Ordered:*%0A${itemsSummary}%0A` +
+`*Grand Total:* ₹${grandTotal}%0A` +
+`*Payment Mode:* Pay on Delivery / WhatsApp UPI%0A%0A` +
+`Please confirm my delivery slot! 🚚`;
+
+      // Official WhatsApp API link
+      const whatsappUrl = `https://wa.me/919999999999?text=${messageText}`;
+      window.open(whatsappUrl, '_blank');
+    });
+  }
+
+  // Integrated Razorpay Demo Payment Gateway
+  if (btnPayOnline && payModal) {
+    btnPayOnline.addEventListener('click', () => {
+      if (cart.length === 0) {
+        alert('Please add at least one carton to your box before proceeding to payment.');
+        return;
+      }
+      const refCode = `order_demo_${Math.floor(10000 + Math.random() * 90000)}`;
+      const refEl = document.getElementById('payOrderRef');
+      if (refEl) refEl.innerText = refCode;
+
+      payModal.classList.add('active');
+    });
+  }
+
+  if (closePayModalBtn && payModal) {
+    closePayModalBtn.addEventListener('click', () => {
+      payModal.classList.remove('active');
+    });
+  }
+
+  // Payment Tabs Switcher
+  const payTabs = document.querySelectorAll('.pay-tab');
+  payTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      payTabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const method = tab.getAttribute('data-method');
+      document.querySelectorAll('.pay-tab-pane').forEach(p => p.style.display = 'none');
+      const activePane = document.getElementById(`pane-${method}`);
+      if (activePane) activePane.style.display = 'block';
+    });
+  });
+
+  // Razorpay Auto-Fill Test Card Button
+  const btnAutoFillTestCard = document.getElementById('btnAutoFillTestCard');
+  if (btnAutoFillTestCard) {
+    btnAutoFillTestCard.addEventListener('click', () => {
+      const cardNum = document.getElementById('rzpCardNumber');
+      const cardExp = document.getElementById('rzpCardExpiry');
+      const cardCvv = document.getElementById('rzpCardCvv');
+      const cardName = document.getElementById('rzpCardName');
+      const custName = document.getElementById('custName')?.value.trim() || 'Nutrifresh Customer';
+
+      if (cardNum) cardNum.value = '4111 2222 3333 4444';
+      if (cardExp) cardExp.value = '12/28';
+      if (cardCvv) cardCvv.value = '123';
+      if (cardName) cardName.value = custName;
+
+      btnAutoFillTestCard.innerText = 'Filled! ✓';
+      setTimeout(() => {
+        btnAutoFillTestCard.innerText = 'Auto-Fill';
+      }, 1500);
+    });
+  }
+
+  // Razorpay Bank Pills Selection
+  const bankPills = document.querySelectorAll('.rzp-bank-pill');
+  bankPills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      pill.parentElement.querySelectorAll('.rzp-bank-pill').forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+    });
+  });
+
+  // Razorpay Simulate UPI Approval
+  const executeRazorpaySuccess = () => {
+    if (!payProcessingLoader) return;
+    payProcessingLoader.style.display = 'flex';
+
+    const rzpTitle = document.getElementById('rzpLoadingTitle');
+    const rzpSub = document.getElementById('rzpLoadingSub');
+    const rzpFill = document.getElementById('rzpProgressFill');
+
+    if (rzpFill) rzpFill.style.width = '30%';
+    if (rzpTitle) rzpTitle.innerText = 'Connecting to Razorpay Sandbox...';
+    if (rzpSub) rzpSub.innerText = 'Authorizing Test Credentials';
+
+    setTimeout(() => {
+      if (rzpFill) rzpFill.style.width = '75%';
+      if (rzpTitle) rzpTitle.innerText = 'Verifying Bank Authorization...';
+      if (rzpSub) rzpSub.innerText = 'Capturing Payment Token';
+    }, 600);
+
+    setTimeout(() => {
+      if (rzpFill) rzpFill.style.width = '100%';
+      if (rzpTitle) rzpTitle.innerText = 'Payment Captured Successfully! ✓';
+      if (rzpSub) rzpSub.innerText = 'Generating Order Confirmation';
+    }, 1200);
+
+    setTimeout(() => {
+      payProcessingLoader.style.display = 'none';
+      if (payModal) payModal.classList.remove('active');
+
+      // Generate authentic Razorpay Payment ID
+      const rzpPaymentId = `pay_demo_${Math.random().toString(36).substring(2, 10).toUpperCase()}`;
+      const name = document.getElementById('custName')?.value.trim() || 'Valued Customer';
+      const successNameEl = document.getElementById('successCustName');
+      const successOrderEl = document.getElementById('successOrderId');
+      const successPaymentIdEl = document.getElementById('successPaymentId');
+
+      if (successNameEl) successNameEl.innerText = name;
+      if (successOrderEl) successOrderEl.innerText = `NF-${new Date().getFullYear()}-${Math.floor(1000 + Math.random() * 9000)}`;
+      if (successPaymentIdEl) successPaymentIdEl.innerText = rzpPaymentId;
+
+      if (orderSuccessModal) orderSuccessModal.classList.add('active');
+
+      // Clear cart
+      cart = [];
+      renderCart();
+    }, 1600);
+  };
+
+  const btnSimulateScanPay = document.getElementById('btnSimulateScanPay');
+  if (btnSimulateScanPay) {
+    btnSimulateScanPay.addEventListener('click', executeRazorpaySuccess);
+  }
+
+  // Razorpay Process Mock Payment Button
+  if (btnProcessMockPayment) {
+    btnProcessMockPayment.addEventListener('click', executeRazorpaySuccess);
+  }
+
+  if (btnDismissSuccessModal && orderSuccessModal) {
+    btnDismissSuccessModal.addEventListener('click', () => {
+      orderSuccessModal.classList.remove('active');
+      window.location.href = 'index.html';
+    });
+  }
+}
+
+/* --------------------------------------------------------------------------
+   12. Happy Hens 3D Flip Cards Interaction
+   -------------------------------------------------------------------------- */
+function initChickenCards() {
+  const cards = document.querySelectorAll('.chicken-flip-card');
+  cards.forEach(card => {
+    const flipBtns = card.querySelectorAll('.btn-flip-card');
+    flipBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        card.classList.toggle('flipped');
+      });
+    });
+
+    card.addEventListener('click', () => {
+      card.classList.toggle('flipped');
+    });
+  });
+}
+
 
 

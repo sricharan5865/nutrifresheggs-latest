@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Nutrifresh Eggs Online | Fresh Pasture-Raised Eggs Delivered</title>
+  <meta name="description" content="Order farm-fresh Nutrifresh pasture-raised and organic eggs online. Fast cold-chain doorstep delivery, seamless WhatsApp ordering, and secure online payment options.">
+  <link rel="icon" type="image/png" href="assets/favicon-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Razorpay Checkout SDK -->
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+<body class="order-page">
+
+  <!-- ==========================================
+       Sticky Header
+       ========================================== -->
+  <header class="site-header happy-header-layout">
+    <div class="header-container happy-nav-container">
+      <div class="header-left">
+        <button class="drawer-trigger drawer-toggle happy-hamburger-btn" id="menuToggle" aria-label="Open Navigation Menu" aria-expanded="false">
+          <div class="hamburger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <span style="display:none;">Menu</span>
+        </button>
+      </div>
+
+      <div class="header-center">
+        <a href="index.html" class="logo-brand happy-center-logo" aria-label="Nutrifresh Homepage">
+          <img src="assets/images/nutrifresh-logo-hires.png" alt="Nutrifresh - Premium Quality Free Range Eggs" class="brand-logo-img">
+        </a>
+      </div>
+
+      <nav aria-label="Main Navigation" style="display:none;">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Our Eggs</a></li>
+          <li><a href="our-farms.html">Our Farms</a></li>
+          <li><a href="become-a-farmer.html">Become a Farmer</a></li>
+          <li><a href="order-online.html" class="active">Order Online</a></li>
+          <li><a href="store-locator.html">Find In Store</a></li>
+          <li><a href="recipes.html">Recipes</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-right">
+        <a href="#order-builder" class="btn btn-primary btn-carton-shape nav-cta happy-find-btn">
+          <span>Order Cart 🛒</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       Slideout Drawer Menu
+       ========================================== -->
+  <div class="drawer-overlay" id="drawerOverlay">
+    <div class="slideout-drawer happy-drawer-theme" id="navDrawer" role="dialog" aria-modal="true" aria-label="Navigation Drawer">
+      <div class="drawer-header-happy">
+        <button class="drawer-close" id="drawerClose" aria-label="Close menu">&times;</button>
+      </div>
+
+      <div class="drawer-body-happy">
+        <div class="drawer-two-col">
+          <!-- Primary Navigation -->
+          <div class="drawer-col-primary">
+            <ul class="drawer-nav-list happy-nav-primary">
+              <li><a href="index.html"><span>Home</span> <span class="drawer-arrow">→</span></a></li>
+              <li><a href="products.html"><span>Nutrifresh eggs</span> <span class="drawer-arrow">→</span></a></li>
+              <li><a href="our-farms.html"><span>Nutrifresh Farms</span> <span class="drawer-arrow">→</span></a></li>
+              <li><a href="become-a-farmer.html"><span>Become a farmer</span> <span class="drawer-arrow">→</span></a></li>
+              <li><a href="index.html#about"><span>About</span> <span class="drawer-arrow">→</span></a></li>
+              <li><a href="recipes.html"><span>Blog</span> <span class="drawer-arrow">→</span></a></li>
+              <li style="display:none;"><a href="store-locator.html">Store Locator</a></li>
+              <li style="display:none;"><a href="order-online.html" class="active-drawer-item">Order Online</a></li>
+            </ul>
+          </div>
+
+          <!-- Secondary Links Right -->
+          <div class="drawer-col-secondary">
+            <ul class="drawer-secondary-links">
+              <li><a href="become-a-farmer.html#faqs" class="drawer-quick-link">FAQs</a></li>
+              <li><a href="our-farms.html">Press</a></li>
+              <li><a href="index.html#contact-us">Contact</a></li>
+              <li><a href="store-locator.html">Find in Store</a></li>
+            </ul>
+            <div class="drawer-contact-box">
+              <p class="drawer-q-title">Order Assistance</p>
+              <p class="drawer-q-sub">WhatsApp support active daily</p>
+              <a href="https://wa.me/919999999999?text=Hi%20Nutrifresh%20Team,%20I%20have%20a%20question%20about%20ordering" target="_blank" rel="noopener noreferrer" class="drawer-whatsapp-btn">
+                <img src="assets/icon_whatsapp.svg" alt="WhatsApp" style="width:20px; vertical-align:middle; margin-right:6px;"> Chat on WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Cartons Strip -->
+        <div class="drawer-cartons-section happy-cartons-strip">
+          <div class="drawer-cartons-title" style="color: #fff; opacity: 0.9;">Choose Your Favorite Pasture Carton</div>
+          <div class="drawer-cartons-grid">
+            <a href="products.html#heritage" class="drawer-carton-item">
+              <img src="assets/images/heritage-carton.jpg" alt="Heritage Amber Carton">
+              <span>Heritage Amber</span>
+            </a>
+            <a href="products.html#pasture" class="drawer-carton-item">
+              <img src="assets/images/pasture-carton.jpg" alt="Pasture Raised Carton">
+              <span>Pasture Raised</span>
+            </a>
+            <a href="products.html#organic" class="drawer-carton-item">
+              <img src="assets/images/organic-carton.jpg" alt="Organic Free Range Carton">
+              <span>Organic Free Range</span>
+            </a>
+            <a href="products.html#freerange" class="drawer-carton-item">
+              <img src="assets/images/freerange-carton.jpg" alt="Free Range Carton">
+              <span>Free Range Brown</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       Hero Banner
+       ========================================== -->
+  <section class="order-hero-section">
+    <div class="container text-center">
+      <span class="script-tag" style="color: var(--primary-yellow); font-size: 1.8rem;">FARM TO TABLE FRESHNESS</span>
+      <h1>Order Nutrifresh Eggs Online</h1>
+      <p>Delivered direct to your doorstep via temperature-controlled cold chain. Select your favorite cartons below, then order via <strong>Instant WhatsApp Checkout</strong> or <strong>Secure Online Payment</strong>.</p>
+      
+      <div class="order-badges-row">
+        <div class="order-badge-pill">
+          <span>🚚</span> Same-Day / Next-Day Dispatch
+        </div>
+        <div class="order-badge-pill">
+          <span>🥚</span> 100% Unbroken Safe Arrival Guarantee
+        </div>
+        <div class="order-badge-pill">
+          <span>☀️</span> Rich Sunset-Amber Yolks Guaranteed
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       Interactive Order Builder
+       ========================================== -->
+  <section class="order-builder-section" id="order-builder">
+    <div class="container">
+      <div class="order-grid-layout">
+        
+        <!-- Left: Product Selection List -->
+        <div class="order-products-col">
+          <div class="order-section-header">
+            <h2>Select Your Cartons</h2>
+            <p>Choose carton styles and pack sizes to build your fresh farm crate.</p>
+          </div>
+
+          <!-- Product Card 1: Heritage Amber -->
+          <div class="order-item-card" data-product="heritage" data-price="299" data-name="Heritage Amber Pasture-Raised">
+            <div class="order-item-img-wrap">
+              <img src="assets/images/heritage-carton.jpg" alt="Heritage Amber Carton">
+              <span class="product-badge-flag blue">Chef's Choice</span>
+            </div>
+            <div class="order-item-details">
+              <div class="order-item-top">
+                <h3>Heritage Amber Pasture-Raised</h3>
+                <span class="order-item-price">₹299 <small>/ 12 Pack</small></span>
+              </div>
+              <p class="order-item-desc">Rich sunset-amber yolks from heritage Speckled Legbar & Copper Maran hens. Speckled sky-blue and rich chocolate brown shells.</p>
+              
+              <div class="order-options-bar">
+                <div class="pack-size-selector">
+                  <label>Pack Size:</label>
+                  <select class="pack-size-dropdown">
+                    <option value="12" data-price="299" selected>12 Pack — ₹299</option>
+                    <option value="18" data-price="429">18 Pack — ₹429</option>
+                    <option value="30" data-price="699">30 Crate — ₹699</option>
+                  </select>
+                </div>
+
+                <div class="qty-counter-control">
+                  <button type="button" class="qty-btn qty-minus" aria-label="Decrease quantity">−</button>
+                  <span class="qty-display">1</span>
+                  <button type="button" class="qty-btn qty-plus" aria-label="Increase quantity">+</button>
+                </div>
+
+                <button type="button" class="btn btn-orange btn-add-cart">
+                  <span>Add to Box</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 2: Pasture-Raised -->
+          <div class="order-item-card" data-product="pasture" data-price="249" data-name="Pasture-Raised Free Range">
+            <div class="order-item-img-wrap">
+              <img src="assets/images/pasture-carton.jpg" alt="Pasture Raised Carton">
+              <span class="product-badge-flag yellow">Most Popular</span>
+            </div>
+            <div class="order-item-details">
+              <div class="order-item-top">
+                <h3>Pasture-Raised Free Range</h3>
+                <span class="order-item-price">₹249 <small>/ 12 Pack</small></span>
+              </div>
+              <p class="order-item-desc">Vibrant golden yolks from hens that enjoy 21.8+ square feet of open pasture, fresh air, and pesticide-free green forage year-round.</p>
+              
+              <div class="order-options-bar">
+                <div class="pack-size-selector">
+                  <label>Pack Size:</label>
+                  <select class="pack-size-dropdown">
+                    <option value="12" data-price="249" selected>12 Pack — ₹249</option>
+                    <option value="18" data-price="359">18 Pack — ₹359</option>
+                    <option value="30" data-price="579">30 Crate — ₹579</option>
+                  </select>
+                </div>
+
+                <div class="qty-counter-control">
+                  <button type="button" class="qty-btn qty-minus" aria-label="Decrease quantity">−</button>
+                  <span class="qty-display">1</span>
+                  <button type="button" class="qty-btn qty-plus" aria-label="Increase quantity">+</button>
+                </div>
+
+                <button type="button" class="btn btn-orange btn-add-cart">
+                  <span>Add to Box</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 3: Organic Free Range -->
+          <div class="order-item-card" data-product="organic" data-price="279" data-name="Organic Free Range">
+            <div class="order-item-img-wrap">
+              <img src="assets/images/organic-carton.jpg" alt="Organic Free Range Carton">
+              <span class="product-badge-flag green">100% Organic</span>
+            </div>
+            <div class="order-item-details">
+              <div class="order-item-top">
+                <h3>Organic Free Range</h3>
+                <span class="order-item-price">₹279 <small>/ 12 Pack</small></span>
+              </div>
+              <p class="order-item-desc">Certified Organic, Non-GMO vegetarian feed and pasture roaming without chemical fertilizers or synthetic pesticides.</p>
+              
+              <div class="order-options-bar">
+                <div class="pack-size-selector">
+                  <label>Pack Size:</label>
+                  <select class="pack-size-dropdown">
+                    <option value="12" data-price="279" selected>12 Pack — ₹279</option>
+                    <option value="18" data-price="399">18 Pack — ₹399</option>
+                  </select>
+                </div>
+
+                <div class="qty-counter-control">
+                  <button type="button" class="qty-btn qty-minus" aria-label="Decrease quantity">−</button>
+                  <span class="qty-display">1</span>
+                  <button type="button" class="qty-btn qty-plus" aria-label="Increase quantity">+</button>
+                </div>
+
+                <button type="button" class="btn btn-orange btn-add-cart">
+                  <span>Add to Box</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product Card 4: Free Range Brown -->
+          <div class="order-item-card" data-product="freerange" data-price="199" data-name="Free Range Brown">
+            <div class="order-item-img-wrap">
+              <img src="assets/images/freerange-carton.jpg" alt="Free Range Carton">
+              <span class="product-badge-flag brown">Daily Essential</span>
+            </div>
+            <div class="order-item-details">
+              <div class="order-item-top">
+                <h3>Free Range Brown</h3>
+                <span class="order-item-price">₹199 <small>/ 12 Pack</small></span>
+              </div>
+              <p class="order-item-desc">High-protein brown eggs from happy cage-free hens with outdoor access. Wholesome everyday nutrition for your morning breakfast.</p>
+              
+              <div class="order-options-bar">
+                <div class="pack-size-selector">
+                  <label>Pack Size:</label>
+                  <select class="pack-size-dropdown">
+                    <option value="12" data-price="199" selected>12 Pack — ₹199</option>
+                    <option value="30" data-price="479">30 Crate — ₹479</option>
+                  </select>
+                </div>
+
+                <div class="qty-counter-control">
+                  <button type="button" class="qty-btn qty-minus" aria-label="Decrease quantity">−</button>
+                  <span class="qty-display">1</span>
+                  <button type="button" class="qty-btn qty-plus" aria-label="Increase quantity">+</button>
+                </div>
+
+                <button type="button" class="btn btn-orange btn-add-cart">
+                  <span>Add to Box</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Interactive Cart & Dual Checkout Options -->
+        <div class="order-cart-col">
+          <div class="order-cart-card" id="cartStickyBox">
+            <div class="cart-card-header">
+              <h3>📦 Your Delivery Box</h3>
+              <span class="cart-items-count-badge" id="cartCountBadge">1 item</span>
+            </div>
+
+            <!-- PIN Code Delivery Verification -->
+            <div class="pincode-check-wrap">
+              <label for="deliveryPincode">Check Delivery Area:</label>
+              <div class="pincode-input-row">
+                <input type="text" id="deliveryPincode" placeholder="Enter 6-digit PIN" maxlength="6" value="500034">
+                <button type="button" class="btn btn-sm btn-navy" id="btnCheckPincode">Check</button>
+              </div>
+              <span class="pincode-feedback" id="pincodeFeedback">✅ Cold-chain delivery available! Next delivery: Tomorrow 7 AM</span>
+            </div>
+
+            <!-- Cart Items List -->
+            <div class="cart-items-list" id="cartItemsList">
+              <div class="cart-item-row" data-id="heritage-12">
+                <div class="cart-item-info">
+                  <strong>Heritage Amber (12 Pack)</strong>
+                  <span>₹299 × 1</span>
+                </div>
+                <div class="cart-item-actions">
+                  <span class="cart-item-total">₹299</span>
+                  <button type="button" class="cart-remove-btn" title="Remove item">&times;</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Customer Details Form -->
+            <div class="customer-info-section">
+              <h4>Delivery Details</h4>
+              <div class="form-group-compact">
+                <input type="text" id="custName" placeholder="Your Full Name *" required>
+              </div>
+              <div class="form-group-compact">
+                <input type="tel" id="custPhone" placeholder="WhatsApp / Phone Number *" required>
+              </div>
+              <div class="form-group-compact">
+                <textarea id="custAddress" rows="2" placeholder="Full Delivery Address & House / Flat No. *" required></textarea>
+              </div>
+            </div>
+
+            <!-- Order Financial Breakdown -->
+            <div class="cart-breakdown">
+              <div class="breakdown-row">
+                <span>Subtotal</span>
+                <span id="cartSubtotal">₹299</span>
+              </div>
+              <div class="breakdown-row">
+                <span>Cold-Chain Delivery</span>
+                <span id="cartShipping" style="color: var(--forest-green); font-weight: 700;">FREE (Orders &gt; ₹249)</span>
+              </div>
+              <div class="breakdown-row total-row">
+                <strong>Grand Total</strong>
+                <strong id="cartGrandTotal">₹299</strong>
+              </div>
+            </div>
+
+            <!-- Dual Checkout Action Buttons -->
+            <div class="cart-checkout-actions">
+              <!-- Primary Option 1: WhatsApp 1-Click Ordering -->
+              <button type="button" class="btn btn-whatsapp-order" id="btnOrderWhatsApp">
+                <img src="assets/icon_whatsapp.svg" alt="WhatsApp">
+                <span>Order via WhatsApp (1-Click)</span>
+              </button>
+              
+              <!-- Primary Option 2: Payment Gateway (Razorpay Demo) -->
+              <button type="button" class="btn btn-primary btn-carton-shape btn-razorpay-trigger" id="btnPayOnline">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0;">
+                  <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#081C30" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M2 17L12 22L22 17" stroke="#081C30" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M2 12L12 17L22 12" stroke="#081C30" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>Pay with Razorpay</span>
+                <span class="badge-rzp-demo">DEMO</span>
+              </button>
+            </div>
+
+            <p class="cart-safety-note">🔒 100% Safe &amp; Secure Checkout powered by Razorpay Test Sandbox.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       Razorpay Demo Payment Gateway Modal
+       ========================================== -->
+  <div class="modal-overlay" id="paymentGatewayModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-card payment-modal-card razorpay-modal-card">
+      <div class="payment-modal-header razorpay-header">
+        <div class="payment-brand-row">
+          <div class="rzp-badge-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="#FFFFFF"><path d="M13.5 2L3 14h7v8l10.5-12h-7l4-8z"/></svg>
+          </div>
+          <div>
+            <div class="rzp-merchant-title">Nutrifresh Eggs</div>
+            <div class="rzp-secure-sub">Razorpay Trusted Merchant • <span class="badge-rzp-test-pill">TEST MODE</span></div>
+          </div>
+        </div>
+        <button class="modal-close" id="closePaymentModalBtn" aria-label="Close modal" style="color:#FFF;">&times;</button>
+      </div>
+
+      <div class="payment-modal-body">
+        <!-- Order Summary Strip -->
+        <div class="payment-order-summary-strip rzp-summary-strip">
+          <div>
+            <span class="pay-amount-label">Payable Amount</span>
+            <h3 class="pay-amount-val" id="payModalAmount">₹299</h3>
+          </div>
+          <div class="order-ref-code">Order ID: <span id="payOrderRef">order_demo_8921</span></div>
+        </div>
+
+        <!-- Payment Method Tabs -->
+        <div class="payment-tabs-nav rzp-tabs-nav">
+          <button type="button" class="pay-tab active" data-method="upi">⚡ UPI / QR</button>
+          <button type="button" class="pay-tab" data-method="card">💳 Cards</button>
+          <button type="button" class="pay-tab" data-method="netbanking">🏦 NetBanking</button>
+          <button type="button" class="pay-tab" data-method="wallets">👛 Wallets</button>
+        </div>
+
+        <!-- Tab 1: UPI & QR Code -->
+        <div class="pay-tab-pane active" id="pane-upi">
+          <div class="rzp-qr-container">
+            <div class="rzp-qr-visual">
+              <svg viewBox="0 0 100 100" width="110" height="110">
+                <rect x="0" y="0" width="100" height="100" fill="#FFFFFF" rx="8"/>
+                <!-- Outer Corners -->
+                <rect x="10" y="10" width="24" height="24" fill="#0C2340" rx="3"/>
+                <rect x="14" y="14" width="16" height="16" fill="#FFFFFF" rx="2"/>
+                <rect x="18" y="18" width="8" height="8" fill="#3395FF" rx="1"/>
+                <rect x="66" y="10" width="24" height="24" fill="#0C2340" rx="3"/>
+                <rect x="70" y="14" width="16" height="16" fill="#FFFFFF" rx="2"/>
+                <rect x="74" y="18" width="8" height="8" fill="#3395FF" rx="1"/>
+                <rect x="10" y="66" width="24" height="24" fill="#0C2340" rx="3"/>
+                <rect x="14" y="70" width="16" height="16" fill="#FFFFFF" rx="2"/>
+                <rect x="18" y="74" width="8" height="8" fill="#3395FF" rx="1"/>
+                <!-- QR Pattern Matrix -->
+                <rect x="42" y="14" width="6" height="6" fill="#0C2340"/>
+                <rect x="52" y="14" width="6" height="6" fill="#3395FF"/>
+                <rect x="42" y="24" width="6" height="6" fill="#3395FF"/>
+                <rect x="14" y="44" width="6" height="6" fill="#0C2340"/>
+                <rect x="24" y="44" width="6" height="6" fill="#3395FF"/>
+                <rect x="34" y="44" width="8" height="8" fill="#0C2340"/>
+                <rect x="46" y="42" width="8" height="8" fill="#FF5700"/>
+                <rect x="58" y="44" width="8" height="8" fill="#0C2340"/>
+                <rect x="70" y="44" width="6" height="6" fill="#3395FF"/>
+                <rect x="80" y="44" width="6" height="6" fill="#0C2340"/>
+                <rect x="42" y="56" width="6" height="6" fill="#0C2340"/>
+                <rect x="52" y="56" width="6" height="6" fill="#3395FF"/>
+                <rect x="42" y="68" width="6" height="6" fill="#3395FF"/>
+                <rect x="52" y="68" width="6" height="6" fill="#0C2340"/>
+                <rect x="68" y="68" width="8" height="8" fill="#0C2340"/>
+                <rect x="80" y="68" width="8" height="8" fill="#3395FF"/>
+                <rect x="68" y="80" width="8" height="8" fill="#3395FF"/>
+                <rect x="80" y="80" width="8" height="8" fill="#0C2340"/>
+              </svg>
+            </div>
+            <div class="rzp-qr-details">
+              <span class="rzp-qr-tag">Scan &amp; Pay via any UPI App</span>
+              <p style="font-size: 0.85rem; color: #64748B; margin: 4px 0 10px;">Google Pay • PhonePe • Paytm • CRED • BHIM</p>
+              <button type="button" class="btn btn-sm btn-outline-navy btn-simulate-upi" id="btnSimulateScanPay">
+                <span>⚡ Simulate UPI App Approval</span>
+              </button>
+            </div>
+          </div>
+
+          <div style="margin-top: 16px;">
+            <p style="font-size: 0.85rem; margin-bottom: 8px; color: #475569; font-weight: 600;">Or enter your UPI VPA ID:</p>
+            <div class="upi-input-group">
+              <input type="text" id="upiIdInput" placeholder="username@okhdfcbank / mobile@upi" value="customer@okhdfcbank">
+              <button type="button" class="btn btn-sm btn-orange" id="btnVerifyUPI">Verify</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 2: Cards (With 1-Click Razorpay Test Fill) -->
+        <div class="pay-tab-pane" id="pane-card" style="display:none;">
+          <div class="rzp-test-card-banner">
+            <span>💡 <strong>Razorpay Test Card:</strong> 4111 2222 3333 4444</span>
+            <button type="button" class="btn btn-xs btn-navy" id="btnAutoFillTestCard">Auto-Fill</button>
+          </div>
+          <div class="card-inputs-grid" style="margin-top: 12px;">
+            <div class="form-group-compact">
+              <label style="font-size:0.8rem; font-weight:600; color:#475569;">Card Number</label>
+              <input type="text" id="rzpCardNumber" placeholder="4111 2222 3333 4444" maxlength="19" value="4111 2222 3333 4444">
+            </div>
+            <div style="display: flex; gap: 10px; margin-top: 8px;">
+              <div style="width: 50%;">
+                <label style="font-size:0.8rem; font-weight:600; color:#475569;">Expiry (MM/YY)</label>
+                <input type="text" id="rzpCardExpiry" placeholder="MM / YY" maxlength="5" value="12/28">
+              </div>
+              <div style="width: 50%;">
+                <label style="font-size:0.8rem; font-weight:600; color:#475569;">CVV</label>
+                <input type="password" id="rzpCardCvv" placeholder="CVV" maxlength="3" value="123">
+              </div>
+            </div>
+            <div class="form-group-compact" style="margin-top: 8px;">
+              <label style="font-size:0.8rem; font-weight:600; color:#475569;">Cardholder Name</label>
+              <input type="text" id="rzpCardName" placeholder="Cardholder Name" value="Nutrifresh Customer">
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab 3: NetBanking -->
+        <div class="pay-tab-pane" id="pane-netbanking" style="display:none;">
+          <p style="font-size: 0.85rem; margin-bottom: 10px; color: #475569; font-weight: 600;">Popular NetBanking Partners:</p>
+          <div class="rzp-banks-grid">
+            <button type="button" class="rzp-bank-pill active"><span class="bank-logo-sym">🏦</span> HDFC Bank</button>
+            <button type="button" class="rzp-bank-pill"><span class="bank-logo-sym">🏛️</span> ICICI Bank</button>
+            <button type="button" class="rzp-bank-pill"><span class="bank-logo-sym">🏢</span> State Bank (SBI)</button>
+            <button type="button" class="rzp-bank-pill"><span class="bank-logo-sym">🏢</span> Axis Bank</button>
+            <button type="button" class="rzp-bank-pill"><span class="bank-logo-sym">🏛️</span> Kotak Bank</button>
+          </div>
+        </div>
+
+        <!-- Tab 4: Wallets & Pay Later -->
+        <div class="pay-tab-pane" id="pane-wallets" style="display:none;">
+          <p style="font-size: 0.85rem; margin-bottom: 10px; color: #475569; font-weight: 600;">Select Wallet or PayLater:</p>
+          <div class="rzp-banks-grid">
+            <button type="button" class="rzp-bank-pill active">👛 Paytm Wallet</button>
+            <button type="button" class="rzp-bank-pill">📦 Amazon Pay</button>
+            <button type="button" class="rzp-bank-pill">⚡ Simpl PayLater</button>
+            <button type="button" class="rzp-bank-pill">🪙 CRED Pay</button>
+          </div>
+        </div>
+
+        <!-- Razorpay Primary Submit CTA -->
+        <div style="margin-top: 24px;">
+          <button type="button" class="btn btn-primary btn-carton-shape rzp-submit-pay-btn" id="btnProcessMockPayment" style="width: 100%; justify-content: center; font-size: 1.1rem; padding: 14px; background: #3395FF; color: #FFF;">
+            <span>⚡ Pay <span id="btnPayAmountText">₹299</span> via Razorpay Demo</span>
+          </button>
+        </div>
+
+        <!-- Animated Razorpay Loading Overlay -->
+        <div class="payment-processing-overlay" id="payProcessingLoader" style="display:none;">
+          <div class="rzp-processing-box">
+            <div class="spinner-rzp"></div>
+            <h4 id="rzpLoadingTitle">Connecting to Razorpay Sandbox...</h4>
+            <p id="rzpLoadingSub">Simulating 256-Bit Bank Encryption</p>
+            <div class="rzp-progress-bar"><div class="rzp-progress-fill" id="rzpProgressFill"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       Order Success Modal (Razorpay Verified)
+       ========================================== -->
+  <div class="modal-overlay" id="orderSuccessModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-card" style="text-align: center; max-width: 490px; border-radius: 24px;">
+      <div class="modal-body" style="padding: 36px 28px;">
+        <div style="width: 84px; height: 84px; margin: 0 auto 16px; background: #ECFDF5; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 2.5rem; box-shadow: 0 8px 24px rgba(16, 185, 129, 0.2);">
+          🎉
+        </div>
+        <h2 style="color: var(--deep-navy); margin-bottom: 6px; font-size: 1.8rem;">Payment &amp; Order Confirmed!</h2>
+        <p style="color: var(--muted-text); font-size: 0.95rem; line-height: 1.5;">
+          Thank you, <strong id="successCustName">Valued Customer</strong>! Your box of fresh Nutrifresh Eggs has been reserved.
+        </p>
+        
+        <div style="background: var(--cream-alt); border-radius: 16px; padding: 18px 20px; margin: 20px 0; text-align: left; border: 1px solid var(--border-light);">
+          <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+            <span style="color: var(--muted-text); font-size: 0.85rem;">Nutrifresh Order No:</span>
+            <strong style="color: var(--yolk-orange);" id="successOrderId">NF-2026-9812</strong>
+          </div>
+          <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+            <span style="color: var(--muted-text); font-size: 0.85rem;">Razorpay Payment ID:</span>
+            <strong style="color: #0284C7; font-family: monospace; font-size: 0.9rem;" id="successPaymentId">pay_demo_78193291</strong>
+          </div>
+          <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+            <span style="color: var(--muted-text); font-size: 0.85rem;">Payment Gateway:</span>
+            <strong style="color: var(--deep-navy); font-size: 0.85rem;">Razorpay Test Sandbox ✅</strong>
+          </div>
+          <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+            <span style="color: var(--muted-text); font-size: 0.85rem;">Estimated Delivery:</span>
+            <strong style="color: var(--deep-navy);">Tomorrow by 7:30 AM</strong>
+          </div>
+          <div style="display: flex; justify-content: space-between;">
+            <span style="color: var(--muted-text); font-size: 0.85rem;">Tracking Updates:</span>
+            <strong style="color: var(--forest-green);">Sent via WhatsApp &amp; SMS</strong>
+          </div>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 10px;">
+          <button type="button" class="btn btn-primary" id="btnDismissSuccessModal" style="width: 100%; justify-content: center;">
+            <span>Back to Home</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       Universal Footer
+       ========================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <a href="index.html" class="footer-logo">
+            <img src="assets/images/nutrifresh-logo-white.png" alt="Nutrifresh Logo">
+          </a>
+          <p class="brand-tagline">SUREGROW FARMS Pvt. Ltd. — Bringing you rich, golden-amber yolks from happy hens raised on lush family pastures.</p>
+          <div class="drawer-socials" style="margin-top: 18px;">
+            <a href="https://www.instagram.com/nutrifresheggs?igsh=MWg3OXlhZmRjcnI1ZA==" target="_blank" rel="noopener noreferrer" class="drawer-social-btn" aria-label="Instagram">📸</a>
+            <a href="https://www.instagram.com/nutrifresheggs?igsh=MWg3OXlhZmRjcnI1ZA==" target="_blank" rel="noopener noreferrer" class="drawer-social-btn" aria-label="Facebook">📘</a>
+            <a href="https://www.instagram.com/nutrifresheggs?igsh=MWg3OXlhZmRjcnI1ZA==" target="_blank" rel="noopener noreferrer" class="drawer-social-btn" aria-label="TikTok">🎵</a>
+            <a href="https://www.instagram.com/nutrifresheggs?igsh=MWg3OXlhZmRjcnI1ZA==" target="_blank" rel="noopener noreferrer" class="drawer-social-btn" aria-label="YouTube">▶️</a>
+          </div>
+        </div>
+
+        <div class="footer-col footer-nav">
+          <h4 class="footer-title">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Our Cartons</a></li>
+            <li><a href="our-farms.html">Our Farms</a></li>
+            <li><a href="become-a-farmer.html">Become a Farmer</a></li>
+            <li><a href="order-online.html">Order Online</a></li>
+            <li><a href="recipes.html">Farm Kitchen Recipes</a></li>
+            <li><a href="store-locator.html">Store Locator</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col footer-newsletter-col">
+          <h4 class="footer-title">Join the Flock</h4>
+          <p>Get exclusive sunrise recipes, farmer stories, and discounts delivered to your inbox.</p>
+          <form class="footer-newsletter-form" id="footerNewsletter" novalidate>
+            <div class="newsletter-input-group">
+              <input type="email" id="newsletterEmail" placeholder="Enter your email" required aria-label="Email for newsletter">
+              <button type="submit" class="btn btn-primary">
+                <span>Subscribe</span>
+              </button>
+            </div>
+            <div id="newsletterFeedback"></div>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Suregrow Farms Pvt. Ltd. All rights reserved. Nutrifresh Eggs is a registered trademark.</p>
+        <div class="footer-legal-links">
+          <a href="products.html#traceability" class="legal-link" data-legal="privacy">Privacy Policy</a>
+          <span class="legal-sep">|</span>
+          <a href="products.html#traceability" class="legal-link" data-legal="terms">Terms of Service</a>
+          <span class="legal-sep">|</span>
+          <a href="products.html#traceability" class="legal-link" data-legal="cookies">Cookie Settings</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Legal & Information Modal -->
+  <div class="modal-overlay" id="legalModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="legalModalTitle">Nutrifresh Information</h3>
+        <button class="modal-close" id="modalCloseBtn" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body" id="legalModalContent">
+        <!-- Dynamic Content -->
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" id="modalActionBtn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

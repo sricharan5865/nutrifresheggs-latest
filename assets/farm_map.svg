@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <!-- Map Outline Base -->
+  <rect width="800" height="450" rx="16" fill="#F4F8F3"/>
+  <path d="M120 180 Q 220 80 400 90 T 680 130 Q 720 220 640 340 T 360 380 Q 180 370 120 260 Z" fill="#E2EFE0" stroke="#B8DAC0" stroke-width="2"/>
+  
+  <!-- Pasture Greens -->
+  <path d="M250 160 C 320 120 440 130 520 170 C 580 210 550 300 460 320 C 360 340 280 300 240 250 Z" fill="#C8E6C9" opacity="0.6"/>
+
+  <!-- River Arc -->
+  <path d="M300 100 Q 380 200 350 280 T 420 380" fill="none" stroke="#90CAF9" stroke-width="6" stroke-linecap="round"/>
+  
+  <!-- Map Pins with Pulsing animations -->
+  <!-- Pin 1: Missouri / Midwest Farm Region -->
+  <g class="map-pin" transform="translate(320, 200)">
+    <circle cx="0" cy="0" r="14" fill="#FF5700" opacity="0.25"/>
+    <circle cx="0" cy="0" r="7" fill="#FF5700"/>
+    <circle cx="0" cy="0" r="3" fill="#FFFFFF"/>
+    <rect x="15" y="-14" width="110" height="28" rx="6" fill="#081C30"/>
+    <text x="70" y="4" fill="#FFFFFF" font-family="Poppins, sans-serif" font-size="11" font-weight="700" text-anchor="middle">Ozark Pastures</text>
+  </g>
+
+  <!-- Pin 2: Arkansas Heartland -->
+  <g class="map-pin" transform="translate(420, 260)">
+    <circle cx="0" cy="0" r="14" fill="#FF5700" opacity="0.25"/>
+    <circle cx="0" cy="0" r="7" fill="#FF5700"/>
+    <circle cx="0" cy="0" r="3" fill="#FFFFFF"/>
+    <rect x="15" y="-14" width="130" height="28" rx="6" fill="#081C30"/>
+    <text x="80" y="4" fill="#FFFFFF" font-family="Poppins, sans-serif" font-size="11" font-weight="700" text-anchor="middle">Heartland Valley (HQ)</text>
+  </g>
+
+  <!-- Pin 3: Ohio / Indiana Rolling Hills -->
+  <g class="map-pin" transform="translate(540, 180)">
+    <circle cx="0" cy="0" r="14" fill="#FF5700" opacity="0.25"/>
+    <circle cx="0" cy="0" r="7" fill="#FF5700"/>
+    <circle cx="0" cy="0" r="3" fill="#FFFFFF"/>
+    <rect x="15" y="-14" width="115" height="28" rx="6" fill="#081C30"/>
+    <text x="72" y="4" fill="#FFFFFF" font-family="Poppins, sans-serif" font-size="11" font-weight="700" text-anchor="middle">Sunny Ridge Farms</text>
+  </g>
+
+  <!-- Pin 4: Tennessee Valley -->
+  <g class="map-pin" transform="translate(490, 290)">
+    <circle cx="0" cy="0" r="14" fill="#FF5700" opacity="0.25"/>
+    <circle cx="0" cy="0" r="7" fill="#FF5700"/>
+    <circle cx="0" cy="0" r="3" fill="#FFFFFF"/>
+    <rect x="15" y="-14" width="110" height="28" rx="6" fill="#081C30"/>
+    <text x="70" y="4" fill="#FFFFFF" font-family="Poppins, sans-serif" font-size="11" font-weight="700" text-anchor="middle">Green Meadow</text>
+  </g>
+
+  <!-- Hen Graphic Overlay -->
+  <g transform="translate(200, 280) scale(0.6)">
+    <circle cx="30" cy="30" r="24" fill="#FFB71B" opacity="0.9"/>
+    <path d="M15 35 Q 30 15 45 35 Q 30 50 15 35 Z" fill="#FF5700"/>
+    <polygon points="45,28 55,30 45,34" fill="#FF5700"/>
+    <circle cx="40" cy="26" r="3" fill="#081C30"/>
+  </g>
+</svg>

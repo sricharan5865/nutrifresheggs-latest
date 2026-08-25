@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
+  <circle cx="40" cy="40" r="38" fill="#FFF3E0" stroke="#FF5700" stroke-width="2"/>
+  <!-- Barn icon -->
+  <path d="M22 56 V 38 L 40 24 L 58 38 V 56 Z" fill="#FF5700"/>
+  <path d="M40 24 L 22 38 H 58 Z" fill="#081C30"/>
+  <rect x="34" y="44" width="12" height="12" fill="#FFEAA7"/>
+  <!-- Hen silhouette -->
+  <path d="M48 52 C 50 48 54 48 56 50 C 58 52 57 56 54 56 Z" fill="#FFFFFF"/>
+</svg>

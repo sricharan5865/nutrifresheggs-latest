@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
+  <circle cx="40" cy="40" r="38" fill="#E8F5E9" stroke="#2D6A4F" stroke-width="2"/>
+  <!-- Sprout & sun -->
+  <circle cx="56" cy="28" r="8" fill="#FFB71B"/>
+  <path d="M40 58 C 40 45 32 38 22 36 C 22 48 30 56 40 58 Z" fill="#2D6A4F"/>
+  <path d="M40 58 C 40 45 48 38 58 36 C 58 48 50 56 40 58 Z" fill="#52B788"/>
+  <path d="M40 58 V 32" stroke="#2D6A4F" stroke-width="3" stroke-linecap="round"/>
+</svg>

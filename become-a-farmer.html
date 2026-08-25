@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Become a Happy Egg Farmer | Happy Egg Co.</title>
+  <meta name="description" content="Join our family of happy egg farmers. We offer transparent contracts, stable pay, and unmatched support for family-owned chicken farms.">
+  <link rel="icon" type="image/png" href="assets/favicon-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="farmer-page-body">
+
+  <!-- ==========================================
+       Sticky Header (Exact Happy Egg Transparent / Orange Layout)
+       ========================================== -->
+  <header class="site-header happy-header-layout farmer-header" id="siteHeader">
+    <div class="header-container happy-nav-container">
+      <div class="header-left">
+        <button class="drawer-trigger drawer-toggle happy-hamburger-btn" id="menuToggle" aria-label="Open Navigation Menu" aria-expanded="false">
+          <div class="hamburger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </button>
+        <a href="index.html" class="brand-logo-link" aria-label="Happy Egg Homepage">
+          <img src="assets/images/nutrifresh-logo-hires.png" alt="Happy Egg Co." class="brand-logo-img farmer-header-logo">
+        </a>
+      </div>
+
+      <div class="header-right">
+        <a href="#apply-now-section" class="btn-farmer-nav-apply" id="navApplyBtn">
+          Apply Now
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       Slideout Drawer Menu
+       ========================================== -->
+  <div class="drawer-overlay" id="drawerOverlay">
+    <div class="slideout-drawer happy-drawer-theme" id="navDrawer" role="dialog" aria-modal="true" aria-label="Navigation Drawer">
+      <div class="drawer-header-happy">
+        <button class="drawer-close" id="drawerClose" aria-label="Close menu">&times;</button>
+      </div>
+
+      <div class="drawer-body-happy">
+        <div class="drawer-two-col">
+          <!-- Primary Navigation -->
+          <div class="drawer-col-primary">
+            <ul class="drawer-nav-list happy-nav-primary">
+              <li><a href="index.html"><span>Home</span> <span class="drawer-arrow">→</span></a></li>
+              <li><a href="products.html"><span>Nutrifresh eggs</span> <span class="drawer-arrow">→</span></a></li>
+              <li><a href="our-farms.html"><span>Nutrifresh Farms</span> <span class="drawer-arrow">→</span></a></li>
+              <li><a href="become-a-farmer.html" class="active-drawer-item"><span>Become a farmer</span> <span class="drawer-arrow">→</span></a></li>
+              <li><a href="index.html#about"><span>About</span> <span class="drawer-arrow">→</span></a></li>
+              <li><a href="recipes.html"><span>Blog</span> <span class="drawer-arrow">→</span></a></li>
+              <li style="display:none;"><a href="store-locator.html">Store Locator</a></li>
+              <li style="display:none;"><a href="order-online.html">Order Online</a></li>
+            </ul>
+          </div>
+
+          <!-- Secondary Links Right -->
+          <div class="drawer-col-secondary">
+            <ul class="drawer-secondary-links">
+              <li><a href="#apply-now-section" class="drawer-quick-link">Apply Now</a></li>
+              <li><a href="our-farms.html">Press</a></li>
+              <li><a href="index.html#contact-us">Contact</a></li>
+              <li><a href="store-locator.html">Find in Store</a></li>
+            </ul>
+            <div class="drawer-contact-box">
+              <p class="drawer-q-title">Questions?</p>
+              <p class="drawer-q-sub">We're happy to help!</p>
+              <a href="mailto:farm@happyegg.com" class="drawer-email-link">farm@happyegg.com</a>
+              <div class="drawer-socials-row">
+                <a href="https://www.instagram.com/nutrifresheggs" target="_blank" rel="noopener noreferrer" aria-label="Instagram">📸</a>
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">📘</a>
+                <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok">🎵</a>
+                <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">▶️</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Cartons Row -->
+        <div class="drawer-cartons-section happy-cartons-strip">
+          <div class="drawer-cartons-title" style="color: #fff; opacity: 0.9;">Explore Our Pasture Cartons</div>
+          <div class="drawer-cartons-grid">
+            <a href="products.html#heritage" class="drawer-carton-item">
+              <img src="assets/images/heritage-carton.jpg" alt="Heritage Amber Carton">
+              <span>Heritage Amber</span>
+            </a>
+            <a href="products.html#pasture" class="drawer-carton-item">
+              <img src="assets/images/pasture-carton.jpg" alt="Pasture Raised Carton">
+              <span>Pasture Raised</span>
+            </a>
+            <a href="products.html#organic" class="drawer-carton-item">
+              <img src="assets/images/organic-carton.jpg" alt="Organic Free Range Carton">
+              <span>Organic Free Range</span>
+            </a>
+            <a href="products.html#freerange" class="drawer-carton-item">
+              <img src="assets/images/freerange-carton.jpg" alt="Free Range Carton">
+              <span>Free Range Brown</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       Hero Section (Screenshot 1 Exact)
+       ========================================== -->
+  <section class="exact-farmer-hero">
+    <div class="exact-hero-bg-wrap">
+      <img src="assets/images/happy_farmer_hero_bg.jpg" alt="Happy Egg Farmers" class="exact-hero-bg-img">
+      <div class="exact-hero-overlay"></div>
+    </div>
+
+    <div class="exact-hero-content">
+      <h1 class="exact-hero-title">become a happy egg farmer</h1>
+      <div class="exact-hero-btn-wrap">
+        <a href="#apply-now-section" class="btn-exact-apply-hero">Apply Now</a>
+      </div>
+    </div>
+
+    <!-- Organic Wave Divider Bottom -->
+    <div class="exact-hero-wave">
+      <svg viewBox="0 0 1440 110" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+        <path d="M0,35 C280,95 440,5 720,40 C1000,75 1200,20 1440,50 L1440,110 L0,110 Z" fill="#FFF8EB" opacity="0.5"/>
+        <path d="M0,55 C320,115 480,18 780,50 C1060,82 1240,28 1440,65 L1440,110 L0,110 Z" fill="#FFFFFF"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       Section 1: "farm with Happy Egg" & 3 Core Values (Screenshot 1 & 2 Exact)
+       ========================================== -->
+  <section class="exact-values-section" id="why-farm">
+    <div class="container exact-values-container">
+      <h2 class="exact-section-heading-orange">farm with Happy Egg</h2>
+
+      <div class="exact-values-grid">
+        <!-- Value 1 -->
+        <div class="exact-value-item">
+          <div class="exact-value-icon-box">
+            <img src="assets/icon_pride.png" alt="We take pride in what we do" class="exact-value-icon-img">
+          </div>
+          <h3 class="exact-value-title">we take pride in what we do.</h3>
+          <p class="exact-value-desc">You don't compromise on your values and neither do we. You can take pride in saying you are a Happy Egg farmer.</p>
+        </div>
+
+        <!-- Value 2 -->
+        <div class="exact-value-item">
+          <div class="exact-value-icon-box">
+            <img src="assets/icon_care.png" alt="You care for more than yourself" class="exact-value-icon-img">
+          </div>
+          <h3 class="exact-value-title">you care for more than yourself.</h3>
+          <p class="exact-value-desc">You care about the hens, your family, and supporting your local community through your business.</p>
+        </div>
+
+        <!-- Value 3 -->
+        <div class="exact-value-item">
+          <div class="exact-value-icon-box">
+            <img src="assets/icon_work.png" alt="You get to work for yourself" class="exact-value-icon-img">
+          </div>
+          <h3 class="exact-value-title">you get to work for yourself.</h3>
+          <p class="exact-value-desc">You are supported by a family-owned business. We aren't owned by Wall Street and don't want to be.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       Section 2: "apply now" & Selection Cards (Screenshot 2 & 3 Exact)
+       ========================================== -->
+  <section class="exact-apply-section" id="apply-now-section">
+    <div class="container exact-apply-container">
+      <h2 class="exact-section-heading-orange exact-apply-title">apply now</h2>
+
+      <!-- Selection Cards -->
+      <div class="exact-selection-cards-grid">
+        <!-- Card 1: Existing Farm -->
+        <button type="button" class="exact-select-card active" id="cardExistingFarmer" data-type="existing">
+          <div class="exact-card-icon">
+            <img src="assets/icon_existing_farmer.png" alt="Existing Chicken Farm">
+          </div>
+          <div class="exact-card-text">
+            I have an existing chicken farm and I am interested in being a Happy Egg Farmer
+          </div>
+        </button>
+
+        <!-- Card 2: New Farm -->
+        <button type="button" class="exact-select-card" id="cardNewFarmer" data-type="new">
+          <div class="exact-card-icon">
+            <img src="assets/icon_new_farmer.png" alt="New Farmer">
+          </div>
+          <div class="exact-card-text">
+            I am new and I'm interested in being a Happy Egg Farmer
+          </div>
+        </button>
+      </div>
+
+      <!-- Paper Application & Help Notice -->
+      <div class="exact-paper-notice">
+        <p class="notice-line-1">
+          If you prefer a paper application, click here to download the <a href="javascript:void(0)" class="exact-orange-link" id="downloadExistingLink">Existing Farmer Application</a> and click here to download the <a href="javascript:void(0)" class="exact-orange-link" id="downloadNewLink">New Farmer Application</a>!
+        </p>
+        <p class="notice-line-2">
+          Please mail to Happy Egg ATTN: Farmer Recruiting PO Box 863, Rogers, AR 72757
+        </p>
+        <p class="notice-line-3">
+          Having trouble with your application? Email <a href="mailto:farm@happyegg.com" class="exact-orange-link">farm@happyegg.com</a>
+        </p>
+      </div>
+
+      <!-- ==========================================
+           Application Form Box (Screenshot 3, 4 & 5 Exact)
+           ========================================== -->
+      <div class="exact-form-card" id="farmerFormContainer">
+        <h3 class="exact-form-card-title">I am interested in becoming a Happy Egg Farmer</h3>
+
+        <!-- Numbered Requirements List -->
+        <ol class="exact-requirements-list">
+          <li>My farm will be located in one of the following states: Alabama, Arkansas, Illinois, Indiana, Kansas, Kentucky, Mississippi, Missouri, Ohio or Tennessee.</li>
+          <li>I have a minimum of 15+ acres available to dedicate to the chicken farm.</li>
+          <li>I am willing to invest $1.0M+ in a barn, equipment and start-up costs.</li>
+          <li>I am willing to seek financing to fund my contract business.</li>
+          <li>I am willing to commit my time to high standards in animal care and responsible farm management.</li>
+        </ol>
+
+        <!-- Form Element -->
+        <form id="happyEggFarmerForm" class="exact-farmer-form" novalidate>
+          <input type="hidden" name="farmerType" id="exactFarmerType" value="existing">
+
+          <!-- Checkbox Confirmation -->
+          <div class="exact-confirm-row">
+            <label class="exact-custom-checkbox-label">
+              <input type="checkbox" id="exactConfirmCheckbox" required checked>
+              <span class="exact-checkbox-box">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </span>
+              <span class="exact-confirm-text">I confirm I meet the above requirements</span>
+            </label>
+          </div>
+
+          <!-- Input Fields -->
+          <div class="exact-input-grid">
+            <!-- Row 1: First Name, Last Name -->
+            <div class="exact-grid-row-2">
+              <div class="exact-input-wrap">
+                <input type="text" name="firstName" id="exactFirstName" placeholder="First Name" class="exact-input" required>
+              </div>
+              <div class="exact-input-wrap">
+                <input type="text" name="lastName" id="exactLastName" placeholder="Last Name" class="exact-input" required>
+              </div>
+            </div>
+
+            <!-- Row 2: Email, Phone -->
+            <div class="exact-grid-row-2">
+              <div class="exact-input-wrap">
+                <input type="email" name="email" id="exactEmail" placeholder="Email" class="exact-input" required>
+              </div>
+              <div class="exact-input-wrap">
+                <input type="tel" name="phone" id="exactPhone" placeholder="Phone" class="exact-input" required>
+              </div>
+            </div>
+
+            <!-- Row 3: Address -->
+            <div class="exact-grid-row-full">
+              <div class="exact-input-wrap">
+                <input type="text" name="address" id="exactAddress" placeholder="Address" class="exact-input" required>
+              </div>
+            </div>
+
+            <!-- Row 4: Address Line 2 -->
+            <div class="exact-grid-row-full">
+              <div class="exact-input-wrap">
+                <input type="text" name="address2" id="exactAddress2" placeholder="Address Line 2" class="exact-input">
+              </div>
+            </div>
+
+            <!-- Row 5: City, Select a State -->
+            <div class="exact-grid-row-2">
+              <div class="exact-input-wrap">
+                <input type="text" name="city" id="exactCity" placeholder="City" class="exact-input" required>
+              </div>
+              <div class="exact-select-wrap">
+                <select name="state" id="exactState" class="exact-select" required>
+                  <option value="" disabled selected>Select a State</option>
+                  <option value="AL">Alabama</option>
+                  <option value="AR">Arkansas</option>
+                  <option value="IL">Illinois</option>
+                  <option value="IN">Indiana</option>
+                  <option value="KS">Kansas</option>
+                  <option value="KY">Kentucky</option>
+                  <option value="MS">Mississippi</option>
+                  <option value="MO">Missouri</option>
+                  <option value="OH">Ohio</option>
+                  <option value="TN">Tennessee</option>
+                  <option value="OTHER">Other State</option>
+                </select>
+                <span class="exact-select-arrow">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#081C30" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                </span>
+              </div>
+            </div>
+
+            <!-- Row 6: Zip -->
+            <div class="exact-grid-row-half">
+              <div class="exact-input-wrap">
+                <input type="text" name="zip" id="exactZip" placeholder="Zip" class="exact-input" required>
+              </div>
+            </div>
+
+            <!-- Question 1: How did you hear -->
+            <div class="exact-question-group">
+              <label class="exact-question-label" for="exactReferral">How did you hear about farming for Happy Egg</label>
+              <input type="text" name="referral" id="exactReferral" placeholder="Examples: billboard, current farmer (name), Happy Egg employee (name), radio ad, etc." class="exact-input">
+            </div>
+
+            <!-- Question 2: Poultry Experience -->
+            <div class="exact-question-group">
+              <label class="exact-question-label" for="exactExperience">Do you have experience working with poultry or chickens? Please explain.</label>
+              <textarea name="experience" id="exactExperience" rows="4" class="exact-textarea"></textarea>
+            </div>
+
+            <!-- Question 3: Pre-Approval -->
+            <div class="exact-question-group">
+              <label class="exact-question-label" for="exactPreApproval">Do you have pre-approval with a bank for funding your farm? Please explain.</label>
+              <div class="exact-select-wrap">
+                <select name="preApproval" id="exactPreApproval" class="exact-select" required>
+                  <option value="" disabled selected>Select One</option>
+                  <option value="approved">Yes - Pre-approved with Agricultural Lender / Bank</option>
+                  <option value="in_progress">In Discussions with Bank / Lender</option>
+                  <option value="self_funded">Self-Funded / Capital Available</option>
+                  <option value="need_guidance">Seeking Happy Egg Financing Guidance</option>
+                  <option value="no">No</option>
+                </select>
+                <span class="exact-select-arrow">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#081C30" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                </span>
+              </div>
+            </div>
+
+            <!-- Question 4: Acres -->
+            <div class="exact-question-group">
+              <label class="exact-question-label" for="exactAcreage">How many acres are you able to devote to your farm?</label>
+              <div class="exact-select-wrap">
+                <select name="acreage" id="exactAcreage" class="exact-select" required>
+                  <option value="" disabled selected>Select One</option>
+                  <option value="15-30">15 – 30 Acres (Optimal)</option>
+                  <option value="31-50">31 – 50 Acres</option>
+                  <option value="51+">51+ Acres</option>
+                  <option value="looking">Currently Looking to Purchase Land</option>
+                </select>
+                <span class="exact-select-arrow">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#081C30" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                </span>
+              </div>
+            </div>
+
+            <!-- Question 5: Organic Certification -->
+            <div class="exact-question-group">
+              <label class="exact-question-label" for="exactOrganic">Is your 15+ acres able to be certified Organic (pesticide & chemical free for a minimum of 3 years)?</label>
+              <div class="exact-select-wrap">
+                <select name="organic" id="exactOrganic" class="exact-select" required>
+                  <option value="" disabled selected>Select One</option>
+                  <option value="yes">Yes (Pesticide & chemical free 3+ years)</option>
+                  <option value="no">No</option>
+                  <option value="transitioning">Currently in Organic Transition</option>
+                  <option value="unsure">Unsure</option>
+                </select>
+                <span class="exact-select-arrow">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#081C30" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+                </span>
+              </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="exact-submit-wrap">
+              <button type="submit" class="btn-exact-submit" id="exactSubmitBtn">
+                <span>Submit Application</span>
+              </button>
+            </div>
+          </div>
+        </form>
+
+        <!-- Success Screen -->
+        <div class="exact-success-view" id="exactSuccessView" style="display: none;">
+          <div class="exact-success-check-badge">
+            <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="#FF5700" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
+          <h4 class="exact-success-title">Application Submitted!</h4>
+          <p class="exact-success-desc">
+            Thank you for applying to become a Happy Egg Farmer! Our Farmer Recruiting team will review your application and contact you at <strong id="successContactEmail">your email</strong> within 2 business days.
+          </p>
+          <div class="exact-success-actions">
+            <button type="button" class="btn-exact-apply-hero" id="resetApplicationBtn" style="border: none; cursor: pointer;">Submit Another Application</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Accessibility / Help Floating Badge -->
+  <div class="exact-floating-a11y-badge" title="Farmer Support & Accessibility">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#FF5700" stroke-width="2.2">
+      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+      <polyline points="14 2 14 8 20 8"></polyline>
+      <line x1="16" y1="13" x2="8" y2="13"></line>
+      <line x1="16" y1="17" x2="8" y2="17"></line>
+      <polyline points="10 9 9 9 8 9"></polyline>
+    </svg>
+  </div>
+
+  <!-- Universal Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-brand">
+          <a href="index.html" class="footer-logo">
+            <img src="assets/images/nutrifresh-logo-white.png" alt="Happy Egg Logo">
+          </a>
+          <p class="brand-tagline">Happy Egg Co. — Bringing you rich, golden-amber yolks from happy hens raised on lush American family pastures.</p>
+          <div class="drawer-socials" style="margin-top: 18px;">
+            <a href="https://www.instagram.com/nutrifresheggs" target="_blank" rel="noopener noreferrer" class="drawer-social-btn" aria-label="Instagram">📸</a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="drawer-social-btn" aria-label="Facebook">📘</a>
+            <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer" class="drawer-social-btn" aria-label="TikTok">🎵</a>
+            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="drawer-social-btn" aria-label="YouTube">▶️</a>
+          </div>
+        </div>
+
+        <div class="footer-col footer-nav">
+          <h4 class="footer-title">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Our Cartons</a></li>
+            <li><a href="our-farms.html">Our Farms</a></li>
+            <li><a href="become-a-farmer.html">Become a Farmer</a></li>
+            <li><a href="order-online.html">Order Online</a></li>
+            <li><a href="recipes.html">Farm Kitchen Recipes</a></li>
+            <li><a href="store-locator.html">Store Locator</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col footer-newsletter-col">
+          <h4 class="footer-title">Join the Flock</h4>
+          <p>Get exclusive sunrise recipes, farmer stories, and discounts delivered to your inbox.</p>
+          <form class="footer-newsletter-form" id="footerNewsletter" novalidate>
+            <div class="newsletter-input-group">
+              <input type="email" id="newsletterEmail" placeholder="Enter your email" required aria-label="Email for newsletter">
+              <button type="submit" class="btn btn-primary">
+                <span>Subscribe</span>
+              </button>
+            </div>
+            <div id="newsletterFeedback"></div>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Happy Egg Co. All rights reserved. Nutrifresh Eggs is a registered partner trademark.</p>
+        <div class="footer-legal-links">
+          <a href="products.html#traceability" class="legal-link">Privacy Policy</a>
+          <span class="legal-sep">|</span>
+          <a href="products.html#traceability" class="legal-link">Terms of Service</a>
+          <span class="legal-sep">|</span>
+          <a href="products.html#traceability" class="legal-link">Cookie Settings</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

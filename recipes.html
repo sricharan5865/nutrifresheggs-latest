@@ -35,6 +35,8 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="products.html">Our Eggs</a></li>
           <li><a href="our-farms.html">Our Farms</a></li>
+          <li><a href="become-a-farmer.html">Become a Farmer</a></li>
+          <li><a href="order-online.html">Order Online</a></li>
           <li><a href="store-locator.html">Find In Store</a></li>
           <li><a href="recipes.html" class="active">Recipes</a></li>
         </ul>
@@ -49,28 +51,54 @@
     </div>
   </header>
 
-  <!-- Slideout Drawer -->
+  <!-- Slideout Drawer Menu (Exact Happy Egg Orange Layout) -->
   <div class="drawer-overlay" id="drawerOverlay">
-    <div class="slideout-drawer" id="navDrawer" role="dialog" aria-modal="true" aria-label="Navigation Drawer">
-      <div class="drawer-header">
-        <a href="index.html" class="logo-brand" aria-label="Nutrifresh Homepage">
-          <img src="assets/images/nutrifresh-logo-hires.png" alt="Nutrifresh - Premium Quality Free Range Eggs" class="brand-logo-img" style="height: 46px;">
-        </a>
+    <div class="slideout-drawer happy-drawer-theme" id="navDrawer" role="dialog" aria-modal="true" aria-label="Navigation Drawer">
+      <div class="drawer-header-happy">
         <button class="drawer-close" id="drawerClose" aria-label="Close menu">&times;</button>
       </div>
 
-      <div class="drawer-body">
-        <ul class="drawer-nav-list">
-          <li><a href="index.html">Home <span>→</span></a></li>
-          <li><a href="products.html">Our Eggs <span>→</span></a></li>
-          <li><a href="our-farms.html">Our Farms <span>→</span></a></li>
-          <li><a href="recipes.html">Farm Kitchen Recipes <span>→</span></a></li>
-          <li><a href="store-locator.html">Find In Store <span>→</span></a></li>
-          <li><a href="products.html#traceability">Traceability <span>→</span></a></li>
-        </ul>
+      <div class="drawer-body-happy">
+        <div class="drawer-two-col">
+          <!-- Primary Navigation -->
+          <div class="drawer-col-primary">
+            <ul class="drawer-nav-list happy-nav-primary">
+              <li><a href="index.html"><span>Home</span> <span class="drawer-arrow">→</span></a></li>
+              <li><a href="products.html"><span>Nutrifresh eggs</span> <span class="drawer-arrow">→</span></a></li>
+              <li><a href="our-farms.html"><span>Nutrifresh Farms</span> <span class="drawer-arrow">→</span></a></li>
+              <li><a href="become-a-farmer.html"><span>Become a farmer</span> <span class="drawer-arrow">→</span></a></li>
+              <li><a href="index.html#about"><span>About</span> <span class="drawer-arrow">→</span></a></li>
+              <li><a href="recipes.html" class="active-drawer-item"><span>Blog</span> <span class="drawer-arrow">→</span></a></li>
+              <li style="display:none;"><a href="store-locator.html">Store Locator</a></li>
+              <li style="display:none;"><a href="order-online.html">Order Online</a></li>
+            </ul>
+          </div>
 
-        <div class="drawer-cartons-section">
-          <div class="drawer-cartons-title">Explore Our Cartons</div>
+          <!-- Secondary Links Right -->
+          <div class="drawer-col-secondary">
+            <ul class="drawer-secondary-links">
+              <li><a href="become-a-farmer.html#faqs" class="drawer-quick-link">FAQs</a></li>
+              <li><a href="our-farms.html">Press</a></li>
+              <li><a href="index.html#contact-us">Contact</a></li>
+              <li><a href="store-locator.html">Find in Store</a></li>
+            </ul>
+            <div class="drawer-contact-box">
+              <p class="drawer-q-title">Questions?</p>
+              <p class="drawer-q-sub">We're happy to help!</p>
+              <a href="mailto:support@nutrifresheggs.com" class="drawer-email-link">support@nutrifresheggs.com</a>
+              <div class="drawer-socials-row">
+                <a href="https://www.instagram.com/nutrifresheggs?igsh=MWg3OXlhZmRjcnI1ZA==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">📸</a>
+                <a href="https://www.instagram.com/nutrifresheggs?igsh=MWg3OXlhZmRjcnI1ZA==" target="_blank" rel="noopener noreferrer" aria-label="Facebook">📘</a>
+                <a href="https://www.instagram.com/nutrifresheggs?igsh=MWg3OXlhZmRjcnI1ZA==" target="_blank" rel="noopener noreferrer" aria-label="TikTok">🎵</a>
+                <a href="https://www.instagram.com/nutrifresheggs?igsh=MWg3OXlhZmRjcnI1ZA==" target="_blank" rel="noopener noreferrer" aria-label="YouTube">▶️</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Cartons Strip -->
+        <div class="drawer-cartons-section happy-cartons-strip">
+          <div class="drawer-cartons-title" style="color: #fff; opacity: 0.9;">Explore Our Pasture Cartons</div>
           <div class="drawer-cartons-grid">
             <a href="products.html#heritage" class="drawer-carton-item">
               <img src="assets/images/heritage-carton.jpg" alt="Heritage Amber Carton">
@@ -89,16 +117,11 @@
               <span>Free Range Brown</span>
             </a>
           </div>
-        </div>
-      </div>
-
-      <div class="drawer-footer">
-        <p style="font-weight: 700; font-size: 0.9rem; color: var(--deep-navy);">Connect with @NutrifreshEggs</p>
-        <div class="drawer-socials">
-          <a href="https://www.instagram.com/nutrifresheggs?igsh=MWg3OXlhZmRjcnI1ZA==" target="_blank" rel="noopener noreferrer" class="drawer-social-btn" aria-label="Instagram">📸</a>
-          <a href="https://www.instagram.com/nutrifresheggs?igsh=MWg3OXlhZmRjcnI1ZA==" target="_blank" rel="noopener noreferrer" class="drawer-social-btn" aria-label="TikTok">🎵</a>
-          <a href="https://www.instagram.com/nutrifresheggs?igsh=MWg3OXlhZmRjcnI1ZA==" target="_blank" rel="noopener noreferrer" class="drawer-social-btn" aria-label="YouTube">▶️</a>
-          <a href="https://www.instagram.com/nutrifresheggs?igsh=MWg3OXlhZmRjcnI1ZA==" target="_blank" rel="noopener noreferrer" class="drawer-social-btn" aria-label="Facebook">📘</a>
+          <div class="drawer-cta-bottom" style="margin-top: 20px; text-align: center;">
+            <a href="order-online.html" class="btn btn-carton-shape" style="background: #081C30; color: #fff; padding: 12px 28px; width: 100%;">
+              Order Online / Get Nutrifresh 🛒
+            </a>
+          </div>
         </div>
       </div>
     </div>

@@ -640,5 +640,60 @@ class TestTier1_F16_ServerStreaming(E2ETestBase):
         self.assertHttpStatus(resp, 404)
 
 
+class TestTier1_F17_BecomeAFarmer(E2ETestBase):
+    """Feature 17: Become a Farmer Page & Application Workflow"""
+
+    def test_f17_01_farmer_page_loads_cleanly(self):
+        resp = self.client.get('become-a-farmer.html')
+        self.assertHttpStatus(resp, 200)
+        dom = self.client.parse_dom('become-a-farmer.html')
+        h1 = self.assertDOMExists(dom, '.farmer-hero-content h1')
+        self.assertIn("become a happy egg farmer", h1.text.lower())
+
+    def test_f17_02_farmer_pillars_and_cards(self):
+        dom = self.client.parse_dom('become-a-farmer.html')
+        cards = dom.select('.farmer-card')
+        self.assertEqual(len(cards), 4, "Expected 4 farmer highlights cards")
+        pillars = dom.select('.pillar-col')
+        self.assertEqual(len(pillars), 3, "Expected 3 core pillars")
+
+    def test_f17_03_farmer_application_form_elements(self):
+        dom = self.client.parse_dom('become-a-farmer.html')
+        form = self.assertDOMExists(dom, '#farmerApplicationForm')
+        self.assertIsNotNone(form)
+        self.assertIsNotNone(dom.select_one('#btnExistingFarmer'))
+        self.assertIsNotNone(dom.select_one('#btnNewFarmer'))
+        self.assertIsNotNone(dom.select_one('#newFarmerChecklist'))
+
+    def test_f17_04_farmer_faqs_accordion(self):
+        dom = self.client.parse_dom('become-a-farmer.html')
+        faqs = dom.select('.faq-accordion-item')
+        self.assertEqual(len(faqs), 5, "Expected 5 FAQ accordion items on become-a-farmer.html")
+
+
+class TestTier1_F18_OrderOnline(E2ETestBase):
+    """Feature 18: Order Online Cart & Dual Checkout"""
+
+    def test_f18_01_order_online_page_loads(self):
+        resp = self.client.get('order-online.html')
+        self.assertHttpStatus(resp, 200)
+        dom = self.client.parse_dom('order-online.html')
+        h1 = self.assertDOMExists(dom, '.order-hero-section h1')
+        self.assertIn("order nutrifresh eggs online", h1.text.lower())
+
+    def test_f18_02_product_selection_cards(self):
+        dom = self.client.parse_dom('order-online.html')
+        products = dom.select('.order-item-card')
+        self.assertEqual(len(products), 4, "Expected 4 order item carton cards")
+
+    def test_f18_03_cart_sidebar_and_checkout_buttons(self):
+        dom = self.client.parse_dom('order-online.html')
+        self.assertIsNotNone(dom.select_one('#cartStickyBox'))
+        self.assertIsNotNone(dom.select_one('#btnOrderWhatsApp'))
+        self.assertIsNotNone(dom.select_one('#btnPayOnline'))
+        self.assertIsNotNone(dom.select_one('#paymentGatewayModal'))
+
+
 if __name__ == '__main__':
     unittest.main()
+
