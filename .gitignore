@@ -28,3 +28,8 @@ Thumbs.db
 # Agent metadata
 .agents/
 tests/__pycache__/
+
+# Video files (kept locally only)
+*.mp4
+assets/videos/*.mp4
+
